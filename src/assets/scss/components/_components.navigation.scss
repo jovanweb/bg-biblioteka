@@ -1,0 +1,13 @@
+.nav-main {
+  @include min-screen($breakpoint-medium) {
+    ul {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+
+      a {
+
+      }
+    }
+  }
+}

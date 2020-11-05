@@ -191,7 +191,8 @@ h6 > a {
 \*------------------------------------ */
 a {
   color: #000;
-  transition: color .15s ease; }
+  transition: color .15s ease;
+  text-decoration: none; }
   a:hover {
     color: black; }
   a:focus, a:active {
@@ -213,6 +214,32 @@ a {
       max-width: calc(1160px + (20px * 2));
       padding-right: 20px;
       padding-left: 20px; } }
+
+@media screen and (min-width: 1216px) {
+  .wrapper--large {
+    max-width: calc(1700px + (20px * 2)); } }
+
+@media screen and (min-width: 1024px) {
+  .header-main .wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 50px;
+    padding-bottom: 70px; } }
+
+.header-main__logo {
+  width: 200px;
+  display: block; }
+
+@media screen and (min-width: 1024px) {
+  .header-main__content {
+    flex: 1;
+    padding-left: 120px; } }
+
+@media screen and (min-width: 1024px) {
+  .nav-main ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; } }
 
 /**
 * Reset input styles.

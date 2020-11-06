@@ -1,11 +1,9 @@
 .header-main {
-  @include min-screen($breakpoint-medium) {
-    .wrapper {
-      display: flex;
-      justify-content: space-between;
-      padding-top: 50px;
-      padding-bottom: 70px;
-    }
+  .wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 50px;
+    padding-bottom: 70px;
   }
 
 }
@@ -15,8 +13,14 @@
   }
 
   .header-main__content {
+    padding-left: 20px;
     @include min-screen($breakpoint-medium) {
       flex: 1;
       padding-left: 120px;
     }
+  }
+
+  .header-main__content-top {
+    display: flex;
+    justify-content: space-between;
   }

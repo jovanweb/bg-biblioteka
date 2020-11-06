@@ -4,7 +4,11 @@
     <div class="wrapper wrapper--large">
         <a href="index.html" class="header-main__logo"><img src="assets/images/bgb-logo.svg" alt=""></a>
         <div class="header-main__content">
-            
+            <div class="header-main__content-top">
+
+                {% include "./search.html" -%}
+                {% include "./languages.html" -%}
+            </div>
             {% include "./navigation.html" -%}
         </div>
     </div>

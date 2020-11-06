@@ -1,0 +1,16 @@
+
+
+.languages {
+    @include min-screen($breakpoint-medium) {
+      padding-left: 100px;
+      ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+  
+        a {
+  
+        }
+      }
+    }
+  }

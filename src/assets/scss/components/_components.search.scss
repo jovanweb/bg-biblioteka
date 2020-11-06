@@ -1,0 +1,14 @@
+
+
+.search {
+    @include min-screen($breakpoint-medium) {
+        display: flex;
+        flex: 1;
+        flex-direction: row;
+        justify-content: space-between;
+
+        input {
+            flex: 1;
+        }
+    }
+  }

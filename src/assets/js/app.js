@@ -1,2 +1,5 @@
 // ON DOCUMENT READY
-$(document).ready(() => {});
+$(document).ready(() => {
+    $('.home-slider') && $('.home-slider').slick({
+      });
+});

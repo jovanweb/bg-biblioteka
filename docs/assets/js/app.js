@@ -2,7 +2,9 @@
 "use strict";
 
 // ON DOCUMENT READY
-$(document).ready(function () {});
+$(document).ready(function () {
+  $('.home-slider') && $('.home-slider').slick({});
+});
 
 },{}]},{},[1])
 

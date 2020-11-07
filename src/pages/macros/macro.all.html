@@ -11,3 +11,12 @@
 {% endif %}
 
 {% endmacro %}
+
+
+{% macro thumbImg(href, text, imgSrc) %}
+
+<a href="{{ href }}" class="thumb-link">
+  <p class="thumb-link__text">{{ text }}</p>
+  <img class="thumb-link__img" src="assets/images/{{ imgSrc }}" alt="">
+</a> 
+{% endmacro %}

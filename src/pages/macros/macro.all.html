@@ -14,9 +14,21 @@
 
 
 {% macro thumbImg(href, text, imgSrc) %}
-
 <a href="{{ href }}" class="thumb-link">
   <p class="thumb-link__text">{{ text }}</p>
   <img class="thumb-link__img" src="assets/images/{{ imgSrc }}" alt="">
 </a> 
+{% endmacro %}
+
+
+{% macro event(time, title, location) %}
+<article class="event">
+  <time class="event__date">{{ time }}</time>
+  <h3 class="event__title">{{title}}</h3>
+  <p class="event__location">{{location}}</p>
+</article> 
+{% endmacro %}
+
+{% macro titleLink(heading, title, href, arrow) %}
+{% if heading %} <{{heading}} {% else %}<h2{% endif %} class="title-link"><a href="{{href}}">{{title}} {% if arrow %} => {% endif%}</a></{% if heading %} {{heading}} {% else %}h2{% endif %}>
 {% endmacro %}

@@ -42,10 +42,23 @@
           </div>
         </div>
       </div>
-      <div bp="4@md">Календар дешавања</div>
+      <div bp="4@md">
+        <aside>
+          {{ allMacros.titleLink('h2', 'Календар дешавања', '#', true) }}
+          {{ allMacros.event('3. СЕП 2020.', 'Наслов', 'Локација') }}
+          {{ allMacros.event('3. СЕП 2020.', 'Наслов', 'Локација') }}
+          {{ allMacros.event('3. СЕП 2020.', 'Наслов', 'Локација') }}
+          
+          {{ allMacros.titleLink('h2', 'Вести', '#', true) }}
+          {{ allMacros.event('3. СЕП 2020.', 'Наслов', 'Локација') }}
+          {{ allMacros.event('3. СЕП 2020.', 'Наслов', 'Локација') }}
+          {{ allMacros.event('3. СЕП 2020.', 'Наслов', 'Локација') }}
+        </aside>
+      </div>
+
     </div>
   </div>
 </main>
-{% include "./components/footer.html" -%}
+{% include "./components/footer/footer.html" -%}
 
 {% endblock %}

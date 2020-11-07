@@ -1,3 +1,19 @@
 .footer-main {
   @include min-screen($breakpoint-medium) {}
 }
+
+  .footer-main__top {
+    background-color: #333;
+    padding: 80px 0;
+  }
+  .footer-main__bottom {
+    .wrapper {
+      padding: 40px 0;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    p {
+      margin-bottom: 0;
+    }
+  }

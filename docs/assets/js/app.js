@@ -54,6 +54,80 @@ $(document).ready(function () {
     // instead of a settings object
     ]
   });
+  var markers = [['1', 51.5286416, -1.5015987], ['2', 51.4505299, -0.0854554], ['3', 52.5159729, -0.174943]];
+
+  var initializeMap = function initializeMap() {
+    var center = {
+      lat: 51.5159729,
+      lng: -0.1015987
+    },
+        map = new google.maps.Map(document.getElementById('map'), {
+      disableDefaultUI: true,
+      center: center,
+      zoom: 11
+    });
+    var Markers = [];
+    var iconNormal = 'https://i.stack.imgur.com/AAsD3.png',
+        iconSelected = 'https://webdesign.danols.com/static/template/images/icons/light/pin_map_icon&48.png',
+        bounds = new google.maps.LatLngBounds();
+
+    var setMarkers = function setMarkers(map) {
+      var _loop = function _loop() {
+        marker = markers[i];
+        myLatLng = new google.maps.LatLng(marker[1], marker[2]);
+        eachMarker = new google.maps.Marker({
+          record_id: i,
+          position: myLatLng,
+          map: map,
+          animation: google.maps.Animation.DROP,
+          icon: iconNormal,
+          title: marker[0]
+        }); //var selectedMarker;
+
+        bounds.extend(myLatLng);
+        Markers.push(eachMarker); // google.maps.event.addListener(eachMarker,'click', function() {
+        //   changeIcon(this);
+        // });
+        // function changeIcon(e){
+        //   if (selectedMarker) {
+        //     selectedMarker.setIcon(iconNormal);
+        //   }
+        //   e.setIcon(iconSelected);
+        //   selectedMarker = e;
+        // }
+        // choose from list
+
+        $('.map-places li').on('click', function () {
+          var mapItem = $(this).index();
+          changeMarker(mapItem);
+          var thisLat = markers[mapItem][1],
+              thisLon = markers[mapItem][2];
+          map.panTo({
+            lat: thisLat,
+            lng: thisLon
+          });
+        });
+
+        function changeMarker(record_id) {
+          for (i in Markers) {
+            Markers[i].setIcon(iconNormal);
+            Markers[record_id].setIcon(iconSelected);
+          }
+        }
+      };
+
+      for (var i = 0; i < markers.length; i++) {
+        var marker, myLatLng, eachMarker;
+
+        _loop();
+      }
+    };
+
+    map.fitBounds(bounds);
+    setMarkers(map);
+  };
+
+  google.maps.event.addDomListener(window, 'load', initializeMap);
 });
 
 },{}]},{},[1])

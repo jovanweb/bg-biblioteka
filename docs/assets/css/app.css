@@ -1267,6 +1267,24 @@ a {
 .library__content {
   flex: 1; }
 
+.map-section {
+  display: flex; }
+
+.map-container {
+  padding-bottom: 45%;
+  flex: 1;
+  background: gray;
+  position: relative; }
+  .map-container #map {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0; }
+
+.map-places {
+  width: 300px; }
+
 /* ------------------------------------*\
     #TRUMPS - SPACING
 \*------------------------------------ */

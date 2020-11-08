@@ -1285,6 +1285,9 @@ a {
       top: 0 !important;
       right: 0 !important; }
 
+.markers-wrapper {
+  display: none; }
+
 .map-places {
   width: 300px; }
   .map-places li {

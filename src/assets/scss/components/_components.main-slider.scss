@@ -1,16 +1,15 @@
-.home-slider {
-    .home-slider__item {
+.main-slider {
+    .main-slider__item {
         display: flex;
     }
 }
 
-
-.home-slider__item-content {
+.main-slider__item-content {
     padding: 100px 50px;
     flex: 0 0 30%;
 }
 
-.home-slider__item-image {
+.main-slider__item-image {
     flex: 1;
     background-repeat: no-repeat;
     background-size: cover;

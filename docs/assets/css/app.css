@@ -1171,18 +1171,31 @@ a {
   font-size: 16px;
   text-decoration: none; }
 
-.home-slider .home-slider__item {
+.main-slider .main-slider__item {
   display: flex; }
 
-.home-slider__item-content {
+.main-slider__item-content {
   padding: 100px 50px;
   flex: 0 0 30%; }
 
-.home-slider__item-image {
+.main-slider__item-image {
   flex: 1;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 50% 50%; }
+
+.navigation-slider .slick-active {
+  text-align: center; }
+  .navigation-slider .slick-active a {
+    padding: 0 20px;
+    display: block; }
+
+.navigation-slider .slick-active:not(.slick-current) {
+  position: relative; }
+  .navigation-slider .slick-active:not(.slick-current)::before {
+    content: "|";
+    position: absolute;
+    left: 0; }
 
 /* ------------------------------------*\
     #TRUMPS - SPACING

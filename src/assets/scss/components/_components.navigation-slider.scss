@@ -1,0 +1,20 @@
+.navigation-slider {
+
+    .slick-active {
+        text-align: center;
+        
+        a {
+            padding: 0 20px;
+            display: block;
+        }
+    }
+
+    .slick-active:not(.slick-current) {
+        position: relative;
+        &::before {
+            content: "|";
+            position: absolute;
+            left: 0;
+        }
+    }
+}

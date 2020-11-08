@@ -19,4 +19,9 @@
 
 .map-places {
     width: 300px;
+
+    li {
+        cursor: pointer;
+        margin-bottom: 20px;
+    }
 }

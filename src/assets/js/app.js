@@ -77,7 +77,7 @@ $(document).ready(() => {
       var Markers = [];
       
       var iconNormal = 'https://i.stack.imgur.com/AAsD3.png',
-          iconSelected = 'https://webdesign.danols.com/static/template/images/icons/light/pin_map_icon&48.png',
+          // iconSelected = 'https://webdesign.danols.com/static/template/images/icons/light/pin_map_icon&48.png',
           bounds = new google.maps.LatLngBounds();
       const setMarkers = (map) => {
         for (var i = 0; i < markers.length; i++) {
@@ -119,7 +119,7 @@ $(document).ready(() => {
           function changeMarker(record_id){
             for (i in Markers){
               Markers[i].setIcon(iconNormal);
-              Markers[record_id].setIcon(iconSelected);
+              // Markers[record_id].setIcon(iconSelected);
             }
           }
         }

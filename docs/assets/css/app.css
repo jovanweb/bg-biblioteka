@@ -1284,6 +1284,9 @@ a {
 
 .map-places {
   width: 300px; }
+  .map-places li {
+    cursor: pointer;
+    margin-bottom: 20px; }
 
 /* ------------------------------------*\
     #TRUMPS - SPACING

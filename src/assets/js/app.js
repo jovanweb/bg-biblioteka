@@ -1,4 +1,8 @@
 // ON DOCUMENT READY
+$(window).on('load', () => {
+  $('.js-preloader').fadeOut('slow')
+});
+
 $(document).ready(() => {
     $('.js-main-slider') && $('.js-main-slider').slick({
       prevArrow: $('.main-slider-arrows .slick-prev'),

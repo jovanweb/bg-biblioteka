@@ -1037,13 +1037,29 @@ a {
   .wrapper--large {
     max-width: calc(1700px + (20px * 2)); } }
 
+.preloader {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background: white;
+  z-index: 1000;
+  backface-visibility: hidden; }
+  .preloader .logo {
+    backface-visibility: hidden;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%); }
+
 .header-main .wrapper {
   display: flex;
   justify-content: space-between;
   padding-top: 50px;
   padding-bottom: 70px; }
 
-.header-main__logo {
+.logo {
   width: 200px;
   display: block; }
 

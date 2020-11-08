@@ -2,6 +2,9 @@
 "use strict";
 
 // ON DOCUMENT READY
+$(window).on('load', function () {
+  $('.js-preloader').fadeOut('slow');
+});
 $(document).ready(function () {
   $('.js-main-slider') && $('.js-main-slider').slick({
     prevArrow: $('.main-slider-arrows .slick-prev'),

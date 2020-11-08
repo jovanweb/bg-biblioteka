@@ -1239,7 +1239,33 @@ a {
   .navigation-slider .slick-active:not(.slick-current)::before {
     content: "|";
     position: absolute;
-    left: 0; }
+    left: 0;
+    color: white; }
+
+.library .wrapper {
+  display: flex;
+  align-items: center; }
+
+.library__img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 1px solid #000;
+  margin-right: 50px;
+  flex: 0 0 100px; }
+  @media screen and (min-width: 768px) {
+    .library__img {
+      flex: 0 0 220px;
+      width: 220px;
+      height: 220px; } }
+  .library__img img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%; }
+
+.library__content {
+  flex: 1; }
 
 /* ------------------------------------*\
     #TRUMPS - SPACING

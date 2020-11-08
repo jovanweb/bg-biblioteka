@@ -1,0 +1,33 @@
+
+.library {
+    .wrapper {
+        display: flex;
+        align-items: center;
+    }
+}
+
+.library__img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 1px solid #000;
+    margin-right: 50px;
+    flex: 0 0 100px;
+    
+    @include min-screen($breakpoint-small) {
+        flex: 0 0 220px;
+        width: 220px;
+        height: 220px;
+    }
+
+    img {
+        object-fit: cover;
+        height: 100%;
+        width: 100%;
+    }
+}
+
+.library__content {
+    flex: 1;
+}

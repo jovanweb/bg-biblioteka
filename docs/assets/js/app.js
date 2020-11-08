@@ -54,17 +54,17 @@ $(document).ready(function () {
     // instead of a settings object
     ]
   });
-  var markers = [['1', 51.5286416, -1.5015987], ['2', 51.4505299, -0.0854554], ['3', 52.5159729, -0.174943]];
+  var markers = [['1', 44.814357, 20.397957], ['2', 44.804140, 20.461326], ['3', 44.778598, 20.462889]];
 
   var initializeMap = function initializeMap() {
     var center = {
-      lat: 51.5159729,
-      lng: -0.1015987
+      lat: 44.7978649,
+      lng: 20.4512446
     },
         map = new google.maps.Map(document.getElementById('map'), {
-      disableDefaultUI: true,
+      disableDefaultUI: false,
       center: center,
-      zoom: 11
+      zoom: 5
     });
     var Markers = [];
     var iconNormal = 'https://i.stack.imgur.com/AAsD3.png',

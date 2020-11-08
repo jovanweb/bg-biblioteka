@@ -14,6 +14,14 @@
         height: 100%;
         left: 0;
         top: 0;
+        .gm-style-iw {
+
+            .gm-ui-hover-effect {
+                top: 0 !important;
+                right: 0 !important;
+            }
+        }
+    
     }
 }
 
@@ -24,4 +32,13 @@
         cursor: pointer;
         margin-bottom: 20px;
     }
+}
+
+.map-marker-info {
+    padding: 20px;
+    
+    img {
+        max-width: 100%;
+    }
+
 }

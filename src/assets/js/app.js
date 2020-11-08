@@ -58,11 +58,11 @@ $(document).ready(() => {
       ]
     });
 
-
     var markers = [
-      ['1', 44.814357, 20.397957],
-      ['2', 44.804140, 20.461326],
-      ['3', 44.778598, 20.462889]
+      [$('#marker1'), 44.814357, 20.397957],
+      [$('#marker2'), 44.804140, 20.461326],
+      [$('#marker3'), 44.778598, 20.462889],
+      [$('#marker4'), 44.789598, 20.492889]
     ];  
     
     const initializeMap = () => {
@@ -76,12 +76,13 @@ $(document).ready(() => {
     
       var Markers = [];
       
-      var iconNormal = 'https://i.stack.imgur.com/AAsD3.png',
+      var iconNormal = {url: 'assets/images/map/marker.png', size: new google.maps.Size(33, 44)},
           // iconSelected = 'https://webdesign.danols.com/static/template/images/icons/light/pin_map_icon&48.png',
           bounds = new google.maps.LatLngBounds();
       const setMarkers = (map) => {
         for (var i = 0; i < markers.length; i++) {
           var marker = markers[i],
+              infowindow = new google.maps.InfoWindow(),
               myLatLng = new google.maps.LatLng(marker[1], marker[2]),
               eachMarker = new google.maps.Marker({
                 record_id: i,
@@ -89,7 +90,7 @@ $(document).ready(() => {
                 map: map,
                 animation: google.maps.Animation.DROP,
                 icon: iconNormal,
-                title: marker[0]
+
           });
           //var selectedMarker;
           bounds.extend(myLatLng);
@@ -122,6 +123,13 @@ $(document).ready(() => {
               // Markers[record_id].setIcon(iconSelected);
             }
           }
+
+          google.maps.event.addListener(eachMarker, 'click', (function(eachMarker, i) {
+            return function() {
+              infowindow.setContent(markers[i][0].prop("innerHTML"));
+              infowindow.open(map, eachMarker);
+            }
+          })(eachMarker, i));
         }
       }
       map.fitBounds(bounds);

@@ -54,7 +54,7 @@ $(document).ready(function () {
     // instead of a settings object
     ]
   });
-  var markers = [['1', 44.814357, 20.397957], ['2', 44.804140, 20.461326], ['3', 44.778598, 20.462889]];
+  var markers = [[$('#marker1'), 44.814357, 20.397957], [$('#marker2'), 44.804140, 20.461326], [$('#marker3'), 44.778598, 20.462889], [$('#marker4'), 44.789598, 20.492889]];
 
   var initializeMap = function initializeMap() {
     var center = {
@@ -67,21 +67,24 @@ $(document).ready(function () {
       zoom: 5
     });
     var Markers = [];
-    var iconNormal = 'https://i.stack.imgur.com/AAsD3.png',
+    var iconNormal = {
+      url: 'assets/images/map/marker.png',
+      size: new google.maps.Size(33, 44)
+    },
         // iconSelected = 'https://webdesign.danols.com/static/template/images/icons/light/pin_map_icon&48.png',
     bounds = new google.maps.LatLngBounds();
 
     var setMarkers = function setMarkers(map) {
       var _loop = function _loop() {
         marker = markers[i];
+        infowindow = new google.maps.InfoWindow();
         myLatLng = new google.maps.LatLng(marker[1], marker[2]);
         eachMarker = new google.maps.Marker({
           record_id: i,
           position: myLatLng,
           map: map,
           animation: google.maps.Animation.DROP,
-          icon: iconNormal,
-          title: marker[0]
+          icon: iconNormal
         }); //var selectedMarker;
 
         bounds.extend(myLatLng);
@@ -113,10 +116,17 @@ $(document).ready(function () {
             Markers[i].setIcon(iconNormal); // Markers[record_id].setIcon(iconSelected);
           }
         }
+
+        google.maps.event.addListener(eachMarker, 'click', function (eachMarker, i) {
+          return function () {
+            infowindow.setContent(markers[i][0].prop("innerHTML"));
+            infowindow.open(map, eachMarker);
+          };
+        }(eachMarker, i));
       };
 
       for (var i = 0; i < markers.length; i++) {
-        var marker, myLatLng, eachMarker;
+        var marker, infowindow, myLatLng, eachMarker;
 
         _loop();
       }

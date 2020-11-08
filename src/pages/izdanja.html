@@ -1,0 +1,17 @@
+{% extends "layouts/default.html" %}
+
+{% set editions = true %}
+{% set pagetitle = "Библиотека Града Београда" %}
+{% set bodyClass = "editions" %}
+
+{% block content %}
+{% include "./components/header/header.html" -%}
+
+<main>
+  <div class="wrapper">
+    izdanja
+  </div>
+</main>
+{% include "./components/footer/footer.html" -%}
+
+{% endblock %}

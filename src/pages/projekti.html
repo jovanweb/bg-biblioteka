@@ -1,0 +1,17 @@
+{% extends "layouts/default.html" %}
+
+{% set projects = true %}
+{% set pagetitle = "Библиотека Града Београда" %}
+{% set bodyClass = "projects" %}
+
+{% block content %}
+{% include "./components/header/header.html" -%}
+
+<main>
+  <div class="wrapper">
+    projekti
+  </div>
+</main>
+{% include "./components/footer/footer.html" -%}
+
+{% endblock %}

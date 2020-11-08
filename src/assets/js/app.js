@@ -3,6 +3,10 @@ $(document).ready(() => {
     $('.js-main-slider') && $('.js-main-slider').slick({
       prevArrow: $('.main-slider-arrows .slick-prev'),
       nextArrow: $('.main-slider-arrows .slick-next'),
+      autoplay: true,
+      autoplaySpeed: 5000,
+      speed: 300,
+      infinite: true,
     });
     $('.js-navigation-slider') && $('.js-navigation-slider').slick({
       // dots: false,

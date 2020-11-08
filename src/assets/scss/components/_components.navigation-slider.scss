@@ -1,3 +1,24 @@
+.navigation-slider-wrapper {
+    background: black;
+    position: relative;
+    padding: 20px 30px;
+    @include min-screen($breakpoint-medium) {
+        padding: 20px 50px;
+    }
+
+    .slick-prev, .slick-next {
+    position: absolute;
+    top: 50%;
+    left: 30px;
+    transform: translateY(-50%);
+    }
+
+    .slick-next {
+        left: auto;
+        right: 30px;
+    }
+}
+
 .navigation-slider {
 
     .slick-active {
@@ -5,6 +26,7 @@
         
         a {
             padding: 0 20px;
+            color: white;
             display: block;
         }
     }

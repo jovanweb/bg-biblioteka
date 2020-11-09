@@ -393,7 +393,7 @@ html {
   [bp~='last@sm'] {
     order: 12; } }
 
-@media (min-width: 720px) {
+@media (min-width: 768px) {
   [bp~='grid'][bp~='1@md'] {
     grid-template-columns: repeat(12, 1fr); }
   [bp~='1@md'] {
@@ -475,7 +475,7 @@ html {
   [bp~='last@md'] {
     order: 12; } }
 
-@media (min-width: 960px) {
+@media (min-width: 1024px) {
   [bp~='grid'][bp~='1@lg'] {
     grid-template-columns: repeat(12, 1fr); }
   [bp~='1@lg'] {
@@ -720,12 +720,12 @@ html {
     width: 100% !important;
     max-width: 100% !important; } }
 
-@media (max-width: 720px) {
+@media (max-width: 768px) {
   [bp~='full-width-until@md'] {
     width: 100% !important;
     max-width: 100% !important; } }
 
-@media (max-width: 960px) {
+@media (max-width: 1024px) {
   [bp~='full-width-until@lg'] {
     width: 100% !important;
     max-width: 100% !important; } }
@@ -1035,7 +1035,7 @@ a {
 
 @media screen and (min-width: 1216px) {
   .wrapper--large {
-    max-width: calc(1700px + (20px * 2)); } }
+    max-width: calc(1750px + (20px * 2)); } }
 
 .preloader {
   position: fixed;
@@ -1097,9 +1097,18 @@ a {
     .search input {
       flex: 1; } }
 
+@media screen and (max-width: 767px) {
+  .footer-main {
+    text-align: center; }
+    .footer-main [bp~='grid'] {
+      grid-gap: 0; } }
+
 .footer-main__top {
   background-color: #333;
-  padding: 80px 0; }
+  padding: 50px 0; }
+  @media screen and (min-width: 1024px) {
+    .footer-main__top {
+      padding: 80px 0; } }
 
 .footer-main__bottom .wrapper {
   padding: 40px 0;
@@ -1108,6 +1117,55 @@ a {
 
 .footer-main__bottom p {
   margin-bottom: 0; }
+
+.footer-main__heading {
+  color: #F26475;
+  font-size: 36px;
+  margin-bottom: 30px; }
+  @media screen and (min-width: 1024px) {
+    .footer-main__heading {
+      font-size: 50px;
+      margin-bottom: 40px; } }
+
+.footer-main__links a,
+.footer-main__contact,
+.footer-main__working-hours {
+  font-size: 16px;
+  color: white; }
+  @media screen and (min-width: 1024px) {
+    .footer-main__links a,
+    .footer-main__contact,
+    .footer-main__working-hours {
+      font-size: 22px; } }
+
+.footer-main__links a {
+  line-height: 36px;
+  display: inline-block; }
+
+.footer-main__contact,
+.footer-main__working-hours {
+  line-height: 26px; }
+  .footer-main__contact dt,
+  .footer-main__working-hours dt {
+    margin-top: 20px; }
+    .footer-main__contact dt:first-child,
+    .footer-main__working-hours dt:first-child {
+      margin-top: 0; }
+
+@media screen and (min-width: 1024px) {
+  .footer-main__heading--social {
+    margin-top: 70px; } }
+
+.social-icon {
+  margin-right: 10px; }
+  @media screen and (min-width: 1216px) {
+    .social-icon {
+      margin-right: 15px; } }
+  .social-icon img {
+    width: 36px; }
+    @media screen and (min-width: 1216px) {
+      .social-icon img {
+        width: 46px; } }
 
 /**
 * Reset input styles.

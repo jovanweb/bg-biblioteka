@@ -25,6 +25,12 @@
 .main-slider__item-content {
     padding: 100px 50px;
     flex: 0 0 30%;
+    background-color: $color-peach;
+
+    h2 {
+        font-size: 40px;
+        font-weight: 300;
+    }
 }
 
 .main-slider__item-image {

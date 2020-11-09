@@ -1167,6 +1167,14 @@ a {
       .social-icon img {
         width: 46px; } }
 
+.footer-main__copyright span {
+  font-size: 20px; }
+
+.footer-main__author,
+.footer-main__copyright {
+  font-size: 18px;
+  color: #333333; }
+
 /**
 * Reset input styles.
 */

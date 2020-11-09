@@ -1175,6 +1175,9 @@ a {
   font-size: 18px;
   color: #333333; }
 
+.footer-main__author a {
+  color: #999999; }
+
 /**
 * Reset input styles.
 */

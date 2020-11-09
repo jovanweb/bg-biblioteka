@@ -19,13 +19,23 @@
 
 .footer-main__bottom {
   .wrapper {
-    padding: 40px 0;
-    display: flex;
-    justify-content: space-between;
+    padding: 30px 10px;
+    
+    @include min-screen($breakpoint-small) {
+      padding: 40px 10px;
+      display: flex;
+      justify-content: space-between;
+    }
   }
   
   p {
-    margin-bottom: 0;
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+
+    @include min-screen($breakpoint-small) {
+      margin-bottom: 0;
+    }
   }
 }
 
@@ -94,17 +104,25 @@
       }
     }
   }
-
+  
   .footer-main__copyright {
     span {
-      font-size: 20px;
+      font-size: 18px;
+
+      @include min-screen($breakpoint-medium) {
+        font-size: 20px;
+      }
     }
   }
-
+  
   .footer-main__author, 
   .footer-main__copyright {
-    font-size: 18px;
+    font-size: 16px;
     color: $color-darkgray;
+
+    @include min-screen($breakpoint-medium) {
+      font-size: 18px;
+    }
   }
 
   .footer-main__author {

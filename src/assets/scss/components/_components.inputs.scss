@@ -9,7 +9,6 @@
   transition: all .5s ease;
   background: none;
   border: none;
-  color: $color-base;
   width: 100%;
   display: inline-block;
   font-family: $base-font-family;
@@ -18,6 +17,7 @@
   /* remove browser defaults */
   vertical-align: middle;
   width: 100%;
+  color: $color-peach !important;
 
   &:invalid {
     box-shadow: none;
@@ -33,8 +33,8 @@
     /* remove IE clear icon */
   }
 
-  @mixin input-placeholder {
-    color: $color-base;
+  &::placeholder {
+    color: $color-peach !important;
   }
 
   &:not(:disabled) {

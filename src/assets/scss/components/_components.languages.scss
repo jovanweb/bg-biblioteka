@@ -1,16 +1,26 @@
 
 
 .languages {
-    @include min-screen($breakpoint-medium) {
-      padding-left: 100px;
-      ul {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-  
-        a {
-  
-        }
-      }
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+    a {
+      
     }
   }
+  
+  @include min-screen($breakpoint-medium) {
+    padding-left: 50px;
+  }
+  
+  @include min-screen($breakpoint-large) {
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 100px;
+  }
+}

@@ -8,19 +8,35 @@
 
 }
   .logo {
-    width: 200px;
+    width: 100px;
     display: block;
+
+    @include min-screen($breakpoint-medium) {
+      width: 150px;
+    }
+
+    @include min-screen($breakpoint-large) {
+      width: 200px;
+    }
   }
 
   .header-main__content {
     padding-left: 20px;
     @include min-screen($breakpoint-medium) {
       flex: 1;
+      padding-left: 50px;
+    }
+    @include min-screen($breakpoint-large) {
       padding-left: 120px;
     }
   }
-
+  
   .header-main__content-top {
     display: flex;
     justify-content: space-between;
+    flex-direction: column;
+
+      @include min-screen($breakpoint-large) {
+        flex-direction: row;
+      }
   }

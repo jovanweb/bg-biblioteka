@@ -13,18 +13,30 @@
         flex: 1;
         height: 58px;
         margin-bottom: 20px;
-        @include max-screen($breakpoint-small - 1) {
-            font-size: 12px;
+        font-size: 13px;
+
+        @include min-screen($breakpoint-small) {
+            font-size: 16px;
         }
+
         @include min-screen($breakpoint-medium) {
             margin-bottom: 0px;
             padding-right: 20px;
             border-right: 1px solid #000;
         }
+
+        @include min-screen($breakpoint-large) {
+            font-size: 24px;
+        }
+        
         @include screen($breakpoint-large, $breakpoint-extralarge) {
             margin-bottom: 20px;
             padding-right: 0;
             border-right: 0;
+        }
+
+        @include screen($breakpoint-extralarge, $breakpoint-huge) {
+            font-size: 16px;
         }
     }
     

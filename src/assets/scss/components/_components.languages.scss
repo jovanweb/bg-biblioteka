@@ -6,6 +6,7 @@
   justify-content: space-between;
   order: 1;
   flex: 1;
+
   ul {
     display: flex;
     flex-direction: row;
@@ -17,11 +18,12 @@
   nav {
     text-align: right;
   }
+
   a {
     font-size: 12px;
-    word-wrap: break-all;
+
     &.is-active {
-      color: #808080;
+      color: $color-lightgray;
     }
   }
   
@@ -36,6 +38,7 @@
   
   @include min-screen($breakpoint-medium) {
     padding-right: 0;
+    
     ul {
       margin-right: 0;
       margin-bottom: 30px;

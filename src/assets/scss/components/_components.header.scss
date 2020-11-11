@@ -79,6 +79,43 @@
     a {
       display: block;
       padding: 10px;
+      position: relative;
+      
+      &::before {
+        content: '';
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        height: 11px;
+        background-color: $color-peach;
+        display: none;
+      }
+      
+      &.is-active,
+      &:hover {
+        color: $color-lightgray;
+      }
+      
+      &.is-active {
+        
+        &::before {
+          display: block;
+        }
+      }
+      
+      @include min-screen($breakpoint-huge) {
+        font-size: 25px;
+        padding-left: 0;
+        padding-right: 0;
+      }
+      
+      @include max-screen($breakpoint-medium - 1) {
+        &::before {
+          top: auto;
+          bottom: 0;
+        }
+      }
     }
     
     @include max-screen($breakpoint-medium - 1) {
@@ -122,6 +159,7 @@
     @include screen($breakpoint-medium - 1, $breakpoint-large) {
       font-size: 14px;
     }
+
   }
   
   .navigation-trigger {

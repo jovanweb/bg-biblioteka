@@ -1121,7 +1121,30 @@ a {
 
 .nav-main a {
   display: block;
-  padding: 10px; }
+  padding: 10px;
+  position: relative; }
+  .nav-main a::before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    height: 11px;
+    background-color: #F26475;
+    display: none; }
+  .nav-main a.is-active, .nav-main a:hover {
+    color: #808080; }
+  .nav-main a.is-active::before {
+    display: block; }
+  @media screen and (min-width: 1640px) {
+    .nav-main a {
+      font-size: 25px;
+      padding-left: 0;
+      padding-right: 0; } }
+  @media screen and (max-width: 1023px) {
+    .nav-main a::before {
+      top: auto;
+      bottom: 0; } }
 
 @media screen and (max-width: 1023px) {
   .nav-main {
@@ -1215,8 +1238,7 @@ a {
   .languages nav {
     text-align: right; }
   .languages a {
-    font-size: 12px;
-    word-wrap: break-all; }
+    font-size: 12px; }
     .languages a.is-active {
       color: #808080; }
   @media screen and (max-width: 479px) {
@@ -1258,20 +1280,27 @@ a {
   .search input {
     flex: 1;
     height: 58px;
-    margin-bottom: 20px; }
-    @media screen and (max-width: 767px) {
+    margin-bottom: 20px;
+    font-size: 13px; }
+    @media screen and (min-width: 768px) {
       .search input {
-        font-size: 12px; } }
+        font-size: 16px; } }
     @media screen and (min-width: 1024px) {
       .search input {
         margin-bottom: 0px;
         padding-right: 20px;
         border-right: 1px solid #000; } }
+    @media screen and (min-width: 1216px) {
+      .search input {
+        font-size: 24px; } }
     @media screen and (min-width: 1216px) and (max-width: 1440px) {
       .search input {
         margin-bottom: 20px;
         padding-right: 0;
         border-right: 0; } }
+    @media screen and (min-width: 1440px) and (max-width: 1640px) {
+      .search input {
+        font-size: 16px; } }
   .search .styled-radiobutton + label {
     font-size: 15px; }
     @media screen and (max-width: 1023px) {

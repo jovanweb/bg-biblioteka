@@ -54,14 +54,15 @@ $(document).ready(function () {
     // instead of a settings object
     ]
   });
+  var navigation = $('.js-nav-main');
   $('.js-navigation-trigger').on('click', function () {
-    $('.header-main').stop().toggleClass('is-active');
+    navigation.stop().toggleClass('is-active');
   });
-  $('.js-nav-main').on('click', function () {
-    $('.header-main').removeClass('is-active');
+  navigation.on('click', function () {
+    navigation.removeClass('is-active');
   });
 
-  if ($('#map')) {
+  if ($('#map').length) {
     var markers = [[$('#marker1'), 44.814357, 20.397957], [$('#marker2'), 44.804140, 20.461326], [$('#marker3'), 44.778598, 20.462889], [$('#marker4'), 44.789598, 20.492889]];
 
     var initializeMap = function initializeMap() {

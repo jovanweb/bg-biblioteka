@@ -1161,7 +1161,10 @@ a {
     visibility: hidden;
     transition: opacity .2s ease, visibility .2s ease; }
     .nav-main a {
-      padding: 20px; }
+      padding: 20px;
+      transform: translateX(-30px);
+      opacity: 0;
+      transition: all .2s ease; }
     .nav-main ul {
       padding: 20px 0;
       transition: transform .2s ease;
@@ -1172,11 +1175,14 @@ a {
       left: 0;
       min-height: 100vh;
       margin-bottom: 0; }
-    .is-active .nav-main {
+    .nav-main.is-active {
       opacity: 1;
       visibility: visible; }
-      .is-active .nav-main ul {
-        transform: translateX(0); } }
+      .nav-main.is-active ul {
+        transform: translateX(0); }
+      .nav-main.is-active a {
+        transform: translateX(0);
+        opacity: 1; } }
 
 @media screen and (min-width: 1023px) and (max-width: 1216px) {
   .nav-main {
@@ -1675,13 +1681,26 @@ a {
   flex: 1; }
 
 .map-section {
-  display: flex; }
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 40px; }
+  .map-section ul {
+    margin-bottom: 0; }
+  @media screen and (min-width: 480px) {
+    .map-section {
+      flex-direction: row; } }
+  @media screen and (min-width: 1024px) {
+    .map-section {
+      margin-bottom: 90px; } }
 
 .map-container {
-  padding-bottom: 45%;
+  padding-bottom: 75%;
   flex: 1;
   background: gray;
   position: relative; }
+  @media screen and (min-width: 480px) {
+    .map-container {
+      padding-bottom: 45%; } }
   .map-container #map {
     position: absolute;
     width: 100%;
@@ -1696,11 +1715,21 @@ a {
   display: none; }
 
 .map-places {
-  min-width: 150px;
-  width: 20%; }
+  text-align: center; }
+  @media screen and (min-width: 480px) {
+    .map-places {
+      min-width: 150px;
+      width: 20%;
+      text-align: left; } }
   .map-places li {
     cursor: pointer;
-    margin-bottom: 20px; }
+    display: inline-block;
+    padding: 10px 20px; }
+    @media screen and (min-width: 480px) {
+      .map-places li {
+        display: block;
+        padding: 0;
+        margin-bottom: 20px; } }
 
 .map-marker-info {
   padding: 20px; }

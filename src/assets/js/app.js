@@ -58,13 +58,14 @@ $(document).ready(() => {
       ]
     });
 
+    const navigation = $('.js-nav-main');
     $('.js-navigation-trigger').on('click', function() {
-      $('.header-main').stop().toggleClass('is-active')
+      navigation.stop().toggleClass('is-active')
     })
-    $('.js-nav-main').on('click', function() {
-      $('.header-main').removeClass('is-active')
+    navigation.on('click', () => {
+      navigation.removeClass('is-active')
     })
-    if($('#map')) {
+    if($('#map').length) {
 
       var markers = [
         [$('#marker1'), 44.814357, 20.397957],

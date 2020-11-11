@@ -7,14 +7,16 @@
             <div class="header-main__content-top">
 
                 {% include "./search.html" -%}
-                {% include "./languages.html" -%}
+                <div class="inner-wrapper">
+                    {% include "./languages.html" -%}
+                    <div class="navigation-trigger js-navigation-trigger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
             </div>
             {% include "./navigation.html" -%}
-            <div class="navigation-trigger js-navigation-trigger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
         </div>
     </div>
 </header>

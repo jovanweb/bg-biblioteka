@@ -59,16 +59,20 @@
     flex-direction: column;
     flex: 1;
     
-      @include min-screen($breakpoint-tiny) {
-        margin-right: 20px;
-      }
-      @include min-screen($breakpoint-medium) {
-        margin-right: 0;
-      }
-      @include min-screen($breakpoint-large) {
-        flex-direction: row;
-      }
+    @include min-screen($breakpoint-medium) {
+      margin-bottom: 20px;
     }
+    @include min-screen($breakpoint-large) {
+      margin-bottom: 50px;
+      flex-direction: row-reverse;
+    }
+  }
+
+  .inner-wrapper {
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+  }
     
   .nav-main {
 
@@ -80,9 +84,9 @@
     @include max-screen($breakpoint-medium - 1) {
       position: fixed;
       top: 0;
-      bottom: 0;
       left: 0;
       right: 0;
+      bottom: 0;
       overflow: auto;
       background-color: rgba(black, .2);
       display: flex;
@@ -102,8 +106,8 @@
         background-color: white;
         position: absolute;
         top: 0;
-        bottom: 0;
         left: 0;
+        min-height: 100vh;
         margin-bottom: 0;
       }
       .is-active & {
@@ -114,13 +118,16 @@
         }
       }
     }
+
+    @include screen($breakpoint-medium - 1, $breakpoint-large) {
+      font-size: 14px;
+    }
   }
   
   .navigation-trigger {
     position: relative;
     width: 50px;
     height: 50px;
-    margin-top: -10px;
 
     span {
       position: absolute;
@@ -145,8 +152,8 @@
     
     @include max-screen($breakpoint-tiny - 1) {
       position: absolute;
-      top: 20px;
-      right: 20px;
+      top: 10px;
+      right: 10px;
     }
     @include min-screen($breakpoint-medium) {
       display: none;

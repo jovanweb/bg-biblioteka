@@ -5,11 +5,13 @@
   flex-direction: row;
   justify-content: space-between;
   order: 1;
+  flex: 1;
   ul {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     margin-right: 10px;
+    margin-bottom: 0;
   }
 
   nav {
@@ -18,14 +20,32 @@
   a {
     font-size: 12px;
     word-wrap: break-all;
+    &.is-active {
+      color: #808080;
+    }
+  }
+  
+  @include max-screen($breakpoint-tiny - 1) {
+    margin-bottom: 20px;
+  }
+  
+  
+  @include min-screen($breakpoint-tiny) {
+    padding-right: 20px;
   }
   
   @include min-screen($breakpoint-medium) {
+    padding-right: 0;
     ul {
       margin-right: 0;
+      margin-bottom: 30px;
     }
-    a {
-      font-size: 16px;
+    
+    nav {
+      
+      a {
+        font-size: 16px;
+      }
     }
   }
   
@@ -35,5 +55,14 @@
     flex-direction: column;
     justify-content: center;
     padding-left: 100px;
+
+    ul {
+      margin-bottom: 20px;
+    }
   }
+}
+
+.languages__separator {
+  margin: 0 5px;
+  color: $color-peach;
 }

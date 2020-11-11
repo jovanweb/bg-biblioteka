@@ -4,21 +4,34 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  order: 1;
   ul {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    
-    a {
-      
-    }
+    margin-right: 10px;
+  }
+
+  nav {
+    text-align: right;
+  }
+  a {
+    font-size: 12px;
+    word-wrap: break-all;
   }
   
   @include min-screen($breakpoint-medium) {
-    padding-left: 50px;
+    ul {
+      margin-right: 0;
+    }
+    a {
+      font-size: 16px;
+    }
   }
   
   @include min-screen($breakpoint-large) {
+    padding-left: 50px;
+    order: 2;
     flex-direction: column;
     justify-content: center;
     padding-left: 100px;

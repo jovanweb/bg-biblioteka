@@ -2,53 +2,94 @@
 
 .search {
     display: flex;
-    align-items: center;
+    flex-direction: column;
     flex: 1;
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 10px 40px;
+    padding: 20px 15px;
     border: 1px solid #000;
     border-radius: 20px;
+    order: 2;
     
     input {
         flex: 1;
         height: 58px;
-        border-right: 1px solid #000;
-        padding-right: 20px;
+        margin-bottom: 20px;
+        @include max-screen($breakpoint-small - 1) {
+            font-size: 12px;
+        }
+        @include min-screen($breakpoint-medium) {
+            margin-bottom: 0px;
+            padding-right: 20px;
+            border-right: 1px solid #000;
+        }
+        @include screen($breakpoint-large, $breakpoint-extralarge) {
+            margin-bottom: 20px;
+            padding-right: 0;
+            border-right: 0;
+        }
     }
     
     .styled-radiobutton + label {
         font-size: 15px;
+        @include max-screen($breakpoint-medium - 1) {
+            font-size: 12px;
+            span {
+                top: 0;
+            }
+        }
     }
-
+    
     .radio_wrap {
-        margin-left: 20px;
+        margin-left: 10px;
+        
+        @include min-screen($breakpoint-medium) {
+            margin-left: 20px;
+        }
+        &:first-child {
+            @include max-screen($breakpoint-medium - 1) {
+                margin-left: 0;
+            }
+            @include screen($breakpoint-large, $breakpoint-extralarge) {
+                margin-left: 0;
+            }
+        }
     }
-
+    
     @include min-screen($breakpoint-medium) {
+        align-items: center;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 10px 20px;
         .styled-radiobutton + label {
             font-size: 18px;
         }
+    }
+    @include min-screen($breakpoint-large) {
+        padding: 10px 40px;
+        order: 1;
+    }
+    @include screen($breakpoint-large, $breakpoint-extralarge) {
+        flex-direction: column;
+        align-items: flex-start;
+        padding-top: 20px;
+        padding-bottom: 20px;
     }
 }
 
 .search__text {
     font-size: 12px;
-    margin-left: 20px;
+    margin-left: 10px;
     &::before {
         content: 'o';
         margin-right: 5px;
     }
-
+    
     @include min-screen($breakpoint-medium) {
         font-size: 15px;
+        margin-left: 20px;
     }
 }
 
 .search__filters {
-
-    @include min-screen($breakpoint-medium) {
-        display: flex;
-        flex-direction: row;
-    }
+    display: flex;
+    flex-direction: row;
 }

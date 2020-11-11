@@ -54,89 +54,98 @@ $(document).ready(function () {
     // instead of a settings object
     ]
   });
-  var markers = [[$('#marker1'), 44.814357, 20.397957], [$('#marker2'), 44.804140, 20.461326], [$('#marker3'), 44.778598, 20.462889], [$('#marker4'), 44.789598, 20.492889]];
+  $('.js-navigation-trigger').on('click', function () {
+    $('.header-main').stop().toggleClass('is-active');
+  });
+  $('.js-nav-main').on('click', function () {
+    $('.header-main').removeClass('is-active');
+  });
 
-  var initializeMap = function initializeMap() {
-    var center = {
-      lat: 44.7978649,
-      lng: 20.4512446
-    },
-        map = new google.maps.Map(document.getElementById('map'), {
-      disableDefaultUI: false,
-      center: center,
-      zoom: 5
-    });
-    var Markers = [];
-    var iconNormal = {
-      url: 'assets/images/map/marker.png',
-      size: new google.maps.Size(33, 44)
-    },
-        // iconSelected = 'https://webdesign.danols.com/static/template/images/icons/light/pin_map_icon&48.png',
-    bounds = new google.maps.LatLngBounds();
+  if ($('#map')) {
+    var markers = [[$('#marker1'), 44.814357, 20.397957], [$('#marker2'), 44.804140, 20.461326], [$('#marker3'), 44.778598, 20.462889], [$('#marker4'), 44.789598, 20.492889]];
 
-    var setMarkers = function setMarkers(map) {
-      var _loop = function _loop() {
-        marker = markers[i];
-        infowindow = new google.maps.InfoWindow();
-        myLatLng = new google.maps.LatLng(marker[1], marker[2]);
-        eachMarker = new google.maps.Marker({
-          record_id: i,
-          position: myLatLng,
-          map: map,
-          animation: google.maps.Animation.DROP,
-          icon: iconNormal
-        }); //var selectedMarker;
+    var initializeMap = function initializeMap() {
+      var center = {
+        lat: 44.7978649,
+        lng: 20.4512446
+      },
+          map = new google.maps.Map(document.getElementById('map'), {
+        disableDefaultUI: false,
+        center: center,
+        zoom: 5
+      });
+      var Markers = [];
+      var iconNormal = {
+        url: 'assets/images/map/marker.png',
+        size: new google.maps.Size(33, 44)
+      },
+          // iconSelected = 'https://webdesign.danols.com/static/template/images/icons/light/pin_map_icon&48.png',
+      bounds = new google.maps.LatLngBounds();
 
-        bounds.extend(myLatLng);
-        Markers.push(eachMarker); // google.maps.event.addListener(eachMarker,'click', function() {
-        //   changeIcon(this);
-        // });
-        // function changeIcon(e){
-        //   if (selectedMarker) {
-        //     selectedMarker.setIcon(iconNormal);
-        //   }
-        //   e.setIcon(iconSelected);
-        //   selectedMarker = e;
-        // }
-        // choose from list
+      var setMarkers = function setMarkers(map) {
+        var _loop = function _loop() {
+          marker = markers[i];
+          infowindow = new google.maps.InfoWindow();
+          myLatLng = new google.maps.LatLng(marker[1], marker[2]);
+          eachMarker = new google.maps.Marker({
+            record_id: i,
+            position: myLatLng,
+            map: map,
+            animation: google.maps.Animation.DROP,
+            icon: iconNormal
+          }); //var selectedMarker;
 
-        $('.map-places li').on('click', function () {
-          var mapItem = $(this).index();
-          changeMarker(mapItem);
-          var thisLat = markers[mapItem][1],
-              thisLon = markers[mapItem][2];
-          map.panTo({
-            lat: thisLat,
-            lng: thisLon
+          bounds.extend(myLatLng);
+          Markers.push(eachMarker); // google.maps.event.addListener(eachMarker,'click', function() {
+          //   changeIcon(this);
+          // });
+          // function changeIcon(e){
+          //   if (selectedMarker) {
+          //     selectedMarker.setIcon(iconNormal);
+          //   }
+          //   e.setIcon(iconSelected);
+          //   selectedMarker = e;
+          // }
+          // choose from list
+
+          $('.map-places li').on('click', function () {
+            var mapItem = $(this).index();
+            changeMarker(mapItem);
+            var thisLat = markers[mapItem][1],
+                thisLon = markers[mapItem][2];
+            map.panTo({
+              lat: thisLat,
+              lng: thisLon
+            });
           });
-        });
 
-        function changeMarker(record_id) {
-          for (i in Markers) {
-            Markers[i].setIcon(iconNormal); // Markers[record_id].setIcon(iconSelected);
+          function changeMarker(record_id) {
+            for (i in Markers) {
+              Markers[i].setIcon(iconNormal); // Markers[record_id].setIcon(iconSelected);
+            }
           }
-        }
 
-        google.maps.event.addListener(eachMarker, 'click', function (eachMarker, i) {
-          return function () {
-            infowindow.setContent(markers[i][0].prop("innerHTML"));
-            infowindow.open(map, eachMarker);
-          };
-        }(eachMarker, i));
+          google.maps.event.addListener(eachMarker, 'click', function (eachMarker, i) {
+            return function () {
+              infowindow.setContent(markers[i][0].prop("innerHTML"));
+              infowindow.open(map, eachMarker);
+            };
+          }(eachMarker, i));
+        };
+
+        for (var i = 0; i < markers.length; i++) {
+          var marker, infowindow, myLatLng, eachMarker;
+
+          _loop();
+        }
       };
 
-      for (var i = 0; i < markers.length; i++) {
-        var marker, infowindow, myLatLng, eachMarker;
-
-        _loop();
-      }
+      map.fitBounds(bounds);
+      setMarkers(map);
     };
 
-    map.fitBounds(bounds);
-    setMarkers(map);
-  };
-
-  google.maps.event.addDomListener(window, 'load', initializeMap);
+    google.maps.event.addDomListener(window, 'load', initializeMap);
+  }
 });
 
 },{}]},{},[1])

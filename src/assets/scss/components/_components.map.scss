@@ -30,7 +30,8 @@
 }
 
 .map-places {
-    width: 300px;
+    min-width: 150px;
+    width: 20%;
 
     li {
         cursor: pointer;

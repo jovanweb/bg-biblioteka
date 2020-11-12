@@ -1181,7 +1181,8 @@ a {
 .nav-main a {
   display: block;
   padding: 10px;
-  position: relative; }
+  position: relative;
+  color: #000; }
   .nav-main a::before {
     content: '';
     position: absolute;
@@ -1247,6 +1248,12 @@ a {
   .nav-main {
     font-size: 14px; } }
 
+@media screen and (min-width: 1024px) {
+  .nav-main ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; } }
+
 .navigation-trigger {
   position: relative;
   width: 50px;
@@ -1282,12 +1289,6 @@ a {
   .is-active .navigation-trigger span:last-child {
     transform: translate(-50%, -50%) rotate(-45deg); }
 
-@media screen and (min-width: 1024px) {
-  .nav-main ul {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between; } }
-
 .languages {
   display: flex;
   flex-direction: row;
@@ -1303,7 +1304,8 @@ a {
   .languages nav {
     text-align: right; }
   .languages a {
-    font-size: 12px; }
+    font-size: 12px;
+    color: #000; }
     .languages a.is-active {
       color: #808080; }
   @media screen and (max-width: 479px) {

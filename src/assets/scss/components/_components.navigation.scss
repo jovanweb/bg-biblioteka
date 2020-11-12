@@ -1,12 +1,154 @@
 .nav-main {
+
+  a {
+    display: block;
+    padding: 10px;
+    position: relative;
+    color: #000;
+    
+    &::before {
+      content: '';
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      height: 11px;
+      background-color: $color-peach;
+      display: none;
+    }
+    
+    &.is-active,
+    &:hover {
+      color: $color-lightgray;
+    }
+    
+    &.is-active {
+      
+      &::before {
+        display: block;
+      }
+    }
+    
+    @include min-screen($breakpoint-huge) {
+      font-size: 25px;
+      padding-left: 0;
+      padding-right: 0;
+    }
+    
+    @include max-screen($breakpoint-medium - 1) {
+      &::before {
+        top: auto;
+        bottom: 0;
+      }
+    }
+  }
+  
+  @include max-screen($breakpoint-medium - 1) {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: auto;
+    background-color: rgba(black, .2);
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .2s ease, visibility .2s ease;
+    
+    a {
+      padding: 20px;
+      transform: translateX(-30px);
+      opacity: 0;
+      transition: all .2s ease;
+    }
+    
+    ul {
+      padding: 20px 0;
+      transition: transform .2s ease;
+      transform: translateX(-100%);
+      background-color: white;
+      position: absolute;
+      top: 0;
+      left: 0;
+      min-height: 100vh;
+      margin-bottom: 0;
+    }
+    
+    &.is-active {
+      opacity: 1;
+      visibility: visible;
+      ul {
+        transform: translateX(0);
+      }
+
+      a {
+        transform: translateX(0);
+        opacity: 1;
+      }
+    }
+  }
+
+  @include screen($breakpoint-medium - 1, $breakpoint-large) {
+    font-size: 14px;
+  }
+
   @include min-screen($breakpoint-medium) {
     ul {
       display: flex;
       flex-direction: row;
       justify-content: space-between;
+    }
+  }
+}
 
-      a {
+.navigation-trigger {
+  position: relative;
+  width: 50px;
+  height: 50px;
 
+  span {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 30px;
+    height: 4px;
+    background: black;
+    border-radius: 10px;
+    transition: .2s ease transform;
+
+    &:first-child {
+      margin-top: -10px;
+      transform-origin: top left;
+    }
+    &:last-child {
+      margin-top: 10px;
+      transform-origin: bottom left;
+    }
+  }
+  
+  @include max-screen($breakpoint-tiny - 1) {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+  @include min-screen($breakpoint-medium) {
+    display: none;
+  }
+  
+  .is-active & {
+    span {
+      &:first-child {
+        transform: translate(-50%, -50%) rotate(45deg);
+        
+        + span {
+          display: none;
+        }
+      }
+      &:last-child {
+        transform: translate(-50%, -50%) rotate(-45deg);
       }
     }
   }

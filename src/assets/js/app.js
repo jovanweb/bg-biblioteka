@@ -20,7 +20,7 @@ $(document).ready(() => {
       slidesToShow: 5,
       slidesToScroll: 1,
       autoplay: true,
-      autoplaySpeed: 3000,
+      autoplaySpeed: 30000,
       prevArrow: $('.navigation-slider-arrows .slick-prev'),
       nextArrow: $('.navigation-slider-arrows .slick-next'),
       responsive: [
@@ -39,7 +39,7 @@ $(document).ready(() => {
           }
         },
         {
-          breakpoint: 480,
+          breakpoint: 550,
           settings: {
             arrows: true,
             slidesToShow: 2

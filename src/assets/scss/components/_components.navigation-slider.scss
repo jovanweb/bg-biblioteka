@@ -5,30 +5,55 @@
     @include min-screen($breakpoint-medium) {
         padding: 20px 50px;
     }
-
+    
     .slick-prev, .slick-next {
-    position: absolute;
-    top: 50%;
-    left: 30px;
-    transform: translateY(-50%);
+        position: absolute;
+        top: 50%;
+        left: 10px;
+        transform: translateY(-50%);
+        color: $color-peach;
+        width: 50px;
+        height: 50px;
+        
+        svg {
+            height: 26px;
+            width: 50px;
+        }
     }
-
+    
+    .slick-prev {
+        transform: translateY(-50%) scale(-1, 1);
+        
+    }
+    
     .slick-next {
         left: auto;
-        right: 30px;
+        right: 10px;
     }
 }
 
 .navigation-slider {
-
-    .slick-active {
-        text-align: center;
+    
+    .slick-slide {
         
         a {
-            padding: 0 20px;
             color: white;
+            font-size: 18px;
+            padding: 0 20px;
             display: block;
+            line-height: 1.2;
+            font-weight: 600;
+            text-align: center;
+
+            @include min-screen($breakpoint-medium) {
+                font-size: 25px;
+            }
         }
+    }
+
+    .slick-track {
+        display: flex;
+        align-items: center;
     }
 
     .slick-active:not(.slick-current) {
@@ -37,7 +62,10 @@
             content: "|";
             position: absolute;
             left: 0;
-            color: white;
+            top: 50%;
+            transform: translateY(-50%);
+            color: $color-peach;
+            font-size: 25px;
         }
     }
 }

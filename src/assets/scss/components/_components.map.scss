@@ -115,3 +115,17 @@
         font-size: 28px;
     }
 }
+
+.gm-style-iw.gm-style-iw-c {
+    border-radius: 0;
+    border: 1px solid #BCBCBC;
+}
+
+.gm-style-iw-t {
+    
+    &::after {
+        background: white;
+        border-left: 1px solid #BCBCBC;
+        border-bottom: 1px solid #BCBCBC;
+    }
+}

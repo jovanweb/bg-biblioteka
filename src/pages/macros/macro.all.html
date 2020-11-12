@@ -28,7 +28,21 @@
 {% endmacro %}
 
 {% macro titleLink(heading, title, href, arrow) %}
-  {% if heading %} <{{heading}} {% else %}<h2{% endif %} class="title-link"><a href="{{href}}">{{title}} {% if arrow %} => {% endif%}</a></{% if heading %} {{heading}} {% else %}h2{% endif %}>
+  {% if heading %} 
+    <{{heading}} class="title-link"><a href="{{href}}"> 
+  {% else %}
+    <h2 class="title-link"><a href="{{href}}">
+  {% endif %} 
+  {{title}}
+  {% if arrow %} 
+  {% include "../components/inline-svg/arrow.html" -%} 
+  {% endif%}
+  </a>
+  {% if heading %} 
+    </{{heading}}> 
+  {% else %}
+    </h2>
+  {% endif %}
 {% endmacro %}
 
 {% macro socialIcon(href, icon) %}

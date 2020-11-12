@@ -41,10 +41,10 @@
 
 .footer-main__heading {
   color: $color-peach;
-  font-size: 36px;
+  font-size: 32px;
   margin-bottom: 30px;
   
-  @include min-screen($breakpoint-medium) {
+  @include min-screen($breakpoint-large) {
     font-size: 50px;
     margin-bottom: 40px;
   }

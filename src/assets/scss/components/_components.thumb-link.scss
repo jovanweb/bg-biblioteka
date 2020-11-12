@@ -1,0 +1,47 @@
+.thumb-link {
+    p    {
+        font-size: 20px;
+        color: $color-black;
+        text-align: center;
+        font-weight: 500;
+    }
+
+    @include min-screen($breakpoint-medium) {
+        
+        p {
+            font-size: 30px;
+        }
+    }
+    
+}
+
+.thumb-img-wrapper {
+
+    > div:last-child() {
+
+        .thumb-link__img {
+            margin-bottom: 0;
+        }
+
+    }
+
+    @include min-screen($breakpoint-tiny) {
+
+        > div:nth-last-child(-n+2) {
+            
+            .thumb-link__img {
+                margin-bottom: 0;
+            }
+        }
+
+    }
+    
+    .thumb-link__img {
+        display: block;
+        margin-bottom: 40px;
+        
+        @include min-screen($breakpoint-medium) {
+            margin-bottom: 80px;
+        }
+    }
+}

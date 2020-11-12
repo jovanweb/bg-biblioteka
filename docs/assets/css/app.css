@@ -918,6 +918,12 @@ fieldset {
 img {
   max-width: 100%; }
 
+section {
+  padding: 40px 0; }
+  @media screen and (min-width: 1024px) {
+    section {
+      padding: 80px 0; } }
+
 /* ------------------------------------*\
     #HEADINGS
 \*------------------------------------ */
@@ -1450,9 +1456,9 @@ a {
 
 .footer-main__heading {
   color: #F26475;
-  font-size: 36px;
+  font-size: 32px;
   margin-bottom: 30px; }
-  @media screen and (min-width: 1024px) {
+  @media screen and (min-width: 1216px) {
     .footer-main__heading {
       font-size: 50px;
       margin-bottom: 40px; } }
@@ -1824,6 +1830,72 @@ a {
   @media screen and (min-width: 768px) {
     .library__note {
       margin-top: 50px; } }
+
+.thumb-link p {
+  font-size: 20px;
+  color: #000;
+  text-align: center;
+  font-weight: 500; }
+
+@media screen and (min-width: 1024px) {
+  .thumb-link p {
+    font-size: 30px; } }
+
+.thumb-img-wrapper > div:last-child .thumb-link__img {
+  margin-bottom: 0; }
+
+@media screen and (min-width: 480px) {
+  .thumb-img-wrapper > div:nth-last-child(-n+2) .thumb-link__img {
+    margin-bottom: 0; } }
+
+.thumb-img-wrapper .thumb-link__img {
+  display: block;
+  margin-bottom: 40px; }
+  @media screen and (min-width: 1024px) {
+    .thumb-img-wrapper .thumb-link__img {
+      margin-bottom: 80px; } }
+
+.event {
+  margin-bottom: 40px; }
+  @media screen and (min-width: 1024px) {
+    .event {
+      margin-bottom: 80px; } }
+
+.event__date {
+  font-size: 20px;
+  line-height: 1.2;
+  margin-bottom: 10px;
+  display: block; }
+  @media screen and (min-width: 1024px) {
+    .event__date {
+      font-size: 30px; } }
+
+.event__title {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 10px; }
+  @media screen and (min-width: 1024px) {
+    .event__title {
+      font-size: 28px; } }
+
+.event__location {
+  font-size: 16px;
+  line-height: 1.33; }
+  @media screen and (min-width: 1024px) {
+    .event__location {
+      font-size: 24px; } }
+
+.event-wrapper .title-link {
+  font-size: 32px;
+  color: #F26475;
+  margin-bottom: 30px; }
+  @media screen and (min-width: 1024px) {
+    .event-wrapper .title-link {
+      margin-bottom: 60px;
+      font-size: 40px; } }
+  .event-wrapper .title-link svg {
+    width: 39px;
+    height: 20px; }
 
 .map-section {
   display: flex;

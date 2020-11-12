@@ -22,7 +22,7 @@ $(document).ready(function () {
     slidesToShow: 5,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 30000,
+    autoplaySpeed: 3000,
     prevArrow: $('.navigation-slider-arrows .slick-prev'),
     nextArrow: $('.navigation-slider-arrows .slick-next'),
     responsive: [{

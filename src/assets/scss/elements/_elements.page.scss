@@ -35,3 +35,11 @@ fieldset {
 img {
   max-width: 100%;
 }
+
+section {
+  padding: 40px 0;
+  
+  @include min-screen($breakpoint-medium) {
+    padding: 80px 0;
+  }
+}

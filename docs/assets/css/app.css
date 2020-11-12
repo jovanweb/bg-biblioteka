@@ -933,14 +933,14 @@ h6 > a {
     #link
 \*------------------------------------ */
 a {
-  color: #000;
+  color: #F26475;
   transition: color .15s ease;
   text-decoration: none; }
   a:hover {
-    color: black; }
+    color: #dd132b; }
   a:focus, a:active {
     outline: none;
-    color: black; }
+    color: #dd132b; }
 
 /* Slider */
 .slick-slider {
@@ -1036,6 +1036,65 @@ a {
 @media screen and (min-width: 1216px) {
   .wrapper--large {
     max-width: calc(1750px + (20px * 2)); } }
+
+/*------------------------------------*\
+    #FLEXBOX
+\*------------------------------------*/
+.o-flex {
+  display: flex; }
+
+.o-flex--column {
+  flex-direction: column; }
+
+.o-flex--wrap {
+  flex-wrap: wrap; }
+
+.o-flex--no-wrap {
+  flex-wrap: nowrap; }
+
+.o-flex--center {
+  align-items: center; }
+
+.o-flex--baseline {
+  align-items: baseline; }
+
+.o-flex--stretch {
+  align-items: stretch; }
+
+.o-flex--start {
+  align-items: flex-start; }
+
+.o-flex--end {
+  align-items: flex-end; }
+
+.o-flex--justify {
+  justify-content: space-between; }
+
+.o-flex--justify-around {
+  justify-content: space-around; }
+
+.o-flex--right {
+  justify-content: flex-end; }
+
+.o-flex--auto {
+  flex: 1 1 auto;
+  min-width: 0;
+  min-height: 0; }
+
+.o-flex--grow {
+  flex: 1 0 auto; }
+
+.o-flex--none {
+  flex: none; }
+
+.o-flex--first {
+  order: -1; }
+
+.o-flex--last {
+  order: 99999; }
+
+.o-flex-full {
+  flex: 1; }
 
 .preloader {
   position: fixed;
@@ -1724,17 +1783,48 @@ a {
   .map-places li {
     cursor: pointer;
     display: inline-block;
-    padding: 10px 20px; }
+    padding: 10px 20px;
+    word-break: break-word; }
     @media screen and (min-width: 480px) {
       .map-places li {
         display: block;
         padding: 0;
         margin-bottom: 20px; } }
+    @media screen and (min-width: 1024px) {
+      .map-places li {
+        font-size: 28px; } }
 
 .map-marker-info {
-  padding: 20px; }
+  padding: 20px;
+  font-family: "PT Sans", sans-serif; }
+  .map-marker-info h2 {
+    font-size: 26px;
+    font-family: "PT Sans", sans-serif; }
+    @media screen and (min-width: 1024px) {
+      .map-marker-info h2 {
+        font-size: 46px; } }
   .map-marker-info img {
     max-width: 100%; }
+  .map-marker-info a svg {
+    width: 35px;
+    height: auto; }
+
+.map-marker-info__address {
+  font-size: 14px; }
+  @media screen and (min-width: 1024px) {
+    .map-marker-info__address {
+      font-size: 24px; } }
+
+.map-marker-info__content {
+  font-size: 18px; }
+  .map-marker-info__content p {
+    margin-bottom: 0; }
+  @media screen and (min-width: 1024px) {
+    .map-marker-info__content {
+      font-size: 28px; } }
+
+.full-height {
+  height: 100% !important; }
 
 /* ------------------------------------*\
     #TRUMPS - SPACING

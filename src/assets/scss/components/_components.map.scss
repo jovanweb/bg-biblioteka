@@ -59,20 +59,59 @@
         cursor: pointer;
         display: inline-block;
         padding: 10px 20px;
+        word-break: break-word;
         
         @include min-screen($breakpoint-tiny) {
             display: block;
             padding: 0;
             margin-bottom: 20px;
         }
+
+        @include min-screen($breakpoint-medium) {
+            font-size: 28px;
+        }
     }
 }
 
 .map-marker-info {
     padding: 20px;
+    font-family: $second-font-family;
+    
+    h2 {
+        font-size: 26px;
+        font-family: $second-font-family;
+        @include min-screen($breakpoint-medium) {
+            font-size: 46px;
+        }
+    }
     
     img {
         max-width: 100%;
     }
 
+    a {
+        svg {
+            width: 35px;
+            height: auto;
+        }
+    }
+}
+
+.map-marker-info__address {
+    font-size: 14px;
+    @include min-screen($breakpoint-medium) {
+        font-size: 24px;
+    }
+}
+
+.map-marker-info__content {
+    font-size: 18px;
+
+    p {
+        margin-bottom: 0;
+    }
+
+    @include min-screen($breakpoint-medium) {
+        font-size: 28px;
+    }
 }

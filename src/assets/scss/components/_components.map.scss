@@ -50,6 +50,7 @@
 .map-places {
     text-align: center;
     @include min-screen($breakpoint-tiny) {
+        padding-left: 20px;
         min-width: 150px;
         width: 20%;
         text-align: left;
@@ -63,8 +64,6 @@
         
         @include min-screen($breakpoint-tiny) {
             display: block;
-            padding: 0;
-            margin-bottom: 20px;
         }
 
         @include min-screen($breakpoint-medium) {

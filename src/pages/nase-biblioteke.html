@@ -8,16 +8,16 @@
 {% include "./components/header/header.html" -%}
 
 <main>
-  <div class="wrapper">
-    {% include "./components/map.html" -%}
+  {% include "./components/map.html" -%}
+  <div class="wrapper wrapper--large">
     <article class="library">
-      <div class="wrapper">
+      <div class="library__wrapper">
         <div class="library__img">
           <img src="assets/images/libraries/img1.jpg" alt="">
         </div>
         <div class="library__content">
           <h2>Централна билбиотека</h2>
-  
+
           <div bp="grid">
             <div bp="4@md">
               <p>Радни дан: 8 - 20</p>
@@ -36,13 +36,13 @@
       </div>
     </article> 
     <article class="library">
-      <div class="wrapper">
+      <div class="library__wrapper">
         <div class="library__img">
           <!-- <img src="assets/images/libraries/img1.jpg" alt=""> -->
         </div>
         <div class="library__content">
           <h2>Завичајно одељење</h2>
-  
+          
           <div bp="grid">
             <div bp="4@md">
               <p>Радни дан: 8 - 20</p>
@@ -59,9 +59,13 @@
           </div>
         </div>
       </div>
+      <div class="library__note">
+        Напомена: Укупно 5 огранака
+      </div>
     </article> 
     <article class="library">
-      <div class="wrapper">
+      <div class="library__wrapper">
+
         <div class="library__img">
           <!-- <img src="assets/images/libraries/img1.jpg" alt=""> -->
         </div>
@@ -117,7 +121,7 @@
       </div>
     </article> 
     <article class="library">
-      <div class="wrapper">
+      <div class="library__wrapper">
         <div class="library__img">
           <!-- <img src="assets/images/libraries/img1.jpg" alt=""> -->
         </div>
@@ -137,6 +141,9 @@
             </div>
           </div>
         </div>
+      </div>
+      <div class="library__note">
+        Напомена: Укупно 5 огранака
       </div>
     </article> 
 

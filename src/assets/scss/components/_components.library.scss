@@ -1,24 +1,37 @@
 
 .library {
-    .wrapper {
-        display: flex;
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #666666;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+    @include min-screen($breakpoint-small) {
+        padding-bottom: 40px;
+        margin-bottom: 50px;
+    }
+}
+.library__wrapper {
+    display: flex;
+    align-items: flex-start;
+    
+    @include min-screen($breakpoint-medium) {
         align-items: center;
     }
 }
 
 .library__img {
-    width: 100px;
+    flex: 0 0 100px;
     height: 100px;
     border-radius: 50%;
     overflow: hidden;
     border: 1px solid #000;
     margin-right: 50px;
-    flex: 0 0 100px;
     
-    @include min-screen($breakpoint-small) {
-        flex: 0 0 220px;
-        width: 220px;
-        height: 220px;
+    @include min-screen($breakpoint-large) {
+        flex: 0 0 280px;
+        height: 280px;
     }
 
     img {
@@ -30,4 +43,28 @@
 
 .library__content {
     flex: 1;
+    font-size: 18px;
+    
+    @include min-screen($breakpoint-large) {
+        font-size: 28px;
+    }
+    
+    h2 {
+        color: $color-peach;
+        font-size: 30px;
+        margin-bottom: 30px;
+        
+        @include min-screen($breakpoint-small) {
+            margin-bottom: 60px;
+            font-size: 40px;
+        }
+    }
+}
+
+
+.library__note {
+    margin-top: 20px;
+    @include min-screen($breakpoint-small) {
+        margin-top: 50px;
+    }
 }

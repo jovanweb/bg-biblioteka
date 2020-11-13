@@ -1897,6 +1897,20 @@ a {
     width: 39px;
     height: 20px; }
 
+.project {
+  display: flex;
+  align-items: center; }
+
+.project__img {
+  border: 1px solid #000;
+  border-radius: 5px;
+  background-size: cover;
+  background-position: 50% 50%;
+  height: 131px;
+  width: 234px; }
+  .project__img img {
+    display: none; }
+
 .map-section {
   display: flex;
   flex-direction: column;

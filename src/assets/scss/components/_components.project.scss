@@ -1,0 +1,24 @@
+.project {
+    display: flex;
+    align-items: center;
+
+    @include min-screen($breakpoint-medium) {
+    }
+}
+
+.project__img {
+    border: 1px solid $color-black;
+    border-radius: 5px;
+    background-size: cover;
+    background-position: 50% 50%;
+    height: 131px;
+    width: 234px;
+    
+    img {
+        display: none;
+    }
+}
+
+
+
+

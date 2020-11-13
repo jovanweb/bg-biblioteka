@@ -64,24 +64,28 @@
   </article>
   {% endmacro %}
 
-  {% macro exhibition(imgSrc, title, icon, authorTitle, authorText, designTitle, designText, info) %}
+  {% macro exhibition(imgSrc, title, authorTitle, authorText, designTitle, designText, info) %}
   <article class="exhibition">
-    <div class="exhibition__img" style="background-image: url('assets/images/{{ imgSrc }}')"><img src="assets/images/{{ imgSrc }}" alt=""></div>
-    <div class="exhibition__content-wrap">
-
-      <h2 class="exhibition__title">{{title}}</h2>
-      <a href="{{href}}" class="social-icon"><img src="assets/images/{{icon}}" alt=""></a>
-
-      <div class="exhibition__content">
-        <div class="exhibition__content-author">
+    <div class="exhibition__img"><img src="assets/images/{{ imgSrc }}" alt=""></div>
+    <div class="exhibition__content">
+      <div>
+          <h2 class="exhibition__title">{{title}}</h2>
+          <div class="social">
+            <a href="{{href}}" class="social-icon"><img src="assets/images/fb-podeli-01.svg" alt=""></a>
+            <a href="{{href}}" class="social-icon"><img src="assets/images/fb-svidjanje.svg" alt=""></a>
+            <a href="{{href}}" class="social-icon"><img src="assets/images/twitter-podeli.svg" alt=""></a>
+          </div>
+      </div>
+      <div>
+        <div class="exhibition__author">
           <h3>{{authorTitle}}</h3>
           <p>{{authorText}}</p>
         </div>
-        <div class="exhibition__content-design">
+        <div class="exhibition__design">
           <h3>{{designTitle}}</h3>
           <p>{{designText}}</p>
         </div>
-        <div class="exhibition__content-info">
+        <div class="exhibition__info">
           <p>{{info}}</p>
         </div>
       </div>

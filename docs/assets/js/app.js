@@ -2,19 +2,19 @@
 "use strict";
 
 // ON DOCUMENT READY
-$(window).on('load', function () {
-  $('.js-preloader').fadeOut('slow');
+$(window).on("load", function () {
+  $(".js-preloader").fadeOut("slow");
 });
 $(document).ready(function () {
-  $('.js-main-slider') && $('.js-main-slider').slick({
-    prevArrow: $('.main-slider-arrows .slick-prev'),
-    nextArrow: $('.main-slider-arrows .slick-next'),
+  $(".js-main-slider") && $(".js-main-slider").slick({
+    prevArrow: $(".main-slider-arrows .slick-prev"),
+    nextArrow: $(".main-slider-arrows .slick-next"),
     autoplay: true,
     autoplaySpeed: 5000,
     speed: 300,
     infinite: true
   });
-  $('.js-navigation-slider') && $('.js-navigation-slider').slick({
+  $(".js-navigation-slider") && $(".js-navigation-slider").slick({
     // dots: false,
     infinite: true,
     // arrows: true,
@@ -23,8 +23,8 @@ $(document).ready(function () {
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 3000,
-    prevArrow: $('.navigation-slider-arrows .slick-prev'),
-    nextArrow: $('.navigation-slider-arrows .slick-next'),
+    prevArrow: $(".navigation-slider-arrows .slick-prev"),
+    nextArrow: $(".navigation-slider-arrows .slick-next"),
     responsive: [{
       breakpoint: 780,
       settings: {
@@ -53,31 +53,52 @@ $(document).ready(function () {
     // settings: "unslick"
     // instead of a settings object
     ]
+  }); // SCROLL PAGE FOR ALL TARGET LINKS (SMOOTH SCROLL)
+
+  $(".sub-navigation__item a").smoothScroll({
+    offset: 0,
+    // one of 'top' or 'left'
+    direction: "top",
+    // only use if you want to override default behavior
+    scrollTarget: null,
+    // fn(opts) function to be called before scrolling occurs.
+    // `this` is the element(s) being scrolled
+    beforeScroll: function beforeScroll() {},
+    // fn(opts) function to be called after scrolling occurs.
+    // `this` is the triggering element
+    afterScroll: function afterScroll() {},
+    speed: 600,
+    easing: "easeInOutExpo",
+    // coefficient for "auto" speed
+    autoCoefficent: 1,
+    // $.fn.smoothScroll only: whether to prevent the default click action
+    preventDefault: true
+  }); // END SCROLL PAGE
+
+  var navigation = $(".js-nav-main");
+  $(".js-navigation-trigger").on("click", function () {
+    navigation.stop().toggleClass("is-active");
   });
-  var navigation = $('.js-nav-main');
-  $('.js-navigation-trigger').on('click', function () {
-    navigation.stop().toggleClass('is-active');
-  });
-  navigation.on('click', function () {
-    navigation.removeClass('is-active');
+  navigation.on("click", function () {
+    navigation.removeClass("is-active");
   });
 
-  if ($('#map').length) {
-    var markers = [[$('#marker1'), 44.814357, 20.397957], [$('#marker2'), 44.804140, 20.461326], [$('#marker3'), 44.778598, 20.462889], [$('#marker4'), 44.789598, 20.492889]];
+  if ($("#map").length) {
+    var markers = [[$("#marker1"), 44.814357, 20.397957], [$("#marker2"), 44.80414, 20.461326], [$("#marker3"), 44.778598, 20.462889], [$("#marker4"), 44.789598, 20.492889]];
 
     var initializeMap = function initializeMap() {
       var center = {
         lat: 44.7978649,
         lng: 20.4512446
       },
-          map = new google.maps.Map(document.getElementById('map'), {
+          map = new google.maps.Map(document.getElementById("map"), {
         disableDefaultUI: false,
         center: center,
         zoom: 5
       });
       var Markers = [];
       var iconNormal = {
-        url: 'assets/images/map/marker.png',
+        url: "assets/images/map/marker.png",
         size: new google.maps.Size(33, 44)
       },
           // iconSelected = 'https://webdesign.danols.com/static/template/images/icons/light/pin_map_icon&48.png',
@@ -109,7 +130,7 @@ $(document).ready(function () {
           // }
           // choose from list
 
-          $('.map-places li').on('click', function () {
+          $(".map-places li").on("click", function () {
             var mapItem = $(this).index();
             changeMarker(mapItem);
             var thisLat = markers[mapItem][1],
@@ -126,7 +147,7 @@ $(document).ready(function () {
             }
           }
 
-          google.maps.event.addListener(eachMarker, 'click', function (eachMarker, i) {
+          google.maps.event.addListener(eachMarker, "click", function (eachMarker, i) {
             return function () {
               infowindow.setContent(markers[i][0].prop("innerHTML"));
               infowindow.open(map, eachMarker);
@@ -145,7 +166,7 @@ $(document).ready(function () {
       setMarkers(map);
     };
 
-    google.maps.event.addDomListener(window, 'load', initializeMap);
+    google.maps.event.addDomListener(window, "load", initializeMap);
   }
 });
 

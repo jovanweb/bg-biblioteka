@@ -1989,6 +1989,34 @@ a {
   border-left: 1px solid #BCBCBC;
   border-bottom: 1px solid #BCBCBC; }
 
+.sub-navigation {
+  position: -webkit-sticky;
+  /* Safari */
+  position: sticky;
+  top: 0;
+  background-color: white; }
+  .sub-navigation ul {
+    margin-bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+
+.sub-navigation__item a {
+  display: block;
+  position: relative;
+  padding: 10px 30px;
+  color: #000; }
+  .sub-navigation__item a::before {
+    content: "|";
+    color: #F26475;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%); }
+
+.sub-navigation__item:first-child a::before {
+  display: none; }
+
 .full-height {
   height: 100% !important; }
 

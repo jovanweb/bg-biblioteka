@@ -16,7 +16,7 @@
   <a href="{{ href }}" class="thumb-link">
     <p class="thumb-link__text">{{ text }}</p>
     <img class="thumb-link__img" src="assets/images/{{ imgSrc }}" alt="">
-  </a> 
+  </a>
 {% endmacro %}
 
 {% macro event(time, title, location) %}
@@ -24,22 +24,22 @@
     <time class="event__date">{{ time }}</time>
     <h3 class="event__title">{{title}}</h3>
     <p class="event__location">{{location}}</p>
-  </article> 
+  </article>
 {% endmacro %}
 
 {% macro titleLink(heading, title, href, arrow) %}
-  {% if heading %} 
-    <{{heading}} class="title-link"><a href="{{href}}"> 
+  {% if heading %}
+    <{{heading}} class="title-link"><a href="{{href}}">
   {% else %}
     <h2 class="title-link"><a href="{{href}}">
-  {% endif %} 
+  {% endif %}
   {{title}}
-  {% if arrow %} 
-  {% include "../components/inline-svg/arrow.html" -%} 
+  {% if arrow %}
+  {% include "../components/inline-svg/arrow.html" -%}
   {% endif%}
   </a>
-  {% if heading %} 
-    </{{heading}}> 
+  {% if heading %}
+    </{{heading}}>
   {% else %}
     </h2>
   {% endif %}
@@ -48,22 +48,22 @@
 {% macro socialIcon(href, icon) %}
   <a href="{{href}}" class="social-icon"><img src="assets/images/{{icon}}" alt=""></a>
   {% endmacro %}
-  
+
   {% macro event(time, title, location) %}
   <article class="event">
     <time class="event__date">{{ time }}</time>
     <h3 class="event__title">{{title}}</h3>
     <p class="event__location">{{location}}</p>
-  </article> 
+  </article>
   {% endmacro %}
-  
+
   {% macro project(imgSrc, title) %}
   <article class="project">
     <div class="project__img" style="background-image: url('assets/images/{{ imgSrc }}')"><img src="assets/images/{{ imgSrc }}" alt=""></div>
     <h2 class="project__title">{{title}}</h2>
-  </article> 
+  </article>
   {% endmacro %}
-  
+
   {% macro exhibition(imgSrc, title, authorTitle, authorText, designTitle, designText, info) %}
   <article class="exhibition">
     <div class="exhibition__img"><img src="assets/images/{{ imgSrc }}" alt=""></div>
@@ -90,7 +90,52 @@
         </div>
       </div>
     </div>
-  </article> 
+  </article>
+{% endmacro %}
+
+
+{% macro membershipsItem(imgSrc, title, tooltipPosition) %}
+<article class="memberships__item tooltip-trigger">
+  <img src="assets/images/{{imgSrc}}" alt="" class="memberships__item-img">
+  <h3 class="memberships__item-title">{{title}}</h3>
+
+  <div class="memberships__item-tooltip tooltip tooltip--{{tooltipPosition}}">
+    <h3>
+      Бесплатно учлањење
+    </h3>
+    <ul class="list list--dotted">
+      <li>
+        деца предшколског узраста
+      </li>
+      <li>
+        ученици првог разреда основне школе
+      </li>
+      <li>
+        добровољни даваоци крви
+      </li>
+      <li>
+        особе са инвалидитетом и посебним потребама
+      </li>
+      <li>
+        особе старије од 65 година
+      </li>
+    </ul>
+    <h4>
+      За упис је потребно донети следеће:
+    </h4>
+    <ul class="list list--arrow">
+      <li>
+        150,00 динара (трошкови штампе)
+      </li>
+      <li>
+        фотографију 3,5 х 3 cm
+      </li>
+      <li>
+        личну карту или пасош
+      </li>
+    </ul>
+  </div>
+</article>
 {% endmacro %}
 
 {% macro exhibitions(imgSrc, title, year) %}

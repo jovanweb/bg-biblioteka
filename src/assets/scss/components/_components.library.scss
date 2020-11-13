@@ -5,6 +5,7 @@
 
   &:last-child {
     margin-bottom: 0;
+    border-bottom: none;
   }
   @include min-screen($breakpoint-small) {
     padding-bottom: 40px;

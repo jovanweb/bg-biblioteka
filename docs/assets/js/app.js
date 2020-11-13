@@ -701,7 +701,7 @@ $(document).ready(function () {
     ]
   });
   var subNavigationHeight = $(".sub-navigation").height();
-  new SmoothScroll('a[href*="#"]', (_ref = {
+  var scroll = new SmoothScroll('a[href*="#"]', (_ref = {
     speed: 500,
     speedAsDuration: true,
     offset: subNavigationHeight

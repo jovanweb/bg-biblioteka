@@ -1,0 +1,45 @@
+.memberships {
+  margin-bottom: 50px;
+
+  @include min-screen($breakpoint-small) {
+    margin-bottom: 100px;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.memberships__item {
+  flex: 1;
+
+  &:hover {
+    .memberships__item-title {
+      color: $color-peach;
+    }
+  }
+}
+
+.memberships__item-img {
+  margin-bottom: 10px;
+  max-width: 30%;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  @include min-screen($breakpoint-small) {
+    max-width: 100%;
+  }
+}
+
+.memberships__item-title {
+  text-align: center;
+}
+
+.memberships__item-tooltip {
+  width: 300px;
+
+  @include min-screen($breakpoint-tiny) {
+    width: 400px;
+  }
+  @include min-screen($breakpoint-small) {
+    width: 500px;
+  }
+}

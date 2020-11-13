@@ -1,0 +1,64 @@
+.tooltip-trigger {
+  position: relative;
+
+  &:hover {
+    .tooltip {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+}
+
+.tooltip {
+  transition: all 0.15s ease;
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 30px;
+  background-color: white;
+  border: 1px solid $color-border;
+  padding: 20px;
+  z-index: 10;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+    border: 1px solid $color-border;
+    border-left: none;
+    border-bottom: none;
+    background-color: white;
+  }
+}
+
+.tooltip--bottom-left {
+  @include min-screen($breakpoint-small) {
+    left: 30px;
+    transform: translateX(0);
+
+    &::before {
+      left: 70px;
+    }
+  }
+}
+
+.tooltip--bottom-right {
+  @include min-screen($breakpoint-small) {
+    left: auto;
+    right: 30px;
+    transform: translateX(0);
+
+    &::before {
+      left: auto;
+      right: 70px;
+      transform: translate(50%, -50%) rotate(-45deg);
+    }
+  }
+}

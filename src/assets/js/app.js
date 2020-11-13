@@ -63,34 +63,13 @@ $(document).ready(() => {
 
   const subNavigationHeight = $(".sub-navigation").height();
 
-  let scroll = new SmoothScroll('a[href*="#"]', {
+  new SmoothScroll('a[href*="#"]', {
     speed: 500,
     speedAsDuration: true,
     offset: subNavigationHeight,
     speed: 300,
     easing: "easeInOutExpo",
   });
-  // // SCROLL PAGE FOR ALL TARGET LINKS (SMOOTH SCROLL)
-  // $(".sub-navigation__item a").smoothScroll({
-  //   offset: 100,
-  //   // one of 'top' or 'left'
-  //   direction: "top",
-  //   // only use if you want to override default behavior
-  //   scrollTarget: null,
-  //   // fn(opts) function to be called before scrolling occurs.
-  //   // `this` is the element(s) being scrolled
-  //   beforeScroll: function () {},
-  //   // fn(opts) function to be called after scrolling occurs.
-  //   // `this` is the triggering element
-  //   afterScroll: function () {},
-  //   speed: 600,
-  //   easing: "easeInOutExpo",
-  //   // coefficient for "auto" speed
-  //   autoCoefficent: 1,
-  //   // $.fn.smoothScroll only: whether to prevent the default click action
-  //   preventDefault: true,
-  // });
-  // // END SCROLL PAGE
 
   const navigation = $(".js-nav-main");
   $(".js-navigation-trigger").on("click", function () {

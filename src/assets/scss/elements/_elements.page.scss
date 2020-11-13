@@ -2,7 +2,6 @@
     #PAGE
 \*------------------------------------ */
 
-
 html {
   min-height: 100vh;
   color: $color-text;
@@ -38,8 +37,15 @@ img {
 
 section {
   padding: 40px 0;
-  
+
   @include min-screen($breakpoint-medium) {
     padding: 80px 0;
+  }
+}
+
+.guide {
+  section {
+    padding-top: 40px;
+    padding-bottom: 40px;
   }
 }

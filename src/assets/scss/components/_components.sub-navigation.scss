@@ -6,9 +6,13 @@
 
   ul {
     margin-bottom: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+
+    @include min-screen($breakpoint-small) {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: nowrap;
+    }
   }
 }
 
@@ -16,16 +20,23 @@
   a {
     display: block;
     position: relative;
-    padding: 10px 30px;
+    padding: 10px;
     color: $color-black;
+    font-size: 14px;
 
-    &::before {
-      content: "|";
-      color: $color-peach;
-      position: absolute;
-      left: 0;
-      top: 50%;
-      transform: translateY(-50%);
+    @include min-screen($breakpoint-small) {
+      padding: 20px 30px;
+      &::before {
+        content: "|";
+        color: $color-peach;
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+    @include min-screen($breakpoint-medium) {
+      font-size: 18px;
     }
   }
 

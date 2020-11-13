@@ -1961,7 +1961,67 @@ a {
       font-size: 22px; } }
 
 .exhibition {
-  display: flex; }
+  display: flex;
+  flex-direction: column;
+  padding-top: 40px; }
+  @media screen and (min-width: 768px) {
+    .exhibition {
+      flex-direction: row;
+      padding-top: 60px; } }
+
+.exhibition__img {
+  max-width: 30%; }
+  .exhibition__img img {
+    margin-bottom: 20px; }
+    @media screen and (min-width: 768px) {
+      .exhibition__img img {
+        margin-bottom: 0; } }
+
+.exhibition__content {
+  flex: 1;
+  line-height: 1.2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; }
+  .exhibition__content .social-icon {
+    margin-bottom: 20px;
+    display: inline-block; }
+  .exhibition__content h2 {
+    font-size: 30px; }
+  .exhibition__content p {
+    font-weight: 500; }
+  .exhibition__content h3,
+  .exhibition__content p {
+    font-size: 18px;
+    line-height: 1.3;
+    margin-bottom: 0; }
+  @media screen and (min-width: 768px) {
+    .exhibition__content {
+      padding-left: 40px; } }
+  @media screen and (min-width: 1024px) {
+    .exhibition__content {
+      padding-left: 90px; }
+      .exhibition__content h2 {
+        font-size: 50px; }
+      .exhibition__content h3,
+      .exhibition__content p {
+        font-size: 24px; } }
+
+.exhibition__author,
+.exhibition__design {
+  margin-bottom: 20px; }
+  @media screen and (min-width: 1024px) {
+    .exhibition__author,
+    .exhibition__design {
+      margin-bottom: 35px; } }
+
+.exhibition-details p {
+  font-size: 18px;
+  line-height: 1.3; }
+  @media screen and (min-width: 1024px) {
+    .exhibition-details p {
+      font-size: 24px;
+      margin-bottom: 40px; } }
 
 .map-section {
   display: flex;

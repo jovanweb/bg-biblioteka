@@ -1904,17 +1904,64 @@ a {
 
 .project {
   display: flex;
-  align-items: center; }
+  align-items: center;
+  flex-direction: column;
+  padding: 40px 0 40px 10px;
+  border-bottom: 1px solid #000; }
+  @media screen and (min-width: 768px) {
+    .project {
+      flex-direction: row; } }
+  @media screen and (min-width: 1024px) {
+    .project {
+      padding: 100px 0 100px 20px; } }
 
 .project__img {
   border: 1px solid #000;
   border-radius: 5px;
-  background-size: cover;
+  background-repeat: no-repeat;
+  background-size: auto;
   background-position: 50% 50%;
   height: 131px;
-  width: 234px; }
+  width: 234px;
+  margin-bottom: 15px; }
   .project__img img {
     display: none; }
+  @media screen and (min-width: 768px) {
+    .project__img {
+      flex: 0 0 234px;
+      margin-bottom: 0; } }
+  @media screen and (min-width: 1024px) {
+    .project__img {
+      margin-bottom: 0; } }
+
+.project__title {
+  font-size: 20px;
+  line-height: 1.4;
+  text-align: center;
+  padding-left: 40px;
+  margin-bottom: 0; }
+  @media screen and (min-width: 768px) {
+    .project__title {
+      text-align: left; } }
+  @media screen and (min-width: 1024px) {
+    .project__title {
+      padding-left: 90px;
+      font-size: 35px; } }
+
+.all-projects a {
+  font-size: 18px;
+  line-height: 1.2;
+  color: #F26475; }
+  .all-projects a svg {
+    width: 25px;
+    height: 15px;
+    transform: rotate(90deg); }
+  @media screen and (min-width: 1024px) {
+    .all-projects a {
+      font-size: 22px; } }
+
+.exhibition {
+  display: flex; }
 
 .map-section {
   display: flex;

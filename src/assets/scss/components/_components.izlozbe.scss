@@ -1,0 +1,11 @@
+.exhibition {
+    display: flex;
+        @include min-screen($breakpoint-medium) {
+    }
+}
+
+
+
+
+
+

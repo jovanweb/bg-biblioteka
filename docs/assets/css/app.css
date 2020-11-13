@@ -1955,6 +1955,9 @@ a {
     .all-projects a {
       font-size: 22px; } }
 
+.exhibition {
+  display: flex; }
+
 .map-section {
   display: flex;
   flex-direction: column;

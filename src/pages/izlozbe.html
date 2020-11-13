@@ -9,45 +9,25 @@
 
 <main>
   <div class="wrapper wrapper--large">
-    <article class="exhibition">
-      <div class="exhibition__img"><img src="assets/images/exhibition-img.jpg" alt=""></div>
-      <div class="exhibition__content">
-        <div>
-            <h2 class="exhibition__title">Данило Киш: 1935-1989</h2>
-            <div class="social">
-              <a href="{{href}}" class="social-icon"><img src="assets/images/fb-podeli-01.svg" alt=""></a>
-              <a href="{{href}}" class="social-icon"><img src="assets/images/fb-svidjanje.svg" alt=""></a>
-              <a href="{{href}}" class="social-icon"><img src="assets/images/twitter-podeli.svg" alt=""></a>
-            </div>
-        </div>
-        <div>
-          <div class="exhibition__author">
-            <h3>Аутор изложбе:</h3>
-            <p>Олга Красић Марјановић</p>
-          </div>
-          <div class="exhibition__design">
-            <h3>Дизајн изложбе:</h3>
-            <p>Снежана Рајковић</p>
-          </div>
-          <div class="exhibition__info">
-            <p>Изложба је приређена поводом 70-годишњице рођења Данила Киша</p>
-          </div>
-        </div>
-      </div>
-    </article> 
     <section class="exhibition-details">
       <p>
-        Изложба обухвата готово све пишчеве важније периоде живота: од Суботице и Новог Сада, преко Мађарске, Цетиња и Београда, до Лила, Бордоа и Париза. Напостерима су представљени и рукописна грађа, страна издања, важнији текстови и издања, као и бројне фотографије.
-      </p>
-
-      <p>
-        Изложба је наишла навелико интересовање јавности. Гостовала је на Цетињу у Централној народној библиотеци Ђурђе Црнојевић, у оквиру Будва града театра и у Галерији Централно еропског института у Будимпешти.
-      </p>
-
-      <p>
-        Изложбу и пратећи каталог можете погледати <a href="">овде</a>
+        Библиотека града Београда приређује ауторске истраживачке изложбе посвећене нашим најпознатијим књижевницима и књижевним појавама. Изложбе су стручно осмишљене, атрактивно дизајниране и одштампане на великим постерима или паноима, са обимним пратећим каталозима. До сада су гостовале у готово свим градовима Србије и широм света. Могу се погледати и у електронском формату на нашој <a href="">дигиталној библиотеци</a>.
       </p>
     </section>
+    <div bp="grid" class="grid-gap--large@md grid-gap--medium@sm thumb-img-wrapper">
+        <div bp="3@lg 4@md 6@sm">
+            {{ allMacros.exhibitions('exhibition-img.jpg', 'Borisav Stanković', '(1876-1927-2007)') }}
+        </div>
+        <div bp="3@lg 4@md 6@sm">
+            {{ allMacros.exhibitions('editions-img.jpg',' Владан Десница:',  '1907-1967') }}
+        </div>
+        <div bp="3@lg 4@md 6@sm">
+            {{ allMacros.exhibitions('exhibition-img.jpg', 'Данило Киш: ', '1935-1989') }}
+        </div>
+        <div bp="3@lg 4@md 6@sm">
+            {{ allMacros.exhibitions('editions-img.jpg', 'Павић од Ш до А',  '') }}
+        </div>
+      </div>
   </div>
 </main>
 {% include "./components/footer/footer.html" -%}

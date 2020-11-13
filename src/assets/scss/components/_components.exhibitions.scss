@@ -1,0 +1,28 @@
+.exhibitions-article {
+    h2 {
+        margin-bottom: 0;
+    }
+
+    h2,
+    p {
+        font-size: 20px;
+        line-height: 1.2;
+
+        @include min-screen($breakpoint-medium) {
+            font-size: 30px;
+        }
+    }
+
+    @include min-screen($breakpoint-small) {
+    }
+}
+    
+.exhibitions__img {
+    margin-bottom: 20px;
+
+    img {
+        width: 100%;
+    }
+}
+
+

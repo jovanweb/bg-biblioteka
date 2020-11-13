@@ -92,3 +92,11 @@
     </div>
   </article> 
 {% endmacro %}
+
+{% macro exhibitions(imgSrc, title, year) %}
+  <article class="exhibitions-article">
+    <div class="exhibitions__img"><img src="assets/images/{{ imgSrc }}" alt=""></div>
+    <h2 class="exhibitions__title">{{title}}</h2>
+    <p>{{year}}</p>
+  </article> 
+  {% endmacro %}

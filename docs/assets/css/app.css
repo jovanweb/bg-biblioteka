@@ -1106,6 +1106,14 @@ a {
 .o-flex-full {
   flex: 1; }
 
+@media screen and (min-width: 1024px) {
+  .grid-gap--large\@md {
+    grid-gap: 90px; } }
+
+@media screen and (min-width: 768px) {
+  .grid-gap--medium\@sm {
+    grid-gap: 45px; } }
+
 .preloader {
   position: fixed;
   left: 0;
@@ -2022,6 +2030,23 @@ a {
     .exhibition-details p {
       font-size: 24px;
       margin-bottom: 40px; } }
+
+.exhibitions-article h2 {
+  margin-bottom: 0; }
+
+.exhibitions-article h2,
+.exhibitions-article p {
+  font-size: 20px;
+  line-height: 1.2; }
+  @media screen and (min-width: 1024px) {
+    .exhibitions-article h2,
+    .exhibitions-article p {
+      font-size: 30px; } }
+
+.exhibitions__img {
+  margin-bottom: 20px; }
+  .exhibitions__img img {
+    width: 100%; }
 
 .map-section {
   display: flex;

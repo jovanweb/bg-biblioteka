@@ -1,21 +1,72 @@
 .project {
     display: flex;
     align-items: center;
-
+    flex-direction: column;
+    padding: 40px 0 40px 10px;
+    border-bottom: 1px solid #000;
+    
+    @include min-screen($breakpoint-small) {
+        flex-direction: row;
+    }
+    
     @include min-screen($breakpoint-medium) {
+        padding: 100px 0 100px 20px;
     }
 }
 
 .project__img {
     border: 1px solid $color-black;
     border-radius: 5px;
-    background-size: cover;
+    background-repeat: no-repeat;
+    background-size: auto;
     background-position: 50% 50%;
     height: 131px;
     width: 234px;
-    
+    margin-bottom: 15px;
     img {
         display: none;
+    }
+    @include min-screen($breakpoint-small) {
+        flex: 0 0 234px;
+        margin-bottom: 0;
+    }
+    
+    @include min-screen($breakpoint-medium) {
+        margin-bottom: 0;
+    }
+}
+
+.project__title {
+    font-size: 20px;
+    line-height: 1.4;
+    text-align: center;
+    padding-left: 40px;
+    margin-bottom: 0;
+
+    @include min-screen($breakpoint-small) {
+        text-align: left;
+
+    }
+    @include min-screen($breakpoint-medium) {
+        padding-left: 90px;
+        font-size: 35px;
+    }
+}
+
+.all-projects {
+    a {
+        font-size: 18px;
+        line-height: 1.2;
+        color: $color-peach;
+        
+        svg {
+            width: 25px;
+            height: 15px;
+            transform: rotate(90deg);
+        }
+        @include min-screen($breakpoint-medium) {
+            font-size: 22px;
+        }
     }
 }
 

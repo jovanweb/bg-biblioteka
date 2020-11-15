@@ -2037,17 +2037,17 @@ a {
       padding-left: 90px;
       font-size: 35px; } }
 
-.all-projects a {
+.all-links a {
   display: block;
   font-size: 18px;
   line-height: 1.2;
   color: #F26475; }
-  .all-projects a svg {
+  .all-links a svg {
     width: 25px;
     height: 15px;
     transform: rotate(90deg); }
   @media screen and (min-width: 1024px) {
-    .all-projects a {
+    .all-links a {
       font-size: 22px; } }
 
 .exhibition {

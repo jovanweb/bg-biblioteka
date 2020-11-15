@@ -940,6 +940,42 @@ h5 > a,
 h6 > a {
   color: inherit; }
 
+h1,
+.h1 {
+  font-size: 60px;
+  font-size: 3.75rem;
+  line-height: 1; }
+
+h2,
+.h2 {
+  font-size: 40px;
+  font-size: 2.5rem;
+  line-height: 1.0125; }
+
+h3,
+.h3 {
+  font-size: 30px;
+  font-size: 1.875rem;
+  line-height: 1; }
+
+h4,
+.h4 {
+  font-size: 28px;
+  font-size: 1.75rem;
+  line-height: 1.01786; }
+
+h5,
+.h5 {
+  font-size: 24px;
+  font-size: 1.5rem;
+  line-height: 1; }
+
+h6,
+.h6 {
+  font-size: 20px;
+  font-size: 1.25rem;
+  line-height: 1.05; }
+
 /* ------------------------------------*\
     #link
 \*------------------------------------ */

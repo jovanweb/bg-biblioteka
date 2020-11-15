@@ -1975,6 +1975,9 @@ a {
     .all-projects a {
       font-size: 22px; } }
 
+.exhibitions .thumb-img-wrapper {
+  margin-bottom: 40px; }
+
 .exhibition {
   display: flex;
   flex-direction: column;

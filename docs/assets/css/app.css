@@ -2110,6 +2110,10 @@ a {
       font-size: 24px;
       margin-bottom: 40px; } }
 
+.exhibitions-article a {
+  display: block;
+  color: #000; }
+
 .exhibitions-article h2 {
   margin-bottom: 0; }
 

@@ -1,4 +1,10 @@
 .exhibitions-article {
+
+    a {
+        display: block;
+        color: $color-base;
+    }
+
     h2 {
         margin-bottom: 0;
     }

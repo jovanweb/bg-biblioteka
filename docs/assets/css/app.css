@@ -947,7 +947,8 @@ a {
   color: #F26475;
   transition: color 0.15s ease;
   text-decoration: none;
-  display: inline-flex; }
+  display: inline-flex;
+  align-items: center; }
   a:hover {
     color: #dd132b; }
   a:focus, a:active {
@@ -1615,6 +1616,37 @@ a {
   font-size: 16px;
   text-decoration: none; }
 
+.list {
+  list-style-type: none;
+  line-height: 1.5; }
+
+.list--dotted li,
+.list--arrow li {
+  position: relative;
+  padding-left: 10px; }
+  .list--dotted li::before,
+  .list--arrow li::before {
+    content: "";
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    left: 0;
+    top: 10px;
+    border-radius: 50%;
+    background-color: black; }
+
+.list--arrow li {
+  padding-left: 25px; }
+  .list--arrow li::before {
+    background-color: transparent;
+    border-radius: 0;
+    background-image: url("../../assets/images/arrow-read_more-01.svg");
+    background-repeat: no-repeat;
+    width: 20px;
+    height: 10px;
+    top: 5px;
+    background-size: 100% auto; }
+
 .radio_wrap {
   user-select: none;
   margin-left: 50px; }
@@ -1815,11 +1847,12 @@ a {
   border-radius: 50%;
   overflow: hidden;
   border: 1px solid #000;
-  margin-right: 50px; }
+  margin-right: 20px; }
   @media screen and (min-width: 1216px) {
     .library__img {
       flex: 0 0 280px;
-      height: 280px; } }
+      height: 280px;
+      margin-right: 50px; } }
   .library__img img {
     object-fit: cover;
     height: 100%;
@@ -1833,7 +1866,7 @@ a {
       font-size: 28px; } }
   .library__content h2 {
     color: #F26475;
-    font-size: 30px;
+    font-size: 25px;
     margin-bottom: 30px; }
     @media screen and (min-width: 768px) {
       .library__content h2 {
@@ -2151,16 +2184,18 @@ a {
   background-color: white;
   z-index: 10; }
   .sub-navigation ul {
-    margin-bottom: 0; }
-    @media screen and (min-width: 768px) {
+    margin-bottom: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; }
+    @media screen and (min-width: 480px) {
       .sub-navigation ul {
-        display: flex;
-        justify-content: center;
+        flex-wrap: nowrap;
         align-items: center;
         flex-wrap: nowrap; } }
 
 .sub-navigation__item a {
-  display: block;
+  display: inline-block;
   position: relative;
   padding: 10px;
   color: #000;
@@ -2183,6 +2218,8 @@ a {
   display: none; }
 
 .table {
+  max-width: 100%;
+  overflow: auto;
   width: 100%; }
 
 .memberships {

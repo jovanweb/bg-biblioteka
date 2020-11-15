@@ -7,10 +7,12 @@
 
   ul {
     margin-bottom: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 
-    @include min-screen($breakpoint-small) {
-      display: flex;
-      justify-content: center;
+    @include min-screen($breakpoint-tiny) {
+      flex-wrap: nowrap;
       align-items: center;
       flex-wrap: nowrap;
     }
@@ -19,7 +21,7 @@
 
 .sub-navigation__item {
   a {
-    display: block;
+    display: inline-block;
     position: relative;
     padding: 10px;
     color: $color-black;

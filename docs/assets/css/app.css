@@ -1880,15 +1880,16 @@ a {
     .library__note {
       margin-top: 50px; } }
 
-.thumb-link p {
-  font-size: 20px;
-  color: #000;
-  text-align: center;
-  font-weight: 500; }
-
-@media screen and (min-width: 1024px) {
+.thumb-link {
+  display: block; }
   .thumb-link p {
-    font-size: 30px; } }
+    font-size: 20px;
+    color: #000;
+    text-align: center;
+    font-weight: 500; }
+  @media screen and (min-width: 1024px) {
+    .thumb-link p {
+      font-size: 30px; } }
 
 .thumb-img-wrapper > div:last-child .thumb-link__img {
   margin-bottom: 0; }
@@ -1942,6 +1943,8 @@ a {
     .event-wrapper .title-link {
       margin-bottom: 60px;
       font-size: 40px; } }
+  .event-wrapper .title-link a {
+    display: block; }
   .event-wrapper .title-link svg {
     width: 39px;
     height: 20px; }
@@ -1993,6 +1996,7 @@ a {
       font-size: 35px; } }
 
 .all-projects a {
+  display: block;
   font-size: 18px;
   line-height: 1.2;
   color: #F26475; }

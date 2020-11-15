@@ -2050,9 +2050,6 @@ a {
     .all-projects a {
       font-size: 22px; } }
 
-.exhibitions .thumb-img-wrapper {
-  margin-bottom: 40px; }
-
 .exhibition {
   display: flex;
   flex-direction: column;
@@ -2116,21 +2113,33 @@ a {
       font-size: 24px;
       margin-bottom: 40px; } }
 
-.exhibitions-article a {
-  display: block;
-  color: #000; }
+.exhibitions-article,
+.editions-article {
+  margin-bottom: 40px; }
+  .exhibitions-article a,
+  .editions-article a {
+    display: block;
+    color: #000; }
+  .exhibitions-article h2,
+  .editions-article h2 {
+    margin-bottom: 0; }
+  .exhibitions-article h2,
+  .exhibitions-article p,
+  .editions-article h2,
+  .editions-article p {
+    font-size: 20px;
+    line-height: 1.2; }
+    @media screen and (min-width: 1024px) {
+      .exhibitions-article h2,
+      .exhibitions-article p,
+      .editions-article h2,
+      .editions-article p {
+        font-size: 30px; } }
 
-.exhibitions-article h2 {
+.editions-article p {
+  font-size: 28px;
+  font-weight: 500;
   margin-bottom: 0; }
-
-.exhibitions-article h2,
-.exhibitions-article p {
-  font-size: 20px;
-  line-height: 1.2; }
-  @media screen and (min-width: 1024px) {
-    .exhibitions-article h2,
-    .exhibitions-article p {
-      font-size: 30px; } }
 
 .exhibitions__img {
   margin-bottom: 20px; }

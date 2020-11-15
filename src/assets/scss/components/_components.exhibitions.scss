@@ -1,4 +1,7 @@
-.exhibitions-article {
+.exhibitions-article,
+.editions-article {
+    margin-bottom: 40px;
+
 
     a {
         display: block;
@@ -20,6 +23,14 @@
     }
 
     @include min-screen($breakpoint-small) {
+    }
+}
+
+.editions-article {
+    p {
+        font-size: 28px;
+        font-weight: 500;
+        margin-bottom: 0;
     }
 }
     

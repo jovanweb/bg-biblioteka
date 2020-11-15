@@ -139,11 +139,23 @@
 {% endmacro %}
 
 {% macro exhibitions(imgSrc, title, year) %}
-  <article class="exhibitions-article">
+  <article class="exhibitions-article editions-article">
     <a href="izlozba.html">
       <div class="exhibitions__img"><img src="assets/images/{{ imgSrc }}" alt=""></div>
       <h2 class="exhibitions__title">{{title}}</h2>
       <p>{{year}}</p>
+    </a>
+  </article> 
+  {% endmacro %}
+
+  {% macro editions(imgSrc, title, editor1, editor2, editor3) %}
+  <article class="exhibitions-article editions-article">
+    <a href="izlozba.html">
+      <div class="exhibitions__img"><img src="assets/images/{{ imgSrc }}" alt=""></div>
+      <h2 class="exhibitions__title">{{title}}</h2>
+      <p>{{editor1}}</p>
+      <p>{{editor2}}</p>
+      <p>{{editor3}}</p>
     </a>
   </article> 
   {% endmacro %}

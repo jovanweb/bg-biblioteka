@@ -1,0 +1,62 @@
+{% extends "layouts/default.html" %}
+
+{% set editions = true %}
+{% set pagetitle = "Библиотека Града Београда" %}
+{% set bodyClass = "editions" %}
+
+{% block content %}
+{% include "./components/header/header.html" -%}
+
+<main>
+  <div class="wrapper wrapper--large">
+    <section class="exhibition-details">
+        <p>
+        Издавачка делатност Библиотеке града Београда програмски је фокусирана на: град Београд, његову историју и културну прошлост; грађу из нашег Фонда старе и ретке књиге и књиге о Београду; реномиране ствараоце (пре свега књижевнике) и значајне књижевне појаве; историју и рад наше установе; теме из области библиотекарства. 
+        </p>
+        <p>
+        Наша издања могу се купити у Централној згради (Кнез Михаилова 56), као и појединим београдским књижарама. Више информација можете добити путем телефона 011 20 24 015.
+        </p>
+    </section>
+    <div bp="grid" class="grid-gap--large@md grid-gap--medium@sm thumb-img-wrapper">
+      <div bp="3@lg 4@md 6@sm">
+          {{ allMacros.editions('editions-img.jpg', 'Двоугао Екс Либрис', 'Вељко Ђуровић', 'Kатарина Расулић', '') }}
+      </div>
+      <div bp="3@lg 4@md 6@sm">
+          {{ allMacros.editions('editions-img2.jpg',' Бездане светлости',  'Михајло Пантић') }}
+      </div>
+      <div bp="3@lg 4@md 6@sm">
+          {{ allMacros.editions('editions-img3.jpg', 'Слике (из) породичног времена', 'Михајло Пантић') }}
+      </div>
+      <div bp="3@lg 4@md 6@sm">
+          {{ allMacros.editions('editions-img4.jpg', 'Фонд уметности БГД од оснивања до данас',  'Иванка Лазовић', 'Љиљана Зечев и', 'Маријана Пурић') }}
+      </div>
+      <div bp="3@lg 4@md 6@sm">
+          {{ allMacros.editions('editions-img.jpg', 'Двоугао Екс Либрис', 'Вељко Ђуровић', 'Kатарина Расулић', '') }}
+      </div>
+      <div bp="3@lg 4@md 6@sm">
+          {{ allMacros.editions('editions-img2.jpg',' Бездане светлости',  'Михајло Пантић') }}
+      </div>
+      <div bp="3@lg 4@md 6@sm">
+          {{ allMacros.editions('editions-img3.jpg', 'Слике (из) породичног времена', 'Михајло Пантић') }}
+      </div>
+      <div bp="3@lg 4@md 6@sm">
+          {{ allMacros.editions('editions-img4.jpg', 'Фонд уметности БГД од оснивања до данас',  'Иванка Лазовић', 'Љиљана Зечев и', 'Маријана Пурић') }}
+      </div>
+      <div bp="3@lg 4@md 6@sm">
+          {{ allMacros.editions('editions-img.jpg', 'Двоугао Екс Либрис', 'Вељко Ђуровић', 'Kатарина Расулић', '') }}
+      </div>
+      <div bp="3@lg 4@md 6@sm">
+          {{ allMacros.editions('editions-img2.jpg',' Бездане светлости',  'Михајло Пантић') }}
+      </div>
+      <div bp="3@lg 4@md 6@sm">
+          {{ allMacros.editions('editions-img3.jpg', 'Слике (из) породичног времена', 'Михајло Пантић') }}
+      </div>
+      <div bp="3@lg 4@md 6@sm">
+          {{ allMacros.editions('editions-img4.jpg', 'Фонд уметности БГД од оснивања до данас',  'Иванка Лазовић', 'Љиљана Зечев и', 'Маријана Пурић') }}
+      </div>
+    </div>
+  </div>
+</main>
+{% include "./components/footer/footer.html" -%}
+
+{% endblock %}

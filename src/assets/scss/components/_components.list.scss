@@ -1,0 +1,39 @@
+.list {
+  list-style-type: none;
+  line-height: 1.5;
+}
+
+.list--dotted,
+.list--arrow {
+  li {
+    position: relative;
+    padding-left: 10px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 2px;
+      height: 2px;
+      left: 0;
+      top: 10px;
+      border-radius: 50%;
+      background-color: black;
+    }
+  }
+}
+
+.list--arrow {
+  li {
+    padding-left: 25px;
+    &::before {
+      background-color: transparent;
+      border-radius: 0;
+      background-image: url("../../assets/images/arrow-read_more-01.svg");
+      background-repeat: no-repeat;
+      width: 20px;
+      height: 10px;
+      top: 5px;
+      background-size: 100% auto;
+    }
+  }
+}

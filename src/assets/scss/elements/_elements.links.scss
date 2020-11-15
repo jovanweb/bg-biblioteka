@@ -7,6 +7,7 @@ a {
   transition: color 0.15s ease;
   text-decoration: none;
   display: inline-flex;
+  align-items: center;
 
   &:hover {
     color: darken($color-link, 20%);

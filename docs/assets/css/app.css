@@ -2050,6 +2050,21 @@ a {
     .all-links a {
       font-size: 22px; } }
 
+.about section {
+  padding-bottom: 0; }
+
+.read-more svg {
+  transform: rotate(90deg); }
+
+@media screen and (min-width: 1024px) {
+  .read-more {
+    margin-bottom: 50px; } }
+
+.section-divider {
+  width: 100%;
+  height: 1px;
+  background-color: #666; }
+
 .exhibition {
   display: flex;
   flex-direction: column;

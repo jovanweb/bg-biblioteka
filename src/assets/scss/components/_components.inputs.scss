@@ -72,3 +72,19 @@
     cursor: not-allowed !important;
   }
 }
+
+.input--search {
+  border-radius: 10px;
+  border: 1px solid $color-border;
+  width: 800px;
+  max-width: 100%;
+  text-align: center;
+  height: 60px;
+  font-size: 18px;
+  padding: 0 20px;
+  
+  @include min-screen($breakpoint-medium) {
+    height: 80px;
+    font-size: 24px;
+  }
+}

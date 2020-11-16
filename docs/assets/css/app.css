@@ -107,9 +107,6 @@ nav,
 section {
   display: block; }
 
-body {
-  line-height: 1; }
-
 ol,
 ul {
   list-style: none; }
@@ -1622,6 +1619,20 @@ a {
   .input--primary:disabled {
     opacity: 0.5;
     cursor: not-allowed !important; }
+
+.input--search {
+  border-radius: 10px;
+  border: 1px solid #000;
+  width: 800px;
+  max-width: 100%;
+  text-align: center;
+  height: 60px;
+  font-size: 18px;
+  padding: 0 20px; }
+  @media screen and (min-width: 1024px) {
+    .input--search {
+      height: 80px;
+      font-size: 24px; } }
 
 .button {
   -webkit-font-smoothing: inherit;

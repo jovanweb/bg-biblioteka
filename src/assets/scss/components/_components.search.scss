@@ -95,6 +95,11 @@
     visibility: hidden;
     opacity: 0;
     transition: opacity .2s ease;
+    color: $color-text;
+    
+    &:hover {
+        color: $color-peach;
+    }
 
     .show-advance-link & {
         visibility: visible;

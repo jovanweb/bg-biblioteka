@@ -1381,7 +1381,7 @@ a {
         margin-right: 0;
         margin-bottom: 30px; }
       .languages nav a {
-        font-size: 16px; } }
+        font-size: 18px; } }
   @media screen and (min-width: 1216px) {
     .languages {
       padding-left: 50px;
@@ -1468,7 +1468,10 @@ a {
   margin-left: 10px;
   visibility: hidden;
   opacity: 0;
-  transition: opacity .2s ease; }
+  transition: opacity .2s ease;
+  color: #000; }
+  .search__advanced:hover {
+    color: #F26475; }
   .show-advance-link .search__advanced {
     visibility: visible;
     opacity: 1; }
@@ -1535,7 +1538,7 @@ a {
 
 .footer-main__contact,
 .footer-main__working-hours {
-  line-height: 26px; }
+  line-height: 1.5; }
   .footer-main__contact dt,
   .footer-main__working-hours dt {
     margin-top: 20px; }
@@ -1813,7 +1816,7 @@ a {
       .main-slider__item-content h2 {
         font-size: 40px; }
       .main-slider__item-content p {
-        font-size: 18px; } }
+        font-size: 24px; } }
 
 .main-slider__item-image {
   flex: 0 0 250px;
@@ -1828,7 +1831,7 @@ a {
       flex: 1; } }
 
 .navigation-slider-wrapper {
-  background: black;
+  background: #333;
   position: relative;
   padding: 20px 30px; }
   @media screen and (min-width: 1024px) {
@@ -1857,11 +1860,13 @@ a {
   padding: 0 20px;
   display: block;
   line-height: 1.2;
-  font-weight: 600;
+  font-weight: 400;
   text-align: center; }
+  .navigation-slider .slick-slide a:hover {
+    color: #F26475; }
   @media screen and (min-width: 1024px) {
     .navigation-slider .slick-slide a {
-      font-size: 25px; } }
+      font-size: 24px; } }
 
 .navigation-slider .slick-track {
   display: flex;
@@ -1954,11 +1959,14 @@ a {
   .thumb-img-wrapper > div:nth-last-child(-n+2) .thumb-link__img {
     margin-bottom: 0; } }
 
-.thumb-img-wrapper .thumb-link__img {
+.thumb-link__img {
   display: block;
-  margin-bottom: 40px; }
+  margin-bottom: 40px;
+  max-width: 70%;
+  margin-left: auto;
+  margin-right: auto; }
   @media screen and (min-width: 1024px) {
-    .thumb-img-wrapper .thumb-link__img {
+    .thumb-link__img {
       margin-bottom: 80px; } }
 
 .event {
@@ -2403,6 +2411,22 @@ a {
       left: auto;
       right: 70px;
       transform: translate(50%, -50%) rotate(-45deg); } }
+
+.back-to-top {
+  position: fixed;
+  bottom: 6vh;
+  right: 3vw;
+  z-index: 100;
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(0);
+  transition: all .1s ease;
+  max-width: 10vw;
+  cursor: pointer; }
+  .back-to-top.is-visible {
+    visibility: visible;
+    opacity: 1;
+    transform: scale(1); }
 
 .full-height {
   height: 100% !important; }

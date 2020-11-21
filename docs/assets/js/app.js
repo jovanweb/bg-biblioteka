@@ -659,6 +659,22 @@ $(document).ready(function () {
     autoplaySpeed: 5000,
     speed: 300,
     infinite: true
+  }); //back to top icon
+
+  var to_top_icon = $('.js-back-to-top');
+  $(window).scroll(function () {
+    if ($(this).scrollTop() > 500) {
+      to_top_icon.addClass('is-visible');
+    } else {
+      to_top_icon.removeClass('is-visible');
+    }
+  });
+  to_top_icon.click(function (e) {
+    e.preventDefault();
+    $("html, body").animate({
+      scrollTop: 0
+    }, "fast");
+    return false;
   });
   $(".js-navigation-slider") && $(".js-navigation-slider").slick({
     // dots: false,

@@ -61,6 +61,15 @@ $(document).ready(() => {
       ],
     });
 
+  $(".styled-radiobutton").on('click', ()=> {
+    console.log('test')
+    if($('.js-radio-advanced').is(':checked')) { 
+      $('.search__filters').addClass('show-advance-link')
+    } else {
+      $('.search__filters').removeClass('show-advance-link')
+    }
+  })
+    
   const subNavigationHeight = $(".sub-navigation").height();
 
   const scroll = new SmoothScroll('a[href*="#"]', {
@@ -75,6 +84,7 @@ $(document).ready(() => {
   $(".js-navigation-trigger").on("click", function () {
     navigation.stop().toggleClass("is-active");
   });
+  
   navigation.on("click", () => {
     navigation.removeClass("is-active");
   });

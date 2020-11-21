@@ -42,11 +42,9 @@
     
     .styled-radiobutton + label {
         font-size: 15px;
+
         @include max-screen($breakpoint-medium - 1) {
             font-size: 12px;
-            span {
-                top: 0;
-            }
         }
     }
     
@@ -56,10 +54,12 @@
         @include min-screen($breakpoint-medium) {
             margin-left: 20px;
         }
+
         &:first-child {
             @include max-screen($breakpoint-medium - 1) {
                 margin-left: 0;
             }
+
             @include screen($breakpoint-large, $breakpoint-extralarge) {
                 margin-left: 0;
             }
@@ -75,10 +75,12 @@
             font-size: 18px;
         }
     }
+
     @include min-screen($breakpoint-large) {
         padding: 10px 40px;
         order: 1;
     }
+
     @include screen($breakpoint-large, $breakpoint-extralarge) {
         flex-direction: column;
         align-items: flex-start;
@@ -87,13 +89,16 @@
     }
 }
 
-.search__text {
+.search__advanced {
     font-size: 12px;
     margin-left: 10px;
-    
-    &::before {
-        content: 'o';
-        margin-right: 5px;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity .2s ease;
+
+    .show-advance-link & {
+        visibility: visible;
+        opacity: 1;
     }
     
     @include min-screen($breakpoint-medium) {

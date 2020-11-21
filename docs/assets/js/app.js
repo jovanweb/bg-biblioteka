@@ -700,6 +700,15 @@ $(document).ready(function () {
     // instead of a settings object
     ]
   });
+  $(".styled-radiobutton").on('click', function () {
+    console.log('test');
+
+    if ($('.js-radio-advanced').is(':checked')) {
+      $('.search__filters').addClass('show-advance-link');
+    } else {
+      $('.search__filters').removeClass('show-advance-link');
+    }
+  });
   var subNavigationHeight = $(".sub-navigation").height();
   var scroll = new SmoothScroll('a[href*="#"]', (_ref = {
     speed: 500,

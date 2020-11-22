@@ -57,11 +57,11 @@
   </article>
   {% endmacro %}
 
-  {% macro project(imgSrc, title) %}
-  <article class="project">
+  {% macro project(imgSrc, title, projecHref) %}
+  <a href="{{projecHref}}" class="project">
     <div class="project__img" style="background-image: url('assets/images/{{ imgSrc }}')"><img src="assets/images/{{ imgSrc }}" alt=""></div>
-    <h2 class="project__title">{{title}}</h2>
-  </article>
+    <p class="project__title">{{title}}</p>
+  </a>
   {% endmacro %}
 
   {% macro exhibition(imgSrc, title, authorTitle, authorText, designTitle, designText, info) %}

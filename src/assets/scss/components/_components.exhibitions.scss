@@ -2,23 +2,26 @@
 .editions-article {
     margin-bottom: 40px;
 
-
+    
     a {
         display: block;
         color: $color-base;
+        
+        &:hover {
+            color: $color-peach;
+        }
     }
 
     h2 {
         margin-bottom: 0;
     }
 
-    h2,
     p {
         font-size: 20px;
         line-height: 1.2;
 
         @include min-screen($breakpoint-medium) {
-            font-size: 30px;
+            font-size: 22px;
         }
     }
 
@@ -28,7 +31,6 @@
 
 .editions-article {
     p {
-        font-size: 28px;
         font-weight: 500;
         margin-bottom: 0;
     }

@@ -4,5 +4,6 @@
     h2 {
         margin-bottom: 40px;
         color: $color-peach;
+        @include font-size(50px);
     }
 }

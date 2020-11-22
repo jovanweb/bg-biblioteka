@@ -11,7 +11,7 @@
     flex-wrap: wrap;
     justify-content: center;
 
-    @include min-screen($breakpoint-tiny) {
+    @include min-screen($breakpoint-small) {
       flex-wrap: nowrap;
       align-items: center;
       flex-wrap: nowrap;

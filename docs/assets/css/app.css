@@ -949,6 +949,14 @@ section {
   height: 1px;
   background-color: #666; }
 
+figure {
+  margin-bottom: 40px; }
+  figure figcaption {
+    font-size: 20px;
+    font-size: 1.25rem;
+    line-height: 1.05;
+    color: #808080; }
+
 /* ------------------------------------*\
     #HEADINGS
 \*------------------------------------ */
@@ -2297,7 +2305,7 @@ a {
     display: flex;
     flex-wrap: wrap;
     justify-content: center; }
-    @media screen and (min-width: 480px) {
+    @media screen and (min-width: 768px) {
       .sub-navigation ul {
         flex-wrap: nowrap;
         align-items: center;
@@ -2453,7 +2461,10 @@ a {
   align-items: center; }
   .page-404 h2 {
     margin-bottom: 40px;
-    color: #F26475; }
+    color: #F26475;
+    font-size: 50px;
+    font-size: 3.125rem;
+    line-height: 1.02; }
 
 .full-height {
   height: 100% !important; }
@@ -2944,5 +2955,8 @@ a {
 
 .bgr-peach {
   background-color: rgba(242, 100, 117, 0.1) !important; }
+
+.color-peach {
+  color: #F26475 !important; }
 
 /*# sourceMappingURL=app.css.map */

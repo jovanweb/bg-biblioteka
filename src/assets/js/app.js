@@ -92,11 +92,9 @@ $(document).ready(() => {
     
   const subNavigationHeight = $(".sub-navigation").height();
 
-  const scroll = new SmoothScroll('a[href*="#"]', {
+  $('a[href*="#"').smoothScroll({
+    offset: -subNavigationHeight + 1,
     speed: 500,
-    speedAsDuration: true,
-    offset: subNavigationHeight,
-    speed: 300,
     easing: "easeInOutExpo",
   });
 

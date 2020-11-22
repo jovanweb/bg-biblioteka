@@ -1,10 +1,7 @@
 .about {
     
-    @include min-screen($breakpoint-medium) {
-    }
-    
     section {
-        padding-bottom: 0;
+        padding: 30px 0;
     }
 }
 

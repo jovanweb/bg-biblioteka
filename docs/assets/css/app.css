@@ -2109,7 +2109,7 @@ a {
       font-size: 22px; } }
 
 .about section {
-  padding-bottom: 0; }
+  padding: 30px 0; }
 
 .exhibition {
   display: flex;
@@ -2492,6 +2492,30 @@ a {
     font-size: 50px;
     font-size: 3.125rem;
     line-height: 1.02; }
+
+.board-of-directors h2 {
+  margin-bottom: 40px; }
+
+.board-of-directors td {
+  padding-left: 30px;
+  height: 50px; }
+  .board-of-directors td:first-child {
+    padding-left: 0; }
+
+.board-of-directors table {
+  margin-left: 30px; }
+
+.board-of-directors__email {
+  padding-left: 30px; }
+  .board-of-directors__email img {
+    width: 46px;
+    margin-right: 20px; }
+  .board-of-directors__email a {
+    color: #000;
+    display: flex;
+    align-items: center; }
+    .board-of-directors__email a:hover {
+      color: #F26475; }
 
 .full-height {
   height: 100% !important; }

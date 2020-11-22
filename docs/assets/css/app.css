@@ -1139,6 +1139,9 @@ a {
 .o-flex--justify {
   justify-content: space-between; }
 
+.o-flex--justify-center {
+  justify-content: center; }
+
 .o-flex--justify-around {
   justify-content: space-around; }
 
@@ -2445,6 +2448,12 @@ a {
     visibility: visible;
     opacity: 1;
     transform: scale(1); }
+
+.page-404 {
+  align-items: center; }
+  .page-404 h2 {
+    margin-bottom: 40px;
+    color: #F26475; }
 
 .full-height {
   height: 100% !important; }

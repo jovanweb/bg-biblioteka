@@ -61,6 +61,10 @@
         display: inline-block;
         padding: 10px 20px;
         word-break: break-word;
+
+        &:hover {
+            color: $color-peach;
+        }
         
         @include min-screen($breakpoint-tiny) {
             display: block;
@@ -97,21 +101,21 @@
 }
 
 .map-marker-info__address {
+    display: flex;
+    justify-content: space-between;
     font-size: 14px;
+    margin-bottom: 30px;
     @include min-screen($breakpoint-medium) {
         font-size: 24px;
     }
 }
 
 .map-marker-info__content {
-    font-size: 18px;
+    @include font-size(24px);
+    line-height: 1.2;
 
     p {
         margin-bottom: 0;
-    }
-
-    @include min-screen($breakpoint-medium) {
-        font-size: 28px;
     }
 }
 

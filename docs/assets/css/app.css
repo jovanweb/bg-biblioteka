@@ -2231,6 +2231,8 @@ a {
     display: inline-block;
     padding: 10px 20px;
     word-break: break-word; }
+    .map-places li:hover {
+      color: #F26475; }
     @media screen and (min-width: 480px) {
       .map-places li {
         display: block; } }
@@ -2254,18 +2256,21 @@ a {
     height: auto; }
 
 .map-marker-info__address {
-  font-size: 14px; }
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  margin-bottom: 30px; }
   @media screen and (min-width: 1024px) {
     .map-marker-info__address {
       font-size: 24px; } }
 
 .map-marker-info__content {
-  font-size: 18px; }
+  font-size: 24px;
+  font-size: 1.5rem;
+  line-height: 1;
+  line-height: 1.2; }
   .map-marker-info__content p {
     margin-bottom: 0; }
-  @media screen and (min-width: 1024px) {
-    .map-marker-info__content {
-      font-size: 28px; } }
 
 .gm-style-iw.gm-style-iw-c {
   border-radius: 0;

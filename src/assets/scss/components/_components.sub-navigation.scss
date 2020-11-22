@@ -27,6 +27,10 @@
     color: $color-black;
     font-size: 14px;
 
+    &:hover {
+      color: $color-peach;
+    }
+
     @include min-screen($breakpoint-small) {
       padding: 20px 30px;
       &::before {

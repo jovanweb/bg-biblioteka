@@ -1,7 +1,10 @@
-.table {
-  max-width: 100%;
+.table-wrapper {
   overflow: auto;
-  width: 100%;
+  
+  table {
+    width: 100%;
+    max-width: 100%;
+  }
 
   td {
     vertical-align: middle;

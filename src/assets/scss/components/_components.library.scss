@@ -36,7 +36,7 @@
   @include min-screen($breakpoint-large) {
     flex: 0 0 280px;
     height: 280px;
-    margin-right: 50px;
+    margin-right: 120px;
   }
 
   img {
@@ -48,11 +48,6 @@
 
 .library__content {
   flex: 1;
-  font-size: 18px;
-
-  @include min-screen($breakpoint-large) {
-    font-size: 28px;
-  }
 
   h2 {
     color: $color-peach;

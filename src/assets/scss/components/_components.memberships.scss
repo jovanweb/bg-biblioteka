@@ -9,8 +9,8 @@
 }
 
 .memberships__item {
-  flex: 1;
-
+  flex: 0 0 16.66%;
+  
   &:hover {
     .memberships__item-title {
       color: $color-peach;
@@ -25,12 +25,17 @@
   margin-right: auto;
   display: block;
   @include min-screen($breakpoint-small) {
-    max-width: 100%;
+    max-width: 75%;
   }
 }
 
 .memberships__item-title {
   text-align: center;
+  @include font-size(28px);
+  
+  @include max-screen($breakpoint-large - 1) {
+    @include font-size(20px);
+  }
 }
 
 .memberships__item-tooltip {

@@ -13,12 +13,12 @@
       justify-content: space-between;
     }
     @include min-screen($breakpoint-medium) {
-      padding-top: 30px;
-      padding-bottom: 40px;
+      // padding-top: 30px;
+      // padding-bottom: 40px;
     }
     @include min-screen($breakpoint-large) {
-      padding-top: 50px;
-      padding-bottom: 70px;
+      // padding-top: 50px;
+      // padding-bottom: 70px;
     }
   }
 }
@@ -34,6 +34,7 @@
 
     @include min-screen($breakpoint-large) {
       width: 200px;
+      margin-bottom: 0;
     }
   }
 

@@ -893,6 +893,18 @@ html {
   line-height: 1.5;
   font-weight: 400; }
 
+body {
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1.03125;
+  line-height: 24px; }
+  @media screen and (min-width: 1024px) {
+    body {
+      font-size: 24px;
+      font-size: 1.5rem;
+      line-height: 1;
+      line-height: 32px; } }
+
 address,
 h1,
 h2,
@@ -925,6 +937,17 @@ section {
   padding-top: 40px;
   padding-bottom: 40px;
   border-bottom: 1px solid #000; }
+
+.hidden-content {
+  display: none; }
+
+.read-more svg {
+  transform: rotate(90deg); }
+
+.section-divider {
+  width: 100%;
+  height: 1px;
+  background-color: #666; }
 
 /* ------------------------------------*\
     #HEADINGS
@@ -1185,14 +1208,6 @@ a {
         flex-direction: row;
         align-items: flex-start;
         justify-content: space-between; } }
-    @media screen and (min-width: 1024px) {
-      .header-main .wrapper {
-        padding-top: 30px;
-        padding-bottom: 40px; } }
-    @media screen and (min-width: 1216px) {
-      .header-main .wrapper {
-        padding-top: 50px;
-        padding-bottom: 70px; } }
 
 .logo {
   width: 100px;
@@ -1203,7 +1218,8 @@ a {
       width: 150px; } }
   @media screen and (min-width: 1216px) {
     .logo {
-      width: 200px; } }
+      width: 200px;
+      margin-bottom: 0; } }
 
 .header-main__content {
   display: flex;
@@ -1312,7 +1328,8 @@ a {
   .nav-main ul {
     display: flex;
     flex-direction: row;
-    justify-content: space-between; } }
+    justify-content: space-between;
+    margin-bottom: 0; } }
 
 .navigation-trigger {
   position: relative;
@@ -1913,18 +1930,14 @@ a {
     .library__img {
       flex: 0 0 280px;
       height: 280px;
-      margin-right: 50px; } }
+      margin-right: 120px; } }
   .library__img img {
     object-fit: cover;
     height: 100%;
     width: 100%; }
 
 .library__content {
-  flex: 1;
-  font-size: 18px; }
-  @media screen and (min-width: 1216px) {
-    .library__content {
-      font-size: 28px; } }
+  flex: 1; }
   .library__content h2 {
     color: #F26475;
     font-size: 25px;
@@ -2074,18 +2087,6 @@ a {
 
 .about section {
   padding-bottom: 0; }
-
-.read-more svg {
-  transform: rotate(90deg); }
-
-@media screen and (min-width: 1024px) {
-  .read-more {
-    margin-bottom: 50px; } }
-
-.section-divider {
-  width: 100%;
-  height: 1px;
-  background-color: #666; }
 
 .exhibition {
   display: flex;
@@ -2299,6 +2300,8 @@ a {
   padding: 10px;
   color: #000;
   font-size: 14px; }
+  .sub-navigation__item a:hover {
+    color: #F26475; }
   @media screen and (min-width: 768px) {
     .sub-navigation__item a {
       padding: 20px 30px; }
@@ -2316,14 +2319,15 @@ a {
 .sub-navigation__item:first-child a::before {
   display: none; }
 
-.table {
-  max-width: 100%;
-  overflow: auto;
-  width: 100%; }
-  .table td {
+.table-wrapper {
+  overflow: auto; }
+  .table-wrapper table {
+    width: 100%;
+    max-width: 100%; }
+  .table-wrapper td {
     vertical-align: middle;
     padding: 20px; }
-    .table td p {
+    .table-wrapper td p {
       margin-bottom: 0;
       line-height: 1.5; }
 
@@ -2336,7 +2340,7 @@ a {
       justify-content: space-between; } }
 
 .memberships__item {
-  flex: 1; }
+  flex: 0 0 16.66%; }
   .memberships__item:hover .memberships__item-title {
     color: #F26475; }
 
@@ -2348,10 +2352,18 @@ a {
   display: block; }
   @media screen and (min-width: 768px) {
     .memberships__item-img {
-      max-width: 100%; } }
+      max-width: 75%; } }
 
 .memberships__item-title {
-  text-align: center; }
+  text-align: center;
+  font-size: 28px;
+  font-size: 1.75rem;
+  line-height: 1.01786; }
+  @media screen and (max-width: 1215px) {
+    .memberships__item-title {
+      font-size: 20px;
+      font-size: 1.25rem;
+      line-height: 1.05; } }
 
 .memberships__item-tooltip {
   width: 300px; }
@@ -2430,6 +2442,9 @@ a {
 
 .full-height {
   height: 100% !important; }
+
+.text-center {
+  text-align: center !important; }
 
 /* ------------------------------------*\
     #TRUMPS - SPACING

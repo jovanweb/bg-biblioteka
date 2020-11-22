@@ -32,8 +32,11 @@ $(document).ready(function () {
   });
   $('.js-read-more').on('click', function (e) {
     e.preventDefault();
-    console.log($(this).prev('.hidden-content'));
-    $(this).prev('.hidden-content').slideToggle();
+    $(this).stop().prev('.hidden-content').slideToggle();
+  });
+  $('.js-read-more-table').on('click', function (e) {
+    e.preventDefault();
+    $(this).stop().toggleClass('read-less').parent('td').parent('tr').next('tr.hidden-content').toggle();
   });
   $(".js-navigation-slider") && $(".js-navigation-slider").slick({
     // dots: false,

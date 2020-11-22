@@ -944,6 +944,9 @@ section {
 .read-more svg {
   transform: rotate(90deg); }
 
+.read-more.read-less svg {
+  transform: rotate(-90deg); }
+
 .section-divider {
   width: 100%;
   height: 1px;
@@ -1003,6 +1006,9 @@ h6,
   font-size: 20px;
   font-size: 1.25rem;
   line-height: 1.05; }
+
+.heading--underlined {
+  border-bottom: 1px solid #666; }
 
 /* ------------------------------------*\
     #link
@@ -1149,6 +1155,12 @@ a {
 
 .o-flex--justify-center {
   justify-content: center; }
+
+.o-flex--justify-start {
+  justify-content: flex-start; }
+
+.o-flex--justify-end {
+  justify-content: flex-end; }
 
 .o-flex--justify-around {
   justify-content: space-around; }
@@ -1306,8 +1318,7 @@ a {
     flex-direction: column;
     opacity: 0;
     visibility: hidden;
-    transition: opacity .2s ease, visibility .2s ease;
-    z-index: 100; }
+    transition: opacity .2s ease, visibility .2s ease; }
     .nav-main a {
       padding: 20px;
       transform: translateX(-30px);
@@ -2338,7 +2349,8 @@ a {
   display: none; }
 
 .table-wrapper {
-  overflow: auto; }
+  overflow: auto;
+  margin-bottom: 40px; }
   .table-wrapper table {
     width: 100%;
     max-width: 100%; }
@@ -2348,6 +2360,20 @@ a {
     .table-wrapper td p {
       margin-bottom: 0;
       line-height: 1.5; }
+
+.table--extend {
+  table-layout: fixed; }
+  .table--extend h3 {
+    margin-bottom: 0; }
+  .table--extend td:last-child {
+    text-align: center;
+    width: 80px; }
+    .table--extend td:last-child a {
+      display: block; }
+
+.table--extend-content img {
+  width: 46px;
+  margin-right: 15px; }
 
 .memberships {
   margin-bottom: 50px; }

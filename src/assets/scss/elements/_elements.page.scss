@@ -69,6 +69,13 @@ section {
 
   svg {
       transform: rotate(90deg);
+    }
+    
+    &.read-less {
+      
+      svg {
+        transform: rotate(-90deg);
+    }
   }
 }
 

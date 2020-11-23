@@ -5,6 +5,7 @@
     padding: 10px;
     position: relative;
     color: #000;
+    font-size: 14px;
     
     &::before {
       content: '';
@@ -27,6 +28,10 @@
       &::before {
         display: block;
       }
+    }
+    
+    @include min-screen($breakpoint-extralarge) {
+      font-size: 20px;
     }
     
     @include min-screen($breakpoint-huge) {

@@ -47,7 +47,7 @@
 
 {% macro socialIcon(href, icon) %}
   <a href="{{href}}" class="social-icon"><img src="assets/images/{{icon}}" alt=""></a>
-  {% endmacro %}
+{% endmacro %}
 
   {% macro event(time, title, location) %}
   <article class="event">
@@ -158,4 +158,37 @@
       <p>{{editor3}}</p>
     </a>
   </article> 
+  {% endmacro %}
+
+  {% macro tabNavigation(url1, icon1, tab1, url2, icon2, tab2, firstActive, secondActive) %}
+    <nav class="tab-navigation">
+      <a href="{{ url1 }}.html" {% if firstActive %} class="is-active" {% endif %}><img src="assets/images/{{icon1}}.svg" alt=""><span>{{ tab1 }}</span></a>
+      <div class="tab-navigation__separator"></div>
+      <a href="{{ url2 }}.html" {% if secondActive %} class="is-active" {% endif %}><img src="assets/images/{{icon2}}.svg" alt=""><span>{{ tab2 }}</span></a>
+    </nav>
+  {% endmacro %}
+
+  {% macro calendarEvent(imgSrc, title, subtitle, date, text) %}
+    <article class="calendar-event">
+      <div class="calendar-event__image">
+        <img src="assets/images/calendar/{{imgSrc}}.svg" alt="">
+        <div class="calendar-event__social">
+          <a href="#" class="social-icon"><img src="assets/images/fb-podeli-01.svg" alt=""></a>
+          <a href="#" class="social-icon"><img src="assets/images/fb-svidjanje.svg" alt=""></a>
+          <a href="#" class="social-icon"><img src="assets/images/twitter-podeli.svg" alt=""></a>
+        </div>
+      </div>
+      <div class="calendar-event__content">
+        <h2>{{ title }}</h2>
+        <h3>{{ subtitle }}</h3>
+        <time>{{ date }}</time>
+
+        <h4>Учесници</h4>
+        <p>{{ text }}</p>
+        <p class="hidden-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure facilis animi architecto laborum corporis! Optio accusantium totam nihil asperiores porro sunt alias doloribus recusandae. Molestias atque nisi fugit vitae eveniet quia quod quam dolores, veritatis asperiores, vero ipsa voluptate laboriosam maxime natus accusamus voluptatibus labore incidunt. Temporibus, sequi hic accusamus aperiam et modi, ad repudiandae sunt quae cumque, mollitia deserunt maxime possimus. Ipsum laboriosam explicabo quae tempore iusto pariatur architecto? Deleniti incidunt autem, nisi corporis, nemo culpa expedita illo delectus sed nulla facere ipsam aut perspiciatis aspernatur ex nihil similique dolores perferendis rerum. Ex omnis eveniet, dignissimos quisquam autem esse.</p>
+      <p class="read-more js-read-more">
+        <a href="">Прочитај више {% include "../components/inline-svg/arrow.html" -%}</a>
+      </p>
+      </div>
+    </article>
   {% endmacro %}

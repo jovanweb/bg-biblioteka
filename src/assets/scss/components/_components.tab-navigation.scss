@@ -1,0 +1,103 @@
+.tab-navigation {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 50px;
+    
+    @include min-screen($breakpoint-small) {
+        margin-bottom: 100px;
+    }
+
+    @include min-screen($breakpoint-medium) {
+        margin-bottom: 150px;
+    }
+
+    a {
+        text-transform: uppercase;
+        color: #000;
+        @include font-size(16px);
+        flex: 1;
+        
+        &:first-child {
+            display: flex;
+            justify-content: flex-end;
+        }
+        
+        &:hover, &.is-active {
+            color: #999;
+        }
+        
+        span {
+            position: relative;
+
+            &::before {
+                content: '';
+                position: absolute;
+                top: 100%;
+                margin-top: 10px;
+                left: 0;
+                right: 0;
+                height: 11px;
+                background-color: $color-peach;
+                display: none;
+            }
+        }
+        
+                
+        &.is-active {
+        
+            span::before {
+                display: block;
+            }
+        }
+
+        img {
+            width: 30px;
+            margin-right: 10px;
+        }
+
+        @include min-screen($breakpoint-small) {
+            @include font-size(25px);
+            flex: 0 0 auto;
+
+            img {
+                width: 40px;
+                margin-right: 15px;
+            }
+        }
+        
+        @include min-screen($breakpoint-large) {
+            @include font-size(30px);
+            img {
+                width: 50px;
+                margin-right: 20px;
+            }
+        }
+        
+        @include min-screen($breakpoint-extralarge) {
+            @include font-size(35px);
+            img {
+                width: 60px;
+                margin-right: 30px;
+            }
+        }
+    }
+}
+
+.tab-navigation__separator {
+    width: 1px;
+    height: 40px;
+    margin-left: 20px;
+    margin-right: 20px;
+    background-color: #000;
+    
+    @include min-screen($breakpoint-medium) {
+        margin-left: 40px;
+        margin-right: 40px;
+    }
+    @include min-screen($breakpoint-large) {
+        height: 58px;
+        margin-left: 70px;
+        margin-right: 70px;
+    }
+}

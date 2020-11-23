@@ -1,0 +1,18 @@
+{% extends "layouts/default.html" %}
+
+{% set vesti = true %}
+{% set tab2 = true %}
+{% set pagetitle = "Библиотека Града Београда" %}
+{% set bodyClass = "vesti" %}
+
+{% block content %}
+{% include "./components/header/header.html" -%}
+
+<main>
+  <div class="wrapper wrapper--large">
+    {{ allMacros.tabNavigation('kalendar-desavanja', 'desavanja-01', 'КАЛЕНДАР ДЕШАВАЊА', 'vesti', 'vesti-01', 'ВЕСТИ', false, true) }}
+  </div>
+</main>
+{% include "./components/footer/footer.html" -%}
+
+{% endblock %}

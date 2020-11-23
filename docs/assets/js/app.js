@@ -148,6 +148,7 @@ $(document).ready(function () {
 
           $(".map-places li").on("click", function () {
             var mapItem = $(this).index();
+            $(this).addClass('is-active').siblings().removeClass('is-active');
             changeMarker(mapItem);
             var thisLat = markers[mapItem][1],
                 thisLon = markers[mapItem][2];
@@ -155,6 +156,7 @@ $(document).ready(function () {
               lat: thisLat,
               lng: thisLon
             });
+            google.maps.event.trigger(Markers[mapItem], 'click');
           });
 
           function changeMarker(record_id) {
@@ -167,6 +169,7 @@ $(document).ready(function () {
             return function () {
               infowindow.setContent(markers[i][0].prop("innerHTML"));
               infowindow.open(map, eachMarker);
+              $('.map-places li:eq(' + i + ')').addClass('is-active').siblings().removeClass('is-active');
             };
           }(eachMarker, i));
         };

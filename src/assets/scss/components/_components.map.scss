@@ -62,7 +62,8 @@
         padding: 10px 20px;
         word-break: break-word;
 
-        &:hover {
+        &:hover, 
+        &.is-active {
             color: $color-peach;
         }
         

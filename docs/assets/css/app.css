@@ -2255,7 +2255,7 @@ a {
     display: inline-block;
     padding: 10px 20px;
     word-break: break-word; }
-    .map-places li:hover {
+    .map-places li:hover, .map-places li.is-active {
       color: #F26475; }
     @media screen and (min-width: 480px) {
       .map-places li {

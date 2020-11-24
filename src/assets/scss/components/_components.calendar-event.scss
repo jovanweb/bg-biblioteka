@@ -11,6 +11,10 @@
         margin-bottom: 60px;
         flex-direction: row;
     }
+
+    .vest & {
+        border-bottom: none;
+    }
 }
 
 .calendar-event__image,
@@ -86,5 +90,28 @@
     time {
         margin-bottom: 20px;
         display: block;
+    }
+
+    .section-divider {
+        margin: 30px 0;
+        
+        @include min-screen($breakpoint-medium) {
+            margin: 60px 0;
+        }
+    }
+}
+
+.news-event__header {
+    margin-bottom: 50px;
+    
+    @include min-screen($breakpoint-medium) {
+        margin-bottom: 100px;
+    }
+}
+
+.news-event__social {
+    margin-bottom: 20px;
+    @include min-screen($breakpoint-medium) {
+        margin-bottom: 40px;
     }
 }

@@ -198,4 +198,11 @@ $(document).ready(() => {
     };
     google.maps.event.addDomListener(window, "load", initializeMap);
   }
+  if ($(".masonry-grid").length) {
+    $(".masonry-grid").imagesLoaded(function() {
+      $(".masonry-grid").masonry({
+        itemSelector: ".masonry-grid__item"
+      });
+    });
+  }
 });

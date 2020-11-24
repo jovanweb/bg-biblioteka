@@ -1,0 +1,22 @@
+.masonry-grid {
+    text-align: center;
+    max-width: calc(100% + 20px);
+    margin-left: -10px;
+  }
+
+  .masonry-grid__item {
+    padding: 7px 10px;
+    display:inline;
+    width: 100%;
+    
+    img {
+        width: 100%;
+    }
+
+    @include min-screen($breakpoint-small) {
+        width: 50%;
+    }
+    @include min-screen($breakpoint-medium) {
+        width: 33.333%;
+    }    
+  }

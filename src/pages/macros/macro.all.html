@@ -186,9 +186,25 @@
         <h4>Учесници</h4>
         <p>{{ text }}</p>
         <p class="hidden-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure facilis animi architecto laborum corporis! Optio accusantium totam nihil asperiores porro sunt alias doloribus recusandae. Molestias atque nisi fugit vitae eveniet quia quod quam dolores, veritatis asperiores, vero ipsa voluptate laboriosam maxime natus accusamus voluptatibus labore incidunt. Temporibus, sequi hic accusamus aperiam et modi, ad repudiandae sunt quae cumque, mollitia deserunt maxime possimus. Ipsum laboriosam explicabo quae tempore iusto pariatur architecto? Deleniti incidunt autem, nisi corporis, nemo culpa expedita illo delectus sed nulla facere ipsam aut perspiciatis aspernatur ex nihil similique dolores perferendis rerum. Ex omnis eveniet, dignissimos quisquam autem esse.</p>
-      <p class="read-more js-read-more">
-        <a href="">Прочитај више {% include "../components/inline-svg/arrow.html" -%}</a>
-      </p>
+        <p class="read-more js-read-more">
+          <a href="">Прочитај више {% include "../components/inline-svg/arrow.html" -%}</a>
+        </p>
       </div>
     </article>
   {% endmacro %}
+
+  {% macro newsEvent(imgSrc, date, title, text) %}
+  <article class="news-event">
+    <div class="news-event__image">
+      <img src="assets/images/calendar/{{imgSrc}}.svg" alt="">
+    </div>
+    <div class="news-event__content">
+      <time>{{ date }}</time>
+      <h2>{{ title }}</h2>
+      <p>{{ text }}</p>
+      <p>
+        <a href="#">Прочитај више {% include "../components/inline-svg/arrow.html" -%}</a>
+      </p>
+    </div>
+  </article>
+{% endmacro %}

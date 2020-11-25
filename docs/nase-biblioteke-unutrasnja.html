@@ -14,7 +14,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
 </head>
 
-<body class="calendar">
+<body class="libraries-inner">
   <main>
 
     <div class="js-preloader preloader">
@@ -65,7 +65,7 @@
           </div>
           <nav class="nav-main js-nav-main">
             <ul>
-              <li><a href="nase-biblioteke.html">НАШЕ БИБЛИОТЕКЕ</a></li>
+              <li><a href="nase-biblioteke.html" class="is-active">НАШЕ БИБЛИОТЕКЕ</a></li>
               <li><a href="vodic-za-korisnike.html">ВОДИЧ ЗА КОРИСНИКЕ</a></li>
               <li><a href="o-nama.html">О НАМА</a></li>
               <li><a href="projekti.html">ПРОЈЕКТИ</a></li>
@@ -77,13 +77,106 @@
       </div>
     </header>
     <main>
-      <div class="wrapper wrapper--large">
+      <div bp="grid" class="grid-gap--no-gap library-hero">
+        <div bp="8@xl 6@lg" class="library-hero__img" style="background-image: url('assets/images/lib-img1.jpg');">
+        </div>
+        <div bp="4@xl 6@lg" class="bgr-gray library-hero__info">
+          <h2 class="library-hero__heading">Централна библиотека</h2>
+          <div class="contact-element">
+            <div class="contact-element__icon"><img src="assets/images/pin.svg" alt=""></div>
+            <div class="contact-element__content">Кнез Михаилова 58 <br> Београд</div>
+          </div>
+          <div class="contact-element">
+            <div class="contact-element__icon"><img src="assets/images/time.svg" alt=""></div>
+            <div class="contact-element__content">Понедељак - петак: 8 - 20 <br>Субота: 8 - 14</div>
+          </div>
+          <div class="contact-element">
+            <div class="contact-element__icon"><img src="assets/images/email.svg" alt=""></div>
+            <div class="contact-element__content">info@bgb.rs</div>
+          </div>
+          <div class="contact-element">
+            <div class="contact-element__icon"><img src="assets/images/phone.svg" alt=""></div>
+            <div class="contact-element__content">011/20 24 000</div>
+          </div>
+        </div>
+      </div>
+      <section>
+        <div class="wrapper wrapper--large">
+          <p>Библиотека града Београда је градска библиотека, по типу и функцијама јавна и матична, највећа позајмна библиотека у Србији. Основана је 1928. године, а 1994. добија статус матичне библиотеке за подручје града Београда и врши функцију матичне надлежности која је регулисана Законом о библиотечко-информационој делатности (Службени гласник РС бр. 52/11), Статутом и другим подзаконским актима као и општим актима Библиотеке на подручју града Београда. Послове из домена матичности Библиотеке над око 500 библиотека обавља Одељење за унапређење библиотечке делатности у оквиру Сектора за библиотечку делатност. Спроводи надзор над стручним радом и условима рада у јавним, школским и специјалним библиотекама; води бригу о унапређењу и развоју делатности и стручном усавршавању; иницира, спроводи и координира активности значајне за рад и развој Библиотеке града Београда. Обједињује пословање у матичној библиотеци, прати домете библиотечко-информационе делатности у Србији и свету. </p>
+        </div>
+      </section>
 
-        <nav class="tab-navigation">
-          <a href="kalendar-desavanja.html" class="is-active"><img src="assets/images/desavanja-01.svg" alt=""><span>КАЛЕНДАР ДЕШАВАЊА</span></a>
-          <div class="tab-navigation__separator"></div>
-          <a href="vesti.html"><img src="assets/images/vesti-01.svg" alt=""><span>ВЕСТИ</span></a>
-        </nav>
+      <div class="wrapper wrapper--large">
+        <h1>УСЛУГЕ</h1>
+        <div class="section-divider"></div>
+        <br>
+        <ul class="list list--arrow list--columns@lg3 list--columns@md2">
+          <li>
+            Књиге за одрасле
+          </li>
+          <li>
+            Мултимедија (DVD, CD)
+          </li>
+          <li>
+            Читаоница
+          </li>
+          <li>
+            Е-читаоница
+          </li>
+          <li>
+            Галерија
+          </li>
+          <li>
+            Културно образовни програми
+          </li>
+          <li>
+            Проналажење лит. за стр. радове
+          </li>
+          <li>
+            Рачунари за кориснике
+          </li>
+          <li>
+            Бесплатан Wi-Fi
+          </li>
+          <li>
+            Књиге за децу и младе
+          </li>
+          <li>
+            Часописи
+          </li>
+          <li>
+            Мултимедија (DVD, CD)
+          </li>
+          <li>
+            Читаоница
+          </li>
+          <li>
+            Галерија
+          </li>
+          <li>
+            Културно образовни програми
+          </li>
+          <li>
+            Проналажење лит. за стр. радове
+          </li>
+          <li>
+            Рачунари за кориснике
+          </li>
+          <li>
+            Бесплатан Wi-Fi
+          </li>
+          <li>
+            Скенирање
+          </li>
+        </ul>
+
+        <br>
+        <br>
+
+        <h1>ДЕШАВАЊА</h1>
+        <div class="section-divider"></div>
+        <br>
+        <br>
 
         <article class="calendar-event ">
           <div class="calendar-event__image">
@@ -139,7 +232,7 @@
           </div>
         </article>
 
-        <article class="calendar-event ">
+        <article class="calendar-event calendar-event--borderless">
           <div class="calendar-event__image">
             <img src="assets/images/calendar/ikonica-01.svg" alt="">
             <div class="calendar-event__social">
@@ -166,33 +259,131 @@
           </div>
         </article>
 
-        <article class="calendar-event ">
-          <div class="calendar-event__image">
-            <img src="assets/images/calendar/ikonica-05.svg" alt="">
-            <div class="calendar-event__social">
-              <a href="#" class="social-icon"><img src="assets/images/fb-podeli-01.svg" alt=""></a>
-              <a href="#" class="social-icon"><img src="assets/images/fb-svidjanje.svg" alt=""></a>
-              <a href="#" class="social-icon"><img src="assets/images/twitter-podeli.svg" alt=""></a>
+      </div>
+
+      <div class="map-section m0">
+        <div class="map-container">
+          <div id="map"></div>
+        </div>
+
+      </div>
+      <div class="markers-wrapper">
+        <div id="marker1">
+          <div class="map-marker-info">
+            <h2>Централна</h2>
+            <p class="map-marker-info__address"><span>Кнез Михајлова 56</span> | <span class="map-marker-phone">011 223 344 55</span> | <span class="map-marker-email">info@bgb.rs</span></p>
+
+            <div bp="grid" class="map-marker-info__content grid-gap--medium@sm">
+              <div bp="5">
+                <img src="assets/images/map/marker-1.jpg" alt="">
+              </div>
+              <div bp="7">
+                <div class="o-flex o-flex--column o-flex--justify full-height">
+                  <div>
+                    <p>понедељак - петак</p>
+                    <p>08:00-20:00 часова</p>
+                    <p>субота</p>
+                    <p>08:00-14:00 часова</p>
+                  </div>
+                  <div>
+                    <a href="#"><span>Прочитај више</span><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="26.694px" height="15.714px" viewBox="0 0 26.694 15.714" enable-background="new 0 0 26.694 15.714" xml:space="preserve">
+                        <g>
+                          <path fill="currentColor" d="M22.816,7.852l-4.866,4.866V8.206H3.878V7.508H17.95V2.996L22.816,7.852z" />
+                        </g>
+                      </svg></a>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
-          <div class="calendar-event__content">
-            <h2>Програм са филмском пројекцијом „Милорад Павић” у Чачку</h2>
-            <h3>Галерија Градске библиотеке „Владислав Петковић Дис” у Чачку</h3>
-            <time>1. октобар 2020.</time>
+        </div>
+        <div id="marker2">
+          <div class="map-marker-info">
+            <h2>Барајево</h2>
+            <p class="map-marker-info__address"><span>Кнез Михајлова 56</span> | <span class="map-marker-phone">011 223 344 55</span> | <span class="map-marker-email">info@bgb.rs</span></p>
 
-            <h4>Учесници</h4>
-            <p>У четвртак, 15. октобра 2020, у галерији Градске библиотеке „Владислав Петковић Дис” у Чачку, отворена је изложба Библиотеке града Београда посвећена животу и делу Милорада Павића. Изложбу је отворила Јасмина Нинков, директорка Библиотеке града Београда, а присутнима се обратила и Исидора Ињац, у име трочланог ауторског тима.</p>
-            <p class="hidden-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure facilis animi architecto laborum corporis! Optio accusantium totam nihil asperiores porro sunt alias doloribus recusandae. Molestias atque nisi fugit vitae eveniet quia quod quam dolores, veritatis asperiores, vero ipsa voluptate laboriosam maxime natus accusamus voluptatibus labore incidunt. Temporibus, sequi hic accusamus aperiam et modi, ad repudiandae sunt quae cumque, mollitia deserunt maxime possimus. Ipsum laboriosam explicabo quae tempore iusto pariatur architecto? Deleniti incidunt autem, nisi corporis, nemo culpa expedita illo delectus sed nulla facere ipsam aut perspiciatis aspernatur ex nihil similique dolores perferendis rerum. Ex omnis eveniet, dignissimos quisquam autem esse.</p>
-            <p class="read-more js-read-more">
-              <a href="">Прочитај више <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="26.694px" height="15.714px" viewBox="0 0 26.694 15.714" enable-background="new 0 0 26.694 15.714" xml:space="preserve">
-                  <g>
-                    <path fill="currentColor" d="M22.816,7.852l-4.866,4.866V8.206H3.878V7.508H17.95V2.996L22.816,7.852z" />
-                  </g>
-                </svg></a>
-            </p>
+            <div bp="grid" class="map-marker-info__content grid-gap--medium@sm">
+              <div bp="5">
+                <img src="assets/images/map/marker-1.jpg" alt="">
+              </div>
+              <div bp="7">
+                <div class="o-flex o-flex--column o-flex--justify full-height">
+                  <div>
+                    <p>понедељак - петак</p>
+                    <p>08:00-20:00 часова</p>
+                    <p>субота</p>
+                    <p>08:00-14:00 часова</p>
+                  </div>
+                  <div>
+                    <a href="#"><span>Прочитај више</span> <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="26.694px" height="15.714px" viewBox="0 0 26.694 15.714" enable-background="new 0 0 26.694 15.714" xml:space="preserve">
+                        <g>
+                          <path fill="currentColor" d="M22.816,7.852l-4.866,4.866V8.206H3.878V7.508H17.95V2.996L22.816,7.852z" />
+                        </g>
+                      </svg></a>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-        </article>
+        </div>
+        <div id="marker3">
+          <div class="map-marker-info">
+            <h2>Вождовац</h2>
+            <p class="map-marker-info__address"><span>Кнез Михајлова 56</span> | <span class="map-marker-phone">011 223 344 55</span> | <span class="map-marker-email">info@bgb.rs</span></p>
 
+            <div bp="grid" class="map-marker-info__content grid-gap--medium@sm">
+              <div bp="5">
+                <img src="assets/images/map/marker-1.jpg" alt="">
+              </div>
+              <div bp="7">
+                <div class="o-flex o-flex--column o-flex--justify full-height">
+                  <div>
+                    <p>понедељак - петак</p>
+                    <p>08:00-20:00 часова</p>
+                    <p>субота</p>
+                    <p>08:00-14:00 часова</p>
+                  </div>
+                  <div>
+                    <a href="#"><span>Прочитај више</span> <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="26.694px" height="15.714px" viewBox="0 0 26.694 15.714" enable-background="new 0 0 26.694 15.714" xml:space="preserve">
+                        <g>
+                          <path fill="currentColor" d="M22.816,7.852l-4.866,4.866V8.206H3.878V7.508H17.95V2.996L22.816,7.852z" />
+                        </g>
+                      </svg></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="marker4">
+          <div class="map-marker-info">
+            <h2>Врачар</h2>
+            <p class="map-marker-info__address"><span>Кнез Михајлова 56</span> | <span class="map-marker-phone">011 223 344 55</span> | <span class="map-marker-email">info@bgb.rs</span></p>
+
+            <div bp="grid" class="map-marker-info__content grid-gap--medium@sm">
+              <div bp="5">
+                <img src="assets/images/map/marker-1.jpg" alt="">
+              </div>
+              <div bp="7">
+                <div class="o-flex o-flex--column o-flex--justify full-height">
+                  <div>
+                    <p>понедељак - петак</p>
+                    <p>08:00-20:00 часова</p>
+                    <p>субота</p>
+                    <p>08:00-14:00 часова</p>
+                  </div>
+                  <div>
+                    <a href="#"><span>Прочитај више</span> <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="26.694px" height="15.714px" viewBox="0 0 26.694 15.714" enable-background="new 0 0 26.694 15.714" xml:space="preserve">
+                        <g>
+                          <path fill="currentColor" d="M22.816,7.852l-4.866,4.866V8.206H3.878V7.508H17.95V2.996L22.816,7.852z" />
+                        </g>
+                      </svg></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </main>
 
@@ -279,6 +470,8 @@
 
   </main>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+  <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;sensor=false"></script>
 
   <script src="assets/js/app.js"></script>
   <script src="assets/custom-js/slick.min.js"></script>

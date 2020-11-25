@@ -14,7 +14,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
 </head>
 
-<body class="space">
+<body class="libraries-inner">
   <main>
 
     <div class="js-preloader preloader">
@@ -65,7 +65,7 @@
           </div>
           <nav class="nav-main js-nav-main">
             <ul>
-              <li><a href="nase-biblioteke.html">НАШЕ БИБЛИОТЕКЕ</a></li>
+              <li><a href="nase-biblioteke.html" class="is-active">НАШЕ БИБЛИОТЕКЕ</a></li>
               <li><a href="vodic-za-korisnike.html">ВОДИЧ ЗА КОРИСНИКЕ</a></li>
               <li><a href="o-nama.html">О НАМА</a></li>
               <li><a href="projekti.html">ПРОЈЕКТИ</a></li>
@@ -78,72 +78,7 @@
     </header>
     <main>
       <div class="wrapper wrapper--large">
-        <nav class="sub-navigation">
-          <ul>
-            <li class="sub-navigation__item">
-              <a href="prostor.html">Зграда БГБ</a>
-            </li>
-            <li class="sub-navigation__item">
-              <a href="prostor.html">Рисмка дворана</a>
-            </li>
-            <li class="sub-navigation__item">
-              <a href="prostor.html">Галерија Атријум</a>
-            </li>
-            <li class="sub-navigation__item">
-              <a href="prostor.html" class="is-active">Вукова сала</a>
-            </li>
-            <li class="sub-navigation__item">
-              <a href="prostor.html">Читаоница Фонда уметности</a>
-            </li>
-          </ul>
-        </nav>
 
-      </div>
-      <div class="main-slider-wrapper">
-        <div class="main-slider js-main-slider">
-          <div class="main-slider__item">
-            <img src="assets/images/prostor-img1.jpg" alt="">
-          </div>
-          <div class="main-slider__item">
-            <img src="assets/images/prostor-img1.jpg" alt="">
-          </div>
-          <div class="main-slider__item">
-            <img src="assets/images/prostor-img1.jpg" alt="">
-          </div>
-        </div>
-        <div class="main-slider-arrows">
-          <button type="button" data-role="none" class="button slick-prev slick-arrow" aria-label="Previous" role="button"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="26.694px" height="15.714px" viewBox="0 0 26.694 15.714" enable-background="new 0 0 26.694 15.714" xml:space="preserve">
-              <g>
-                <path fill="currentColor" d="M22.816,7.852l-4.866,4.866V8.206H3.878V7.508H17.95V2.996L22.816,7.852z" />
-              </g>
-            </svg></button>
-          <button type="button" data-role="none" class="button slick-next slick-arrow" aria-label="Next" role="button"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="26.694px" height="15.714px" viewBox="0 0 26.694 15.714" enable-background="new 0 0 26.694 15.714" xml:space="preserve">
-              <g>
-                <path fill="currentColor" d="M22.816,7.852l-4.866,4.866V8.206H3.878V7.508H17.95V2.996L22.816,7.852z" />
-              </g>
-            </svg></button>
-        </div>
-      </div>
-
-      <div class="wrapper wrapper--large">
-        <div bp="grid" class="grid-gap--large@md">
-          <div bp="9@lg">
-            <h1>Вукова сала</h1>
-            <p>Налази се на првом спрату Библиотеке и права је мала галерија уметничких слика посвећених Београду. Назив је добила по централној слици – портрету Вука Караџића, раду Бете Вуксановић. <br> Око овалног стола који може да се раздваја на делове, стаје 20 учесника, а на још једном нивоу се налази још 30 места за седење. Сала је идеална за коференције за новинаре, семинаре, предавања, представљања књига и друге програме.</p>
-          </div>
-          <div bp="3@md" class="o-flex o-flex--column o-flex--justify-center">
-            <div class="contact-element">
-              <div class="contact-element__icon"><img src="assets/images/telefon-01.svg" alt=""></div>
-              <div class="contact-element__content">011/34 29 303</div>
-            </div>
-            <div class="contact-element">
-              <div class="contact-element__icon"><img src="assets/images/email-01.svg" alt=""></div>
-              <div class="contact-element__content">info@bgb.rs</div>
-            </div>
-          </div>
-        </div>
-        <br>
-        <br>
       </div>
     </main>
 
@@ -230,6 +165,8 @@
 
   </main>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+  <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;sensor=false"></script>
 
   <script src="assets/js/app.js"></script>
   <script src="assets/custom-js/slick.min.js"></script>

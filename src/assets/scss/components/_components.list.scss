@@ -18,6 +18,9 @@
       top: 10px;
       border-radius: 50%;
       background-color: black;
+      @include min-screen($breakpoint-medium) {
+        top: 18px;
+      }
     }
   }
 }
@@ -34,6 +37,21 @@
       height: 10px;
       top: 5px;
       background-size: 100% auto;
+      @include min-screen($breakpoint-medium) {
+        top: 10px;
+      }
     }
+  }
+}
+
+.list--columns\@md2 {
+  @include min-screen($breakpoint-medium) {
+    column-count: 2;
+  }
+}
+
+.list--columns\@lg3 {
+  @include min-screen($breakpoint-large) {
+    column-count: 3;
   }
 }

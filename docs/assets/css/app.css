@@ -1196,6 +1196,9 @@ a {
   .grid-gap--medium\@sm {
     grid-gap: 45px; } }
 
+.grid-gap--no-gap {
+  grid-gap: 0; }
+
 .text--regular {
   font-size: 1rem !important; }
 
@@ -1741,6 +1744,10 @@ a {
     top: 10px;
     border-radius: 50%;
     background-color: black; }
+    @media screen and (min-width: 1024px) {
+      .list--dotted li::before,
+      .list--arrow li::before {
+        top: 18px; } }
 
 .list--arrow li {
   padding-left: 25px; }
@@ -1753,6 +1760,17 @@ a {
     height: 10px;
     top: 5px;
     background-size: 100% auto; }
+    @media screen and (min-width: 1024px) {
+      .list--arrow li::before {
+        top: 10px; } }
+
+@media screen and (min-width: 1024px) {
+  .list--columns\@md2 {
+    column-count: 2; } }
+
+@media screen and (min-width: 1216px) {
+  .list--columns\@lg3 {
+    column-count: 3; } }
 
 .radio_wrap {
   user-select: none;
@@ -2659,6 +2677,9 @@ a {
   .news-event {
     border-bottom: none; }
 
+.calendar-event--borderless {
+  border: none !important; }
+
 .calendar-event__image,
 .news-event__image {
   padding-right: 20px;
@@ -2765,10 +2786,14 @@ a {
   display: flex;
   align-items: center;
   font-size: 24px;
-  margin-bottom: 25px; }
+  margin-bottom: 25px;
+  line-height: 1.4; }
   @media screen and (min-width: 1024px) {
     .contact-element {
       margin-bottom: 40px; } }
+  .library-hero__info .contact-element {
+    color: white;
+    font-size: 28px; }
 
 .contact-element__icon {
   margin-right: 20px;
@@ -2777,6 +2802,23 @@ a {
   @media screen and (min-width: 1024px) {
     .contact-element__icon {
       margin-right: 35px; } }
+
+.library-hero__info {
+  padding: 30px; }
+  @media screen and (min-width: 1024px) {
+    .library-hero__info {
+      padding: 70px 20px 70px 70px; } }
+
+.library-hero__img {
+  background-size: cover;
+  min-height: 400px; }
+
+.library-hero__heading {
+  margin-bottom: 30px;
+  color: #F26475; }
+  @media screen and (min-width: 1024px) {
+    .library-hero__heading {
+      margin-bottom: 70px; } }
 
 .full-height {
   height: 100% !important; }
@@ -3267,6 +3309,9 @@ a {
 
 .bgr-peach {
   background-color: rgba(242, 100, 117, 0.1) !important; }
+
+.bgr-gray {
+  background-color: #4D4D4D !important; }
 
 .color-peach {
   color: #F26475 !important; }

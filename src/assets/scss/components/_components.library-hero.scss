@@ -1,0 +1,26 @@
+.library-hero {
+}
+
+.library-hero__info {
+    padding: 30px;
+    
+    @include min-screen($breakpoint-medium) {
+        padding: 70px 20px 70px 70px;
+    }
+    
+}
+
+.library-hero__img {
+    background-size: cover;
+    min-height: 400px;
+}
+
+
+.library-hero__heading {
+    margin-bottom: 30px;
+    color: $color-peach;
+    
+    @include min-screen($breakpoint-medium) {
+        margin-bottom: 70px;
+    }
+}

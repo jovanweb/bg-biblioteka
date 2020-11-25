@@ -33,6 +33,10 @@
     }
 }
 
+.calendar-event--borderless {
+    border: none !important;
+}
+
 .calendar-event__image,
 .news-event__image {
     padding-right: 20px;

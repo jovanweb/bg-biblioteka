@@ -168,8 +168,8 @@
     </nav>
   {% endmacro %}
 
-  {% macro calendarEvent(imgSrc, title, subtitle, date, text) %}
-    <article class="calendar-event">
+  {% macro calendarEvent(imgSrc, title, subtitle, date, text, customClass) %}
+    <article class="calendar-event {{customClass}}">
       <div class="calendar-event__image">
         <img src="assets/images/calendar/{{imgSrc}}.svg" alt="">
         <div class="calendar-event__social">

@@ -3,11 +3,15 @@
   align-items: center; 
   font-size: 24px;
   margin-bottom: 25px;
+  line-height: 1.4;
 
   @include min-screen($breakpoint-medium) {
     margin-bottom: 40px;
   }
-
+  .library-hero__info & {
+    color: white;
+    font-size: 28px;
+    }
 }
 
 .contact-element__icon {

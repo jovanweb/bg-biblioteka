@@ -1,6 +1,8 @@
 .main-slider-wrapper {
     position: relative;
-    @include min-screen($breakpoint-medium) {
+
+    .space & {
+        margin-bottom: 50px;    
     }
     
     .slick-prev, .slick-next {

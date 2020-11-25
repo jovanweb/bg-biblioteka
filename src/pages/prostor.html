@@ -1,0 +1,61 @@
+{% extends "layouts/default.html" %}
+
+{% set space = true %}
+{% set pagetitle = "Библиотека Града Београда" %}
+{% set bodyClass = "space" %}
+
+{% block content %}
+{% include "./components/header/header.html" -%}
+
+<main>
+    <div class="wrapper wrapper--large">
+        {% include "./components/sub-navigation-prostor.html" -%}
+    </div>
+    <div class="js-space-slider"></div>
+    <div class="main-slider-wrapper">
+        <div class="main-slider js-main-slider">
+            <div class="main-slider__item">
+                <img src="assets/images/prostor-img1.jpg" alt="">
+            </div>
+            <div class="main-slider__item">
+                <img src="assets/images/prostor-img1.jpg" alt="">
+            </div>
+            <div class="main-slider__item">
+                <img src="assets/images/prostor-img1.jpg" alt="">
+            </div>
+        </div>
+        <div class="main-slider-arrows">
+            <button type="button" data-role="none" class="button slick-prev slick-arrow" aria-label="Previous" role="button">{% include "./components/inline-svg/arrow.html" -%}</button>
+            <button type="button" data-role="none" class="button slick-next slick-arrow" aria-label="Next" role="button">{% include "./components/inline-svg/arrow.html" -%}</button>
+        </div>
+    </div>
+
+
+
+    <div class="wrapper wrapper--large">
+        <div bp="grid" class="grid-gap--large@md">
+            <div bp="9@lg">
+                <h1>Вукова сала</h1>
+                <p>Налази се на првом спрату Библиотеке и права је мала галерија уметничких слика посвећених Београду. Назив је добила по централној слици – портрету Вука Караџића, раду Бете Вуксановић. <br> Око овалног стола који може да се раздваја на делове, стаје 20 учесника, а на још једном нивоу се налази још 30 места за седење. Сала је идеална за коференције за новинаре, семинаре, предавања, представљања књига и друге програме.</p>
+            </div>
+            <div bp="3@md" class="o-flex o-flex--column o-flex--justify-center">
+                <div class="contact-element">
+                    <div class="contact-element__icon"><img src="assets/images/telefon-01.svg" alt=""></div>
+                    <div class="contact-element__content">011/34 29 303</div>
+                </div>
+                <div class="contact-element">
+                    <div class="contact-element__icon"><img src="assets/images/email-01.svg" alt=""></div>
+                    <div class="contact-element__content">info@bgb.rs</div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <br>
+    </div>
+</main>
+{% include "./components/footer/footer.html" -%}
+
+{% endblock %}
+
+
+

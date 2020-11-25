@@ -27,7 +27,8 @@
     color: $color-black;
     font-size: 14px;
 
-    &:hover {
+    &:hover, 
+    &.is-active {
       color: $color-peach;
     }
 

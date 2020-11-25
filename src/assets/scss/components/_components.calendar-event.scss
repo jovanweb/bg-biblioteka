@@ -1,3 +1,19 @@
+.c-calendar {
+    background-color: gray;
+    padding-bottom: 100%;
+    width: 100%;
+    position: relative;
+    margin-bottom: 40px;
+
+    &:before {
+        content: 'Calendar';
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
 .calendar-event,
 .news-event {
     display: flex;

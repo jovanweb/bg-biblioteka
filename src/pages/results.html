@@ -1,0 +1,44 @@
+{% extends "layouts/default.html" %}
+
+{% set results = true %}
+{% set pagetitle = "Библиотека Града Београда" %}
+{% set bodyClass = "results" %}
+
+{% block content %}
+{% include "./components/header/header.html" -%}
+
+<main>
+    <div class="wrapper wrapper--large">
+        <section>
+
+            <h1>Резултати претраге</h1>
+            <h3>Пронађено је 3 странице са речи ”сала”</h3>
+            
+            <div class="result">
+                <h2>Вукова сала</h2>
+                <p>Налази се на првом спрату Библиотеке и права је мала галерија уметничких слика посвећених Београду. Назив је добила по централној слици – портрету Вука Караџића, раду Бете Вуксановић.
+                </p>
+                <p><a href="http://www.bgb.rs/o-nama/prostori/vukova-sala">http://www.bgb.rs/o-nama/prostori/vukova-sala</a></p>
+            </div>
+            
+            <div class="result">
+                <h2>Вукова сала</h2>
+                <p>Налази се на првом спрату Библиотеке и права је мала галерија уметничких слика посвећених Београду. Назив је добила по централној слици – портрету Вука Караџића, раду Бете Вуксановић.
+                </p>
+                <p><a href="http://www.bgb.rs/o-nama/prostori/vukova-sala">http://www.bgb.rs/o-nama/prostori/vukova-sala</a></p>
+            </div>
+            
+            <div class="result">
+                <h2>Вукова сала</h2>
+                <p>Налази се на првом спрату Библиотеке и права је мала галерија уметничких слика посвећених Београду. Назив је добила по централној слици – портрету Вука Караџића, раду Бете Вуксановић.
+                </p>
+                <p><a href="http://www.bgb.rs/o-nama/prostori/vukova-sala">http://www.bgb.rs/o-nama/prostori/vukova-sala</a></p>
+            </div>
+
+            <input type="text" class="input input--search" placeholder="Поновите претрагу">
+        </section>
+    </div>
+</main>
+{% include "./components/footer/footer.html" -%}
+
+{% endblock %}

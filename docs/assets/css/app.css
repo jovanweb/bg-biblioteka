@@ -1684,6 +1684,9 @@ a {
     .input--search {
       height: 80px;
       font-size: 24px; } }
+  .results .input--search {
+    text-align: left;
+    padding: 0 50px; }
 
 .button {
   -webkit-font-smoothing: inherit;
@@ -2624,6 +2627,19 @@ a {
       margin-left: 70px;
       margin-right: 70px; } }
 
+.c-calendar {
+  background-color: gray;
+  padding-bottom: 100%;
+  width: 100%;
+  position: relative;
+  margin-bottom: 40px; }
+  .c-calendar:before {
+    content: 'Calendar';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%); }
+
 .calendar-event,
 .news-event {
   display: flex;
@@ -2735,6 +2751,13 @@ a {
   @media screen and (min-width: 1024px) {
     .masonry-grid__item {
       width: 33.333%; } }
+
+.result {
+  padding: 50px 0;
+  border-bottom: 1px solid #666;
+  margin-bottom: 40px; }
+  .result:last-of-type {
+    border-bottom: none; }
 
 .full-height {
   height: 100% !important; }

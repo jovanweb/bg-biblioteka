@@ -2056,23 +2056,23 @@ a {
     width: 39px;
     height: 20px; }
 
-.project {
+.single-project {
   display: flex;
   align-items: center;
   flex-direction: column;
   padding: 40px 0 40px 10px;
   border-bottom: 1px solid #666;
   color: #000; }
-  .project:hover {
+  .single-project:hover {
     color: #F26475; }
   @media screen and (min-width: 768px) {
-    .project {
+    .single-project {
       flex-direction: row; } }
   @media screen and (min-width: 1024px) {
-    .project {
+    .single-project {
       padding: 100px 0 100px 20px; } }
 
-.project__img {
+.single-project__img {
   border: 1px solid #000;
   border-radius: 5px;
   background-repeat: no-repeat;
@@ -2081,25 +2081,25 @@ a {
   height: 131px;
   width: 234px;
   margin-bottom: 15px; }
-  .project__img img {
+  .single-project__img img {
     display: none; }
   @media screen and (min-width: 768px) {
-    .project__img {
+    .single-project__img {
       flex: 0 0 234px;
       margin-bottom: 0; } }
   @media screen and (min-width: 1024px) {
-    .project__img {
+    .single-project__img {
       margin-bottom: 0; } }
 
-.project__title {
+.single-project__title {
   text-align: center;
   padding-left: 40px;
   margin-bottom: 0; }
   @media screen and (min-width: 768px) {
-    .project__title {
+    .single-project__title {
       text-align: left; } }
   @media screen and (min-width: 1024px) {
-    .project__title {
+    .single-project__title {
       padding-left: 90px; } }
 
 .all-links a {
@@ -2114,6 +2114,24 @@ a {
   @media screen and (min-width: 1024px) {
     .all-links a {
       font-size: 22px; } }
+
+.project h1 {
+  margin: 50px 0; }
+  @media screen and (min-width: 1024px) {
+    .project h1 {
+      margin: 100px 0; } }
+
+.project .section-divider {
+  margin: 30px 0; }
+  @media screen and (min-width: 1024px) {
+    .project .section-divider {
+      margin: 60px 0; } }
+
+.project__social {
+  margin-bottom: 20px; }
+  @media screen and (min-width: 1024px) {
+    .project__social {
+      margin-bottom: 30px; } }
 
 .about section {
   padding: 30px 0; }

@@ -1,0 +1,66 @@
+{% extends "layouts/default.html" %}
+
+{% set project = true %}
+{% set masonry = true %}
+{% set pagetitle = "Библиотека Града Београда" %}
+{% set bodyClass = "project" %}
+
+{% block content %}
+{% include "./components/header/header.html" -%}
+
+<main>
+    <div class="wrapper wrapper--large">
+        <h1>Креирање иновативних сервиса за промоцију културног наслеђа у библиотекама</h1>
+        <div class="project__social">
+            <a href="#" class="social-icon"><img src="assets/images/fb-podeli-01.svg" alt=""></a>
+            <a href="#" class="social-icon"><img src="assets/images/fb-svidjanje.svg" alt=""></a>
+            <a href="#" class="social-icon"><img src="assets/images/twitter-podeli.svg" alt=""></a>
+        </div>
+        <p>Међународни пројекат Креирање иновативних сервиса за промоцију културног наслеђа у библиoтекама (Re-designing and co-creating innovative cultural heritage services through libraries – iTSELF) реализује се у оквиру програма Европске уније Еразмус+ (Кључна активност 2: Стратешка партнерства у образовању одраслих).</p>
+        <p>Главни циљеви пројекта су утврђивање најбољих постојећих библиотечких сервиса/услуга у вези са културним наслеђем, као и креирање нових иновативних сервиса за промовисање културног наслеђа. Обука запослених и креирање, односно модификација постојећих сервиса  које би задовољиле потражњу и захтеве корисника јесу главни образовни задатак овог пројекта. Самим тим, циљ је и да се друштво што више укључи у идентификацију, чување и коришћење културног наслеђа, развијајући обуке и едукативне материјале за библиотеке, и чинећи их доступним на одговарајућој онлајн платформи (Massive Open Online Course – MOOC).</p>
+        <p>Носилац пројекта је Национална библиотека Летоније. Партнери на пројекту су: Библиотека града Београда, Србија; Hacettepe universitesi, Турска; L’Université de Marne-la-Vallée, Француска; Tallinn University, Естонија; Фондација Stichting PRIME, Холандија.</p>
+        <div class="section-divider"></div>
+        <p>Вредност пројекта: 232.000,00 евра <br>Период реализације: 2018–2021. <br>Донатор: Европска унија (Еразмус+ програм)</p>
+        <br>
+
+        <div class="masonry-grid">
+
+            <div class="masonry-grid__item">
+              <img src="assets/images/project-img-01.jpg" alt="" />
+            </div>
+            
+            <div class="masonry-grid__item">
+                <img src="assets/images/project-img-02.jpg" alt="" />
+            </div>
+
+            <div class="masonry-grid__item">
+                <img src="assets/images/project-img-03.jpg" alt="" />
+            </div>
+            
+            <div class="masonry-grid__item">
+                <img src="assets/images/project-img-04.jpg" alt="" />
+            </div>
+            
+            <div class="masonry-grid__item">
+                <img src="assets/images/project-img-05.jpg" alt="" />
+            </div>
+            
+            <div class="masonry-grid__item">
+                <img src="assets/images/project-img-06.jpg" alt="" />
+            </div>
+            
+            <div class="masonry-grid__item">
+                <img src="assets/images/project-img-07.jpg" alt="" />
+            </div>
+            
+            <div class="masonry-grid__item">
+                <img src="assets/images/project-img-08.jpg" alt="" />
+            </div>
+            
+
+          </div>
+    </div>
+</main>
+{% include "./components/footer/footer.html" -%}
+
+{% endblock %}

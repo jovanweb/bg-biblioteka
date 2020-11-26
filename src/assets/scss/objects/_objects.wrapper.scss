@@ -11,14 +11,8 @@
   margin-left: auto;
 
   @include min-screen($breakpoint-large) {
-    max-width: calc(#{$page-default-width} + (#{$spacing-unit} * 2));
+    max-width: calc(#{$page-max-width} + (#{$spacing-unit} * 2));
     padding-right: $spacing-unit;
     padding-left: $spacing-unit;
-  }
-}
-
-.wrapper--large {
-  @include min-screen($breakpoint-large) {
-    max-width: calc(#{$page-max-width} + (#{$spacing-unit} * 2));
   }
 }

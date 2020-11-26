@@ -192,6 +192,52 @@
       </div>
     </article>
   {% endmacro %}
+  
+  {% macro calendarEventSimple(imgSrc, date, title, customClass) %}
+    <article class="calendar-event {{customClass}}">
+      <div class="calendar-event__image">
+        <img src="assets/images/calendar/{{imgSrc}}.svg" alt="">
+      </div>
+      <div class="calendar-event__content">
+        <time>{{ date }}</time>
+        <br>
+        <br>
+        <h2>{{ title }}</h2>
+      </div>
+    </article>
+  {% endmacro %}
+  
+  {% macro librarySections(title) %}
+    <article class="library-sections">
+      <h2 class="library-sections__heading">{{ title }}</h2>
+      <div class="library-sections__content" bp="grid">
+        <div bp="3@lg 6@md" class="library-sections__item">
+          <div class="contact-element">
+            <div class="contact-element__icon"><img src="assets/images/clock.svg" alt=""></div>
+            <div class="contact-element__content">Радни дан: 8 - 20 <br>Субота: 8 - 14</div>
+          </div>
+        </div>
+        <div bp="3@lg 6@md" class="library-sections__item">
+          <div class="contact-element">
+            <div class="contact-element__icon"><img src="assets/images/lokacija-01.svg" alt=""></div>
+            <div class="contact-element__content">Миријевски венац 4</div>
+          </div>
+        </div>
+        <div bp="3@lg 6@md" class="library-sections__item">
+          <div class="contact-element">
+            <div class="contact-element__icon"><img src="assets/images/telefon-01.svg" alt=""></div>
+            <div class="contact-element__content">011/34 29 303</div>
+          </div>
+        </div>
+        <div bp="3@lg 6@md" class="library-sections__item">
+          <div class="contact-element">
+            <div class="contact-element__icon"><img src="assets/images/email-01.svg" alt=""></div>
+            <div class="contact-element__content">info@bgb.rs</div>
+          </div>
+        </div>
+      </div>
+    </article>
+  {% endmacro %}
 
   {% macro newsEvent(imgSrc, date, title, text) %}
   <article class="news-event">

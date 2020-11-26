@@ -1,0 +1,30 @@
+.library-sections {
+    padding: 30px 0;
+
+    @include min-screen($breakpoint-medium) {
+        padding: 90px 0;
+    }
+    
+}
+
+.library-sections__heading {
+    color: $color-peach;
+    margin-bottom: 30px;
+    
+    @include min-screen($breakpoint-medium) {
+        margin-bottom: 70px;
+    }
+}
+
+.library-sections__item {
+    display: flex;
+    align-items: center;
+
+    .contact-element {
+        flex: 1;
+    }
+}
+
+
+
+

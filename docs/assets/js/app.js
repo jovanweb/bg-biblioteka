@@ -86,7 +86,7 @@ $(document).ready(function () {
     }
   });
   var subNavigationHeight = $(".sub-navigation").height();
-  $('a[href*="#"').smoothScroll({
+  $('.sub-navigation a[href*="#"').smoothScroll({
     offset: -subNavigationHeight + 1,
     speed: 500,
     easing: "easeInOutExpo"
@@ -97,6 +97,35 @@ $(document).ready(function () {
   });
   navigation.on("click", function () {
     navigation.removeClass("is-active");
+  }); //maginfic popup
+
+  $('.js-openpopup').magnificPopup({
+    type: 'inline',
+    fixedContentPos: true,
+    fixedBgPos: true,
+    overflowY: 'auto',
+    closeBtnInside: true,
+    preloader: false,
+    midClick: true,
+    removalDelay: 300,
+    mainClass: 'my-mfp-zoom-in',
+    callbacks: {
+      open: function open() {
+        if ($('.js-popup-slider').length) {
+          // resources slick carousel
+          $('.js-popup-slider').slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows: true,
+            fade: true,
+            prevArrow: $(".main-slider-arrows .slick-prev"),
+            nextArrow: $(".main-slider-arrows .slick-next")
+          });
+        }
+
+        ;
+      }
+    }
   });
 
   if ($("#map").length) {

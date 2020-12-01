@@ -31,8 +31,13 @@
 
 .main-slider {
     .main-slider__item {
-        display: flex;
-        flex-direction: column-reverse;        
+        // display: flex;
+        // flex-direction: column-reverse;   
+        // justify-content: center;     
+
+        &:focus {
+            outline: none !important;
+        }
 
         @include min-screen($breakpoint-medium) {
             flex-direction: row;        

@@ -1,0 +1,114 @@
+.mfp-container  {
+    background-color: rgba(black, .8);
+}
+
+.mfp-content {
+    margin: 0 auto;
+    width: auto;
+    max-width: 100%;
+
+    // .slick-track {
+    //     display: flex;
+
+    //     .main-slider__item  {
+    //         align-self: center;
+    //     }
+    // }
+    height: 100%;
+    .magnific-popup,
+    .main-slider,
+    .slick-list,
+    .slick-track {
+        height: 100vh;
+    }
+
+    .slick-track {
+        display: flex;
+        align-items: center;
+    }
+
+    .slick-slide {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 80%;
+
+        img {
+            max-height: 100%;
+        }
+    }
+}
+  
+.mfp-bg {
+    background-color: transparent;
+}
+  
+.magnific-animate {
+    opacity: 0;
+    transition: all .3s ease;
+    transform: translate(0, -30px);
+}
+  
+/**
+    * Fade-move animation for first dialog
+    */
+
+/* start state */
+.magnific-animate {
+    .my-mfp-zoom-in & {
+        opacity: 0;
+        // @include scale(.5);
+    }
+}
+
+/* animate in */
+.magnific-animate {
+    .my-mfp-zoom-in.mfp-ready & {
+        opacity: 1;
+        // @include scale(1);
+        transform: translate(0, 0);
+    }
+}
+
+/* animate out */
+.magnific-animate {
+    .my-mfp-zoom-in.mfp-removing & {
+        opacity: 0;
+        // @include scale(0);
+        transform: translate(0, -30px);
+    }
+}
+
+/* Dark overlay, start state */
+.my-mfp-zoom-in.mfp-bg {
+    opacity: .001;/* Chrome opacity transition bug */
+    transition: all .3s ease;
+}
+/* animate in */
+.my-mfp-zoom-in.mfp-ready.mfp-bg {
+    opacity: .8;
+}
+/* animate out */
+.my-mfp-zoom-in.mfp-removing.mfp-bg {
+    opacity: 0;
+}
+
+.mfp-close {
+    box-sizing: border-box;
+    padding: 0;
+    opacity: 1;
+    cursor: pointer;
+    color: white !important;
+    font-size: 40px !important;
+    text-transform: uppercase;
+    white-space: nowrap;
+    transition: all .2s ease;
+    line-height: 1;
+    top: 0;
+    height: 70px;
+    width: 70px;
+
+    &:hover {
+        color: darken(white, 20%) !important;
+    }
+}

@@ -26,6 +26,10 @@
 
     }
 
+    .thumb-link__text {
+        margin-top: 7px;
+    }
+
     @include min-screen($breakpoint-tiny) {
 
         > div:nth-last-child(-n+2) {

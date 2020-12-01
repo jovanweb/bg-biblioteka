@@ -19,14 +19,6 @@
   </a>
 {% endmacro %}
 
-{% macro event(time, title, location) %}
-  <article class="event">
-    <time class="event__date">{{ time }}</time>
-    <h3 class="event__title">{{title}}</h3>
-    <p class="event__location">{{location}}</p>
-  </article>
-{% endmacro %}
-
 {% macro titleLink(heading, title, href, arrow) %}
   {% if heading %}
     <{{heading}} class="title-link"><a href="{{href}}">
@@ -49,12 +41,12 @@
   <a href="{{href}}" class="social-icon"><img src="assets/images/{{icon}}" alt=""></a>
 {% endmacro %}
 
-  {% macro event(time, title, location) %}
-  <article class="event">
+  {% macro event(time, title, location, href) %}
+  <a href="{{ href }}" class="event">
     <time class="event__date">{{ time }}</time>
     <h3 class="event__title">{{title}}</h3>
     <p class="event__location">{{location}}</p>
-  </article>
+  </a>
   {% endmacro %}
 
   {% macro project(imgSrc, title) %}
@@ -180,7 +172,7 @@
       </div>
       <div class="calendar-event__content">
         <h2>{{ title }}</h2>
-        <h3>{{ subtitle }}</h3>
+        <h3 class="h5">{{ subtitle }}</h3>
         <time>{{ date }}</time>
 
         <h4>Учесници</h4>

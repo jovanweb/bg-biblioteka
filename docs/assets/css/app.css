@@ -1427,7 +1427,9 @@ a {
         margin-right: 0;
         margin-bottom: 30px; }
       .languages nav a {
-        font-size: 18px; } }
+        font-size: 18px; }
+        .languages nav a:hover {
+          color: #F26475; } }
   @media screen and (min-width: 1216px) {
     .languages {
       padding-left: 50px;
@@ -1581,6 +1583,8 @@ a {
 .footer-main__links a {
   line-height: 36px;
   display: inline-block; }
+  .footer-main__links a:hover {
+    color: #F26475; }
 
 .footer-main__contact,
 .footer-main__working-hours {
@@ -1863,13 +1867,12 @@ a {
   padding: 20px 30px;
   background-color: #F26475;
   text-align: center; }
-  .main-slider__item-content h2,
-  .main-slider__item-content p {
-    line-height: 1.25; }
   .main-slider__item-content h2 {
     font-size: 25px;
-    font-weight: 300; }
+    font-weight: 300;
+    line-height: 1.15; }
   .main-slider__item-content p {
+    line-height: 1.25;
     font-size: 16px;
     font-weight: normal; }
     .main-slider__item-content p:last-child {
@@ -1877,12 +1880,19 @@ a {
   @media screen and (min-width: 1024px) {
     .main-slider__item-content {
       padding: 100px 50px 100px 80px;
-      flex: 0 0 30%;
+      flex: 0 0 33%;
       text-align: left; }
       .main-slider__item-content h2 {
         font-size: 40px; }
       .main-slider__item-content p {
         font-size: 24px; } }
+  @media screen and (max-height: 920px) {
+    .main-slider__item-content {
+      padding: 50px 50px 50px 80px; }
+      .main-slider__item-content h2 {
+        font-size: 35px; }
+      .main-slider__item-content p {
+        font-size: 20px; } }
 
 .main-slider__item-image {
   flex: 0 0 250px;
@@ -2017,6 +2027,9 @@ a {
 .thumb-img-wrapper > div:last-child .thumb-link__img {
   margin-bottom: 0; }
 
+.thumb-img-wrapper .thumb-link__text {
+  margin-top: 7px; }
+
 @media screen and (min-width: 480px) {
   .thumb-img-wrapper > div:nth-last-child(-n+2) .thumb-link__img {
     margin-bottom: 0; } }
@@ -2032,19 +2045,22 @@ a {
       margin-bottom: 80px; } }
 
 .event {
-  margin-bottom: 40px; }
+  margin-bottom: 30px;
+  display: block;
+  color: #000;
+  transition: none; }
   @media screen and (min-width: 1024px) {
     .event {
-      margin-bottom: 80px; } }
+      margin-bottom: 60px; } }
 
 .event__date {
-  font-size: 20px;
+  font-size: 16px;
   line-height: 1.2;
   margin-bottom: 10px;
   display: block; }
   @media screen and (min-width: 1024px) {
     .event__date {
-      font-size: 30px; } }
+      font-size: 24px; } }
 
 .event__title {
   font-size: 18px;
@@ -2743,6 +2759,8 @@ a {
 
 .news-event__header {
   margin-bottom: 50px; }
+  .news-event__header .h2 {
+    color: #F26475; }
   @media screen and (min-width: 1024px) {
     .news-event__header {
       margin-bottom: 100px; } }

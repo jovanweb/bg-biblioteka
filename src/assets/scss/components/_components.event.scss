@@ -1,18 +1,26 @@
 .event {
-    margin-bottom: 40px;
+    margin-bottom: 30px;
+    display: block;
+    color: $color-text;
+    transition: none;
+
+    // &:hover {
+    //     color: $color-peach;
+    // }
+    
     @include min-screen($breakpoint-medium) {
-        margin-bottom: 80px;
+        margin-bottom: 60px;
     }
 }
 
 .event__date {
-    font-size: 20px;
+    font-size: 16px;
     line-height: 1.2;
     margin-bottom: 10px;
     display: block;
 
     @include min-screen($breakpoint-medium) {
-        font-size: 30px;
+        font-size: 24px;
     }
 }
 

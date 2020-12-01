@@ -123,6 +123,10 @@
 
 .news-event__header {
     margin-bottom: 50px;
+
+    .h2 {
+        color: $color-peach;
+    }
     
     @include min-screen($breakpoint-medium) {
         margin-bottom: 100px;

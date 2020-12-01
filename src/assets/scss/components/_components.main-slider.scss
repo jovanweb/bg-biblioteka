@@ -45,17 +45,14 @@
     background-color: $color-peach;
     text-align: center;
     
-    h2,
-    p {
-        line-height: 1.25;
-    }
-    
     h2 {
         font-size: 25px;
         font-weight: 300;
+        line-height: 1.15;
     }
     
     p {
+        line-height: 1.25;
         font-size: 16px;
         font-weight: normal;
 
@@ -66,7 +63,7 @@
     
     @include min-screen($breakpoint-medium) {
         padding: 100px 50px 100px 80px;
-        flex: 0 0 30%;
+        flex: 0 0 33%;
         text-align: left;
         
         h2 {
@@ -75,9 +72,19 @@
         
         p {
             font-size: 24px;
-            
+        }
+    }
+
+    @media screen and (max-height: 920px) {
+        padding: 50px 50px 50px 80px;
+
+        h2 {
+            font-size: 35px;
         }
         
+        p {
+            font-size: 20px;
+        }
     }
 }
 

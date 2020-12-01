@@ -65,6 +65,10 @@
     a {
       line-height: 36px;
       display: inline-block;
+
+      &:hover {
+        color: $color-peach;
+      }
     }
   }
 

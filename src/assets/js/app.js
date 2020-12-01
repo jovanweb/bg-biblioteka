@@ -129,7 +129,7 @@ $(document).ready(() => {
               slidesToShow: 1,
               slidesToScroll: 1,
               arrows: true,
-              fade: true,
+              fade: false,
               prevArrow: $(".main-slider-arrows .slick-prev"),
               nextArrow: $(".main-slider-arrows .slick-next"),
             });

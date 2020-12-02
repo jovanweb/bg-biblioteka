@@ -110,6 +110,12 @@ $(document).ready(() => {
     navigation.removeClass("is-active");
   });
 
+  let masonry_index = 0;
+
+  $('.masonry-grid__item').on('click', function() {
+    masonry_index = $(this).index();
+  })
+
   //maginfic popup
   $('.js-openpopup').magnificPopup({
     type: 'inline',
@@ -125,15 +131,23 @@ $(document).ready(() => {
       open: function() {
         if ( $('.js-popup-slider').length ) {
           // resources slick carousel
-            $('.js-popup-slider').slick({
-              slidesToShow: 1,
-              slidesToScroll: 1,
-              arrows: true,
-              fade: false,
-              prevArrow: $(".main-slider-arrows .slick-prev"),
-              nextArrow: $(".main-slider-arrows .slick-next"),
-            });
+            setTimeout(() => {
+              $('.js-popup-slider').slick(
+                {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                arrows: true,
+                fade: true,
+                prevArrow: $(".main-slider-arrows .slick-prev"),
+                nextArrow: $(".main-slider-arrows .slick-next"),
+              }).slick('slickGoTo', masonry_index);;
+            }, 0);
         };
+      },
+      close: function() {
+        if ( $('.js-popup-slider').length ) {
+          $('.js-popup-slider').slick('unslick');
+        }
       }
     }
 });

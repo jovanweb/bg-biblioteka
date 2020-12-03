@@ -24,4 +24,13 @@
     }
 }
 
+.contact-element__content {
 
+  a {
+    color: $color-text;
+
+    &:hover {
+      color: $color-peach;
+    }
+  }
+}

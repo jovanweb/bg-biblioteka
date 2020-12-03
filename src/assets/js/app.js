@@ -140,7 +140,7 @@ $(document).ready(() => {
                 fade: true,
                 prevArrow: $(".main-slider-arrows .slick-prev"),
                 nextArrow: $(".main-slider-arrows .slick-next"),
-              }).slick('slickGoTo', masonry_index);;
+              }).slick('slickGoTo', masonry_index);
             }, 0);
         };
       },

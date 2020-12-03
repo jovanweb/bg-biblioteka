@@ -18,7 +18,12 @@
 
 .library__wrapper {
   display: flex;
-  align-items: flex-start;
+  flex-direction: column;
+  
+  @include min-screen($breakpoint-tiny) {
+    flex-direction: row;
+    align-items: flex-start;
+  }
 
   @include min-screen($breakpoint-medium) {
     align-items: center;
@@ -26,16 +31,23 @@
 }
 
 .library__img {
-  flex: 0 0 100px;
-  height: 100px;
+  width: 150px;
+  height: 150px;
   border-radius: 50%;
   overflow: hidden;
   border: 1px solid #000;
-  margin-right: 20px;
-
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 30px;
+  
+  @include min-screen($breakpoint-tiny) {
+    flex: 0 0 100px;
+    height: 100px;
+    margin-right: 20px;
+  }
   @include min-screen($breakpoint-large) {
-    flex: 0 0 280px;
-    height: 280px;
+    flex: 0 0 220px;
+    height: 220px;
     margin-right: 120px;
   }
 
@@ -58,6 +70,10 @@
       margin-bottom: 60px;
       font-size: 40px;
     }
+  }
+
+  p {
+    margin-bottom: 10px;
   }
 }
 

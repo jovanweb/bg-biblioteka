@@ -9,7 +9,12 @@
 
   td {
     vertical-align: middle;
-    padding: 20px;
+    padding: 15px 0 15px 10px;
+    word-wrap: break-word;
+    
+    @include min-screen($breakpoint-tiny) {
+      padding: 20px;
+    }
 
     p {
       margin-bottom: 0;
@@ -28,8 +33,10 @@
   td {
     &:last-child {
       text-align: center;
-      width: 80px;
-
+      width: 40px;
+      @include min-screen($breakpoint-tiny) {
+        width: 80px;
+      }
       a {
         display: block;
       }

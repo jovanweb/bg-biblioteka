@@ -2,6 +2,8 @@
     #HEADINGS
 \*------------------------------------ */
 
+$heading-breakpoint: $breakpoint-medium;
+
 h1,
 h2,
 h3,
@@ -15,32 +17,56 @@ h6 {
 
 h1,
 .h1 {
-  @include font-size(60px);
+  @include font-size(40px);
+  
+  @include min-screen($heading-breakpoint) {
+    @include font-size(60px);
+  }
 }
 
 h2,
 .h2 {
-  @include font-size(40px);
+  @include font-size(30px);
+
+  @include min-screen($heading-breakpoint) {
+    @include font-size(40px);
+  }
 }
 
 h3,
 .h3 {
-  @include font-size(30px);
+  @include font-size(25px);
+
+  @include min-screen($heading-breakpoint) {
+    @include font-size(30px);
+  }
 }
 
 h4,
 .h4 {
-  @include font-size(28px);
+  @include font-size(22px);
+  
+  @include min-screen($heading-breakpoint) {
+    @include font-size(28px);
+  }
 }
 
 h5,
 .h5 {
-  @include font-size(24px);
+  @include font-size(20px);
+  
+  @include min-screen($heading-breakpoint) {
+    @include font-size(24px);
+  }
 }
 
 h6,
 .h6 {
-  @include font-size(20px);
+  @include font-size(18px);
+
+  @include min-screen($heading-breakpoint) {
+    @include font-size(20px);
+  }
 }
 
 .heading--underlined {

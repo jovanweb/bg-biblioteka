@@ -7,7 +7,7 @@
         margin-bottom: 0;
     }
     
-    @include min-screen($breakpoint-tiny) {
+    @include min-screen($breakpoint-small) {
         flex-direction: row;
     }
 
@@ -21,9 +21,16 @@
     flex: 1;
     background: gray;
     position: relative;
+
+    .map-section--middle & {
+        padding-bottom: 50%;
+    }
     
-    @include min-screen($breakpoint-tiny) {
+    @include min-screen($breakpoint-small) {
         padding-bottom: 45%;
+        .map-section--middle & {
+            padding-bottom: 30%;
+        }
     }
     #map {
         position: absolute;
@@ -49,7 +56,7 @@
 
 .map-places {
     text-align: center;
-    @include min-screen($breakpoint-tiny) {
+    @include min-screen($breakpoint-small) {
         padding-left: 20px;
         min-width: 150px;
         width: 20%;
@@ -59,7 +66,7 @@
     li {
         cursor: pointer;
         display: inline-block;
-        padding: 10px 20px;
+        padding: 10px 20px 10px 0;
         word-break: break-word;
 
         &:hover, 
@@ -67,7 +74,7 @@
             color: $color-peach;
         }
         
-        @include min-screen($breakpoint-tiny) {
+        @include min-screen($breakpoint-small) {
             display: block;
         }
 
@@ -102,23 +109,49 @@
 }
 
 .map-marker-info__address {
-    display: flex;
-    justify-content: space-between;
-    font-size: 14px;
     margin-bottom: 30px;
+    font-size: 0;
+    span {
+        font-size: 14px;
+        display: block;
+    }
+    @include min-screen($breakpoint-small) {
+        display: flex;
+        justify-content: space-between;
+        font-size: 16px;
+        
+        span {
+            font-size: 16px;
+        }
+    }
+
     @include min-screen($breakpoint-medium) {
         font-size: 24px;
+        
+        span {
+            font-size: 24px;
+        }
     }
 }
 
 .map-marker-info__content {
-    @include font-size(24px);
+    @include font-size(14px);
     line-height: 1.2;
-
+    
     p {
         margin-bottom: 0;
     }
+    
+    @include min-screen($breakpoint-small) {
+        @include font-size(24px);
+    }
 }
+
+// .map-marker-info__work-time {
+//     p {
+//         line-height: 1;
+//     }
+// }
 
 .gm-style-iw.gm-style-iw-c {
     border-radius: 0;

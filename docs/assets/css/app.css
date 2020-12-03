@@ -974,39 +974,75 @@ h6 > a {
 
 h1,
 .h1 {
-  font-size: 60px;
-  font-size: 3.75rem;
-  line-height: 1; }
-
-h2,
-.h2 {
   font-size: 40px;
   font-size: 2.5rem;
   line-height: 1.0125; }
+  @media screen and (min-width: 1024px) {
+    h1,
+    .h1 {
+      font-size: 60px;
+      font-size: 3.75rem;
+      line-height: 1; } }
 
-h3,
-.h3 {
+h2,
+.h2 {
   font-size: 30px;
   font-size: 1.875rem;
   line-height: 1; }
+  @media screen and (min-width: 1024px) {
+    h2,
+    .h2 {
+      font-size: 40px;
+      font-size: 2.5rem;
+      line-height: 1.0125; } }
+
+h3,
+.h3 {
+  font-size: 25px;
+  font-size: 1.5625rem;
+  line-height: 1.02; }
+  @media screen and (min-width: 1024px) {
+    h3,
+    .h3 {
+      font-size: 30px;
+      font-size: 1.875rem;
+      line-height: 1; } }
 
 h4,
 .h4 {
-  font-size: 28px;
-  font-size: 1.75rem;
-  line-height: 1.01786; }
+  font-size: 22px;
+  font-size: 1.375rem;
+  line-height: 1.02273; }
+  @media screen and (min-width: 1024px) {
+    h4,
+    .h4 {
+      font-size: 28px;
+      font-size: 1.75rem;
+      line-height: 1.01786; } }
 
 h5,
 .h5 {
-  font-size: 24px;
-  font-size: 1.5rem;
-  line-height: 1; }
-
-h6,
-.h6 {
   font-size: 20px;
   font-size: 1.25rem;
   line-height: 1.05; }
+  @media screen and (min-width: 1024px) {
+    h5,
+    .h5 {
+      font-size: 24px;
+      font-size: 1.5rem;
+      line-height: 1; } }
+
+h6,
+.h6 {
+  font-size: 18px;
+  font-size: 1.125rem;
+  line-height: 1; }
+  @media screen and (min-width: 1024px) {
+    h6,
+    .h6 {
+      font-size: 20px;
+      font-size: 1.25rem;
+      line-height: 1.05; } }
 
 .heading--underlined {
   border-bottom: 1px solid #666; }
@@ -1090,7 +1126,7 @@ a {
   .slick-slide.dragging img {
     pointer-events: none; }
   .slick-initialized .slick-slide {
-    display: block; }
+    display: flex; }
   .slick-loading .slick-slide {
     visibility: hidden; }
   .slick-vertical .slick-slide {
@@ -1974,22 +2010,33 @@ a {
 
 .library__wrapper {
   display: flex;
-  align-items: flex-start; }
+  flex-direction: column; }
+  @media screen and (min-width: 480px) {
+    .library__wrapper {
+      flex-direction: row;
+      align-items: flex-start; } }
   @media screen and (min-width: 1024px) {
     .library__wrapper {
       align-items: center; } }
 
 .library__img {
-  flex: 0 0 100px;
-  height: 100px;
+  width: 150px;
+  height: 150px;
   border-radius: 50%;
   overflow: hidden;
   border: 1px solid #000;
-  margin-right: 20px; }
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 30px; }
+  @media screen and (min-width: 480px) {
+    .library__img {
+      flex: 0 0 100px;
+      height: 100px;
+      margin-right: 20px; } }
   @media screen and (min-width: 1216px) {
     .library__img {
-      flex: 0 0 280px;
-      height: 280px;
+      flex: 0 0 220px;
+      height: 220px;
       margin-right: 120px; } }
   .library__img img {
     object-fit: cover;
@@ -2006,6 +2053,8 @@ a {
       .library__content h2 {
         margin-bottom: 60px;
         font-size: 40px; } }
+  .library__content p {
+    margin-bottom: 10px; }
 
 .library__note {
   margin-top: 20px;
@@ -2096,7 +2145,7 @@ a {
   display: flex;
   align-items: center;
   flex-direction: column;
-  padding: 40px 0 40px 10px;
+  padding: 30px 0 30px 10px;
   border-bottom: 1px solid #666;
   color: #000; }
   .single-project:hover {
@@ -2106,13 +2155,13 @@ a {
       flex-direction: row; } }
   @media screen and (min-width: 1024px) {
     .single-project {
-      padding: 100px 0 100px 20px; } }
+      padding: 50px 0 50px 20px; } }
 
 .single-project__img {
   border: 1px solid #000;
   border-radius: 5px;
   background-repeat: no-repeat;
-  background-size: 75%;
+  background-size: 60%;
   background-position: 50% 50%;
   height: 131px;
   width: 234px;
@@ -2129,11 +2178,11 @@ a {
 
 .single-project__title {
   text-align: center;
-  padding-left: 40px;
   margin-bottom: 0; }
   @media screen and (min-width: 768px) {
     .single-project__title {
-      text-align: left; } }
+      text-align: left;
+      padding-left: 40px; } }
   @media screen and (min-width: 1024px) {
     .single-project__title {
       padding-left: 90px; } }
@@ -2151,10 +2200,10 @@ a {
     .all-links a {
       font-size: 22px; } }
 
-.project h1 {
+.project h2 {
   margin: 50px 0; }
   @media screen and (min-width: 1024px) {
-    .project h1 {
+    .project h2 {
       margin: 100px 0; } }
 
 .project .section-divider {
@@ -2275,7 +2324,7 @@ a {
   margin-bottom: 40px; }
   .map-section ul {
     margin-bottom: 0; }
-  @media screen and (min-width: 480px) {
+  @media screen and (min-width: 768px) {
     .map-section {
       flex-direction: row; } }
   @media screen and (min-width: 1024px) {
@@ -2287,9 +2336,13 @@ a {
   flex: 1;
   background: gray;
   position: relative; }
-  @media screen and (min-width: 480px) {
+  .map-section--middle .map-container {
+    padding-bottom: 50%; }
+  @media screen and (min-width: 768px) {
     .map-container {
-      padding-bottom: 45%; } }
+      padding-bottom: 45%; }
+      .map-section--middle .map-container {
+        padding-bottom: 30%; } }
   .map-container #map {
     position: absolute;
     width: 100%;
@@ -2305,7 +2358,7 @@ a {
 
 .map-places {
   text-align: center; }
-  @media screen and (min-width: 480px) {
+  @media screen and (min-width: 768px) {
     .map-places {
       padding-left: 20px;
       min-width: 150px;
@@ -2314,11 +2367,11 @@ a {
   .map-places li {
     cursor: pointer;
     display: inline-block;
-    padding: 10px 20px;
+    padding: 10px 20px 10px 0;
     word-break: break-word; }
     .map-places li:hover, .map-places li.is-active {
       color: #F26475; }
-    @media screen and (min-width: 480px) {
+    @media screen and (min-width: 768px) {
       .map-places li {
         display: block; } }
     @media screen and (min-width: 1024px) {
@@ -2341,21 +2394,36 @@ a {
     height: auto; }
 
 .map-marker-info__address {
-  display: flex;
-  justify-content: space-between;
-  font-size: 14px;
-  margin-bottom: 30px; }
+  margin-bottom: 30px;
+  font-size: 0; }
+  .map-marker-info__address span {
+    font-size: 14px;
+    display: block; }
+  @media screen and (min-width: 768px) {
+    .map-marker-info__address {
+      display: flex;
+      justify-content: space-between;
+      font-size: 16px; }
+      .map-marker-info__address span {
+        font-size: 16px; } }
   @media screen and (min-width: 1024px) {
     .map-marker-info__address {
-      font-size: 24px; } }
+      font-size: 24px; }
+      .map-marker-info__address span {
+        font-size: 24px; } }
 
 .map-marker-info__content {
-  font-size: 24px;
-  font-size: 1.5rem;
-  line-height: 1;
+  font-size: 14px;
+  font-size: 0.875rem;
+  line-height: 1.07143;
   line-height: 1.2; }
   .map-marker-info__content p {
     margin-bottom: 0; }
+  @media screen and (min-width: 768px) {
+    .map-marker-info__content {
+      font-size: 24px;
+      font-size: 1.5rem;
+      line-height: 1; } }
 
 .gm-style-iw.gm-style-iw-c {
   border-radius: 0;
@@ -2417,7 +2485,11 @@ a {
     max-width: 100%; }
   .table-wrapper td {
     vertical-align: middle;
-    padding: 20px; }
+    padding: 15px 0 15px 10px;
+    word-wrap: break-word; }
+    @media screen and (min-width: 480px) {
+      .table-wrapper td {
+        padding: 20px; } }
     .table-wrapper td p {
       margin-bottom: 0;
       line-height: 1.5; }
@@ -2428,7 +2500,10 @@ a {
     margin-bottom: 0; }
   .table--extend td:last-child {
     text-align: center;
-    width: 80px; }
+    width: 40px; }
+    @media screen and (min-width: 480px) {
+      .table--extend td:last-child {
+        width: 80px; } }
     .table--extend td:last-child a {
       display: block; }
 
@@ -2819,6 +2894,11 @@ a {
     .contact-element__icon {
       margin-right: 35px; } }
 
+.contact-element__content a {
+  color: #000; }
+  .contact-element__content a:hover {
+    color: #F26475; }
+
 .library-hero__info {
   padding: 30px; }
   @media screen and (min-width: 1024px) {
@@ -2940,6 +3020,9 @@ a {
 
 .text-center {
   text-align: center !important; }
+
+.text-right {
+  text-align: right !important; }
 
 /* ------------------------------------*\
     #TRUMPS - SPACING

@@ -2277,13 +2277,16 @@ a {
       flex-direction: row;
       padding-top: 60px; } }
 
-.exhibition__img {
-  max-width: 30%; }
-  .exhibition__img img {
-    margin-bottom: 20px; }
-    @media screen and (min-width: 768px) {
-      .exhibition__img img {
-        margin-bottom: 0; } }
+.exhibition__img img {
+  margin-bottom: 20px;
+  min-width: 300px; }
+
+@media screen and (min-width: 768px) {
+  .exhibition__img {
+    max-width: 30%; }
+    .exhibition__img img {
+      margin-bottom: 0;
+      min-width: 100px; } }
 
 .exhibition__content {
   flex: 1;

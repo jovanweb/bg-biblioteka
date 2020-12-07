@@ -10,14 +10,18 @@
 }
     
 .exhibition__img {
-    max-width: 30%;
     
     img {
         margin-bottom: 20px;
-
-        @include min-screen($breakpoint-small) {
+        min-width: 300px;
+    }
+    
+    @include min-screen($breakpoint-small) {
+        max-width: 30%;
+        
+        img {
             margin-bottom: 0;
-            
+            min-width: 100px;
         }
     }
     

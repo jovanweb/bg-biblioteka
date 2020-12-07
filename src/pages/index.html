@@ -8,8 +8,10 @@
 {% include "./components/header/header.html" -%}
 
 <main>
-  {% include "./components/sliders/main-slider.html" -%}
-  {% include "./components/sliders/navigation-slider.html" -%}
+  <div class="home-slider">
+    {% include "./components/sliders/main-slider.html" -%}
+    {% include "./components/sliders/navigation-slider.html" -%}
+  </div>
   <section>
     <div class="wrapper">
       <div bp="grid">

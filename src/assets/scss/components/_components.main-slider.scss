@@ -1,5 +1,20 @@
+.home-slider {
+    .main-slider-wrapper,
+    .main-slider {
+        height: 100%;
+    }
+    @include max-screen($breakpoint-medium - 1) {
+        height: auto !important;
+    }
+    @include min-screen($breakpoint-medium) {
+        position: relative;
+        overflow: hidden;
+    }
+}
+
 .main-slider-wrapper {
     position: relative;
+    height: 100%;
 
     .space & {
         margin-bottom: 50px;    
@@ -30,21 +45,36 @@
 }
 
 .main-slider {
+    
+    .slick-list, 
+    .slick-track,
     .main-slider__item {
-        // display: flex;
-        // flex-direction: column-reverse;   
-        // justify-content: center;     
-
+        height: 100%;
+    }
+    .main-slider__item {
+        display: flex;
+        flex-direction: column-reverse;   
+        justify-content: center;     
+        
         &:focus {
             outline: none !important;
         }
-
-        @include min-screen($breakpoint-medium) {
+        
+        @include min-screen($breakpoint-small) {
             flex-direction: row;        
         }
     }
+    
+    @include min-screen($breakpoint-small) {
+        height: 500px;
+    }
 }
-
+.main-slider__item-overflow {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
 .main-slider__item-content {
     padding: 20px 30px;
     background-color: $color-peach;
@@ -66,11 +96,13 @@
         }
     }
     
-    @include min-screen($breakpoint-medium) {
+    @include min-screen($breakpoint-small) {
         padding: 100px 50px 100px 80px;
         flex: 0 0 33%;
         text-align: left;
-        
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
         h2 {
             font-size: 40px;
         }
@@ -81,7 +113,7 @@
     }
 
     @media screen and (max-height: 920px) {
-        padding: 50px 50px 50px 80px;
+        padding: 50px;
 
         h2 {
             font-size: 35px;
@@ -94,13 +126,13 @@
 }
 
 .main-slider__item-image {
-    flex: 0 0 250px;
+    flex: 0 0 300px;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 50% 50%;
     
-    @include min-screen($breakpoint-tiny) {
-        flex: 0 0 400px;
+    @include min-screen($breakpoint-small) {
+        flex: 1;
     }
 
     @include min-screen($breakpoint-medium) {

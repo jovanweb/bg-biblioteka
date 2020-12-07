@@ -19,3 +19,16 @@ a {
     color: darken($color-link, 20%);
   }
 }
+
+
+.download-link {
+  color: $color-text;
+
+  &:hover {
+    color: $color-peach;
+  }
+  img {
+    margin-left: 20px;
+    width: 60px;
+  }
+}

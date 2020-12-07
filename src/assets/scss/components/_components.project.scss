@@ -20,19 +20,19 @@
 }
 
 .single-project__img {
-    border: 1px solid $color-black;
+    border: 0.5px solid $color-black;
     border-radius: 5px;
     background-repeat: no-repeat;
-    background-size: 60%;
+    background-size: 70%;
     background-position: 50% 50%;
-    height: 131px;
-    width: 234px;
+    height: 110px;
+    width: 190px;
     margin-bottom: 15px;
     img {
         display: none;
     }
     @include min-screen($breakpoint-small) {
-        flex: 0 0 234px;
+        flex: 0 0 190px;
         margin-bottom: 0;
     }
     

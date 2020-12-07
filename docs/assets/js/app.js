@@ -703,6 +703,9 @@ require("core-js/modules/es.date.to-string");
 
 require("core-js/modules/web.timers");
 
+$(window).on("load", function () {
+  $(".js-preloader").fadeOut("slow");
+});
 $(document).ready(function () {
   var header = $('.header-main');
   $(".js-main-slider") && $(".js-main-slider").slick({
@@ -751,9 +754,6 @@ $(document).ready(function () {
         setTimeout(resizeend, delta);
       }
     }
-  });
-  $(window).on("load", function () {
-    $(".js-preloader").fadeOut("slow");
   });
   to_top_icon.on('click', function (e) {
     e.preventDefault();

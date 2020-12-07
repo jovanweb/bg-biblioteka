@@ -1,4 +1,9 @@
+  
+$(window).on("load", () => {
+  $(".js-preloader").fadeOut("slow");
+});
 
+  
 $(document).ready(() => {
   const header = $('.header-main');
   $(".js-main-slider") &&
@@ -51,11 +56,7 @@ $(document).ready(() => {
       }
     }
   });
-  
-  $(window).on("load", () => {
-    $(".js-preloader").fadeOut("slow");
-  });
-  
+
   to_top_icon.on('click', function(e) {
       e.preventDefault();
       $("html, body").animate({ scrollTop: 0 }, "fast");

@@ -1959,12 +1959,10 @@ a {
       .main-slider__item-content p {
         font-size: 24px; } }
   @media screen and (max-height: 920px) {
-    .main-slider__item-content {
-      padding: 50px; }
-      .main-slider__item-content h2 {
-        font-size: 35px; }
-      .main-slider__item-content p {
-        font-size: 20px; } }
+    .main-slider__item-content h2 {
+      font-size: 35px; }
+    .main-slider__item-content p {
+      font-size: 20px; } }
 
 .main-slider__item-image {
   flex: 0 0 300px;

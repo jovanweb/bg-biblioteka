@@ -2558,7 +2558,9 @@ a {
       display: block; }
   @media screen and (max-width: 479px) {
     .table--extend td {
-      padding-left: 0; } }
+      padding-left: 0; }
+      .table--extend td:first-child {
+        padding-left: 5px; } }
 
 .table--extend-content img {
   width: 46px;

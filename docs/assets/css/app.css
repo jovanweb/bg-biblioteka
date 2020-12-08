@@ -2561,6 +2561,10 @@ a {
   width: 46px;
   margin-right: 15px; }
 
+@media screen and (max-width: 479px) {
+  .table--employees {
+    font-size: 14px; } }
+
 .memberships {
   margin-bottom: 50px; }
   @media screen and (min-width: 768px) {

@@ -51,3 +51,9 @@
   }
 }
 
+
+.table--employees {
+  @include max-screen($breakpoint-tiny - 1) {
+    font-size: 14px;
+  }
+}

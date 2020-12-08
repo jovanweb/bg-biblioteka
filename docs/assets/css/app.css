@@ -1722,8 +1722,8 @@ a {
 .input--search {
   border-radius: 10px;
   border: 1px solid #000;
-  width: 800px;
-  max-width: 100%;
+  width: 100%;
+  max-width: 800px;
   text-align: center;
   height: 60px;
   font-size: 18px;

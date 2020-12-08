@@ -1,0 +1,14 @@
+.employees-info {
+    display: flex;
+    flex-direction: column;
+    
+    @include min-screen($breakpoint-small) {
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        .download-link {
+            padding-right: 40px;
+            margin-bottom: 10px;
+        }
+    }
+}

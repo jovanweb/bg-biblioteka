@@ -2556,6 +2556,9 @@ a {
         width: 80px; } }
     .table--extend td:last-child a {
       display: block; }
+  @media screen and (max-width: 479px) {
+    .table--extend td {
+      padding-left: 0; } }
 
 .table--extend-content img {
   width: 46px;

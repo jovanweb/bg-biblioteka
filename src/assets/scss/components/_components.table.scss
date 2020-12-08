@@ -41,6 +41,9 @@
         display: block;
       }
     }
+    @include max-screen($breakpoint-tiny - 1) {
+      padding-left: 0;
+    }
   }
 }
 

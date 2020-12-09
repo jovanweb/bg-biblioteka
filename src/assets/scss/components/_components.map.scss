@@ -68,6 +68,7 @@
         display: inline-block;
         padding: 10px 20px 10px 0;
         word-break: break-word;
+        font-size: 16px;
 
         &:hover, 
         &.is-active {
@@ -77,9 +78,10 @@
         @include min-screen($breakpoint-small) {
             display: block;
         }
-
-        @include min-screen($breakpoint-medium) {
+        
+        @include min-screen($breakpoint-extralarge) {
             font-size: 28px;
+            padding: 10px 20px;
         }
     }
 }

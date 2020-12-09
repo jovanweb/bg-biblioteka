@@ -20,7 +20,7 @@
     flex-direction: column;
     padding-bottom: 30px;
     margin-bottom: 30px;
-    border-bottom: 1px solid #666;
+    border-bottom: 1px solid  $color-border;
     
     @include min-screen($breakpoint-small) {
         padding-bottom: 60px;

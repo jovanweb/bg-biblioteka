@@ -15,11 +15,10 @@ $(document).ready(() => {
     speed: 300,
     infinite: true,
   });
-    
+  const homeSlider = $('.home-slider');
   const calculateMainSliderSize = () => {
     const header_height = header.outerHeight();
-    console.log(header_height)
-    $('.home-slider').css('height', 'calc(100vh - ' + header_height + 'px)')
+    homeSlider.css('height', 'calc(100vh - ' + header_height + 'px)')
   }
 
   calculateMainSliderSize()

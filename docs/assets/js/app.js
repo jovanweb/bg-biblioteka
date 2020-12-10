@@ -716,11 +716,11 @@ $(document).ready(function () {
     speed: 300,
     infinite: true
   });
+  var homeSlider = $('.home-slider');
 
   var calculateMainSliderSize = function calculateMainSliderSize() {
     var header_height = header.outerHeight();
-    console.log(header_height);
-    $('.home-slider').css('height', 'calc(100vh - ' + header_height + 'px)');
+    homeSlider.css('height', 'calc(100vh - ' + header_height + 'px)');
   };
 
   calculateMainSliderSize(); //back to top icon

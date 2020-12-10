@@ -951,7 +951,7 @@ section {
 .section-divider {
   width: 100%;
   height: 1px;
-  background-color: #000; }
+  border-bottom: 1px solid #000; }
 
 figure {
   margin-bottom: 40px; }
@@ -2207,7 +2207,7 @@ a {
 .single-project__img {
   border-radius: 5px;
   background-repeat: no-repeat;
-  background-size: 70%;
+  background-size: 85%;
   background-position: 50% 50%;
   height: 110px;
   width: 190px;
@@ -2389,7 +2389,7 @@ a {
     padding-bottom: 50%; }
   @media screen and (min-width: 768px) {
     .map-container {
-      padding-bottom: 45%; }
+      padding-bottom: 30%; }
       .map-section--middle .map-container {
         padding-bottom: 30%; } }
   .map-container #map {
@@ -2406,28 +2406,37 @@ a {
   display: none; }
 
 .map-places {
-  text-align: center; }
+  text-align: center;
+  background-color: #4C4D4C;
+  padding: 10px 20px 20px; }
   @media screen and (min-width: 768px) {
     .map-places {
-      padding-left: 20px;
       min-width: 150px;
-      width: 20%;
-      text-align: left; } }
+      width: 22%;
+      text-align: left;
+      display: flex;
+      flex-direction: column;
+      justify-content: center; } }
   .map-places li {
     cursor: pointer;
     display: inline-block;
-    padding: 10px 20px 10px 0;
     word-break: break-word;
-    font-size: 16px; }
+    font-size: 16px;
+    color: white;
+    line-height: 1.3;
+    margin: 10px 10px 0; }
     .map-places li:hover, .map-places li.is-active {
       color: #F26475; }
     @media screen and (min-width: 768px) {
       .map-places li {
-        display: block; } }
+        display: block;
+        margin: 10px 0 0; } }
     @media screen and (min-width: 1440px) {
       .map-places li {
-        font-size: 28px;
-        padding: 10px 20px; } }
+        font-size: 24px; } }
+  @media screen and (min-width: 1216px) {
+    .map-places {
+      padding: 25px 40px 35px; } }
 
 .map-marker-info {
   padding: 20px;

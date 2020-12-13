@@ -141,6 +141,10 @@
         }
     }
 
+    @include min-screen($breakpoint-medium) {
+        padding: 40px 50px 130px 80px;
+    }
+
     @media screen and (max-height: 920px) {
 
         h2 {
@@ -165,5 +169,25 @@
 
     @include min-screen($breakpoint-medium) {
         flex: 1;
+    }
+}
+
+.main-slider__regular-text {
+    margin-bottom: 0;
+    
+    @include screen($breakpoint-medium, $breakpoint-extralarge) {
+        display: none;
+    }
+}
+
+.main-slider__read-more {
+    display: none;
+    
+    @include screen($breakpoint-medium, $breakpoint-extralarge) {
+        display: block;
+
+        a {
+            color: white;
+        }
     }
 }

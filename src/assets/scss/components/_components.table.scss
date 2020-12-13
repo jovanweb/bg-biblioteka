@@ -63,3 +63,21 @@
     font-size: 14px;
   }
 }
+
+.table--prices {
+  @include max-screen(550px) {
+    font-size: 13px;
+  }
+  @include max-screen(500px) {
+    font-size: 12px;
+  }
+  @include max-screen(450px) {
+    font-size: 11px;
+  }
+  @include max-screen(400px) {
+    font-size: 10px;
+  }
+  @include max-screen(350px) {
+    font-size: 9px;
+  }
+}

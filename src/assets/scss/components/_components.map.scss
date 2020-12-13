@@ -119,6 +119,10 @@
             height: auto;
         }
     }
+
+    @include max-screen($breakpoint-tiny - 1) {
+        padding: 0;
+    }
 }
 
 .map-marker-info__address {
@@ -157,6 +161,10 @@
     
     @include min-screen($breakpoint-small) {
         @include font-size(24px);
+    }
+
+    @include max-screen($breakpoint-tiny - 1) {
+        display: block !important;
     }
 }
 

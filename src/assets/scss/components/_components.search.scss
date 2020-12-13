@@ -13,9 +13,25 @@
         flex: 1;
         height: 58px;
         margin-bottom: 20px;
-        font-size: 13px;
+        font-size: 10px;
+        
+        @include min-screen(370px) {
+            font-size: 13px;
+        }
 
-        @include min-screen($breakpoint-small) {
+        @include min-screen(430px) {
+            font-size: 15px;
+        }
+
+        @include min-screen($breakpoint-tiny) {
+            font-size: 12px;
+        }
+        
+        @include min-screen(520px) {
+            font-size: 14px;
+        }
+
+        @include min-screen(580px) {
             font-size: 16px;
         }
 
@@ -25,7 +41,7 @@
             border-right: 1px solid #000;
         }
 
-        @include min-screen($breakpoint-large) {
+        @include min-screen($breakpoint-large + 100px) {
             font-size: 24px;
         }
         

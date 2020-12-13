@@ -23,12 +23,27 @@ a {
 
 .download-link {
   color: $color-text;
-
+  flex-direction: row-reverse;
+  text-align: left;
+  justify-content: flex-end;
+  margin-bottom: 20px;
+  
   &:hover {
     color: $color-peach;
   }
   img {
-    margin-left: 20px;
+    margin-right: 20px;
     width: 60px;
+  }
+  
+  @include min-screen($breakpoint-small) {
+    flex-direction: row;
+    justify-content: flex-start;
+    margin-bottom: 0;
+    
+    img {
+      margin-right: 0;
+      margin-left: 20px;
+    }
   }
 }

@@ -1063,12 +1063,24 @@ a {
     color: #dd132b; }
 
 .download-link {
-  color: #000; }
+  color: #000;
+  flex-direction: row-reverse;
+  text-align: left;
+  justify-content: flex-end;
+  margin-bottom: 20px; }
   .download-link:hover {
     color: #F26475; }
   .download-link img {
-    margin-left: 20px;
+    margin-right: 20px;
     width: 60px; }
+  @media screen and (min-width: 768px) {
+    .download-link {
+      flex-direction: row;
+      justify-content: flex-start;
+      margin-bottom: 0; }
+      .download-link img {
+        margin-right: 0;
+        margin-left: 20px; } }
 
 /* Slider */
 .slick-slider {
@@ -1151,8 +1163,8 @@ a {
 .wrapper {
   width: 100%;
   max-width: 100%;
-  padding-right: 10px;
-  padding-left: 10px;
+  padding-right: 15px;
+  padding-left: 15px;
   margin-right: auto;
   margin-left: auto; }
   @media screen and (min-width: 1216px) {
@@ -1501,8 +1513,20 @@ a {
     flex: 1;
     height: 58px;
     margin-bottom: 20px;
-    font-size: 13px; }
-    @media screen and (min-width: 768px) {
+    font-size: 10px; }
+    @media screen and (min-width: 370px) {
+      .search input {
+        font-size: 13px; } }
+    @media screen and (min-width: 430px) {
+      .search input {
+        font-size: 15px; } }
+    @media screen and (min-width: 480px) {
+      .search input {
+        font-size: 12px; } }
+    @media screen and (min-width: 520px) {
+      .search input {
+        font-size: 14px; } }
+    @media screen and (min-width: 580px) {
       .search input {
         font-size: 16px; } }
     @media screen and (min-width: 1024px) {
@@ -1510,7 +1534,7 @@ a {
         margin-bottom: 0px;
         padding-right: 20px;
         border-right: 1px solid #000; } }
-    @media screen and (min-width: 1216px) {
+    @media screen and (min-width: 1316px) {
       .search input {
         font-size: 24px; } }
     @media screen and (min-width: 1216px) and (max-width: 1440px) {
@@ -1914,6 +1938,27 @@ a {
   .main-slider-wrapper .slick-next {
     left: auto;
     right: 10px; }
+  @media screen and (max-width: 479px) {
+    .main-slider-wrapper .slick-prev, .main-slider-wrapper .slick-next {
+      width: 30px;
+      height: 30px;
+      display: flex;
+      left: 0; }
+      .main-slider-wrapper .slick-prev svg, .main-slider-wrapper .slick-next svg {
+        display: none; }
+      .main-slider-wrapper .slick-prev:before,
+      .main-slider-wrapper .slick-next:before {
+        content: '';
+        margin: auto;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 10px 0 10px 10px;
+        border-color: transparent transparent transparent #000000; } }
+  @media screen and (max-width: 479px) {
+    .main-slider-wrapper .slick-next {
+      left: auto;
+      right: 0; } }
 
 .main-slider .slick-list,
 .main-slider .slick-track,
@@ -2012,6 +2057,27 @@ a {
   .navigation-slider-wrapper .slick-next {
     left: auto;
     right: 10px; }
+  @media screen and (max-width: 479px) {
+    .navigation-slider-wrapper .slick-prev, .navigation-slider-wrapper .slick-next {
+      width: 30px;
+      height: 30px;
+      display: flex;
+      left: 0; }
+      .navigation-slider-wrapper .slick-prev svg, .navigation-slider-wrapper .slick-next svg {
+        display: none; }
+      .navigation-slider-wrapper .slick-prev:before,
+      .navigation-slider-wrapper .slick-next:before {
+        content: '';
+        margin: auto;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 10px 0 10px 10px;
+        border-color: transparent transparent transparent #F26475; } }
+  @media screen and (max-width: 479px) {
+    .navigation-slider-wrapper .slick-next {
+      left: auto;
+      right: 0; } }
 
 .navigation-slider .slick-slide a {
   color: white;
@@ -2452,6 +2518,9 @@ a {
   .map-marker-info a svg {
     width: 35px;
     height: auto; }
+  @media screen and (max-width: 479px) {
+    .map-marker-info {
+      padding: 0; } }
 
 .map-marker-info__address {
   margin-bottom: 30px;
@@ -2484,6 +2553,9 @@ a {
       font-size: 24px;
       font-size: 1.5rem;
       line-height: 1; } }
+  @media screen and (max-width: 479px) {
+    .map-marker-info__content {
+      display: block !important; } }
 
 .gm-style-iw.gm-style-iw-c {
   border-radius: 0;
@@ -2579,6 +2651,26 @@ a {
 @media screen and (max-width: 479px) {
   .table--employees {
     font-size: 14px; } }
+
+@media screen and (max-width: 550px) {
+  .table--prices {
+    font-size: 13px; } }
+
+@media screen and (max-width: 500px) {
+  .table--prices {
+    font-size: 12px; } }
+
+@media screen and (max-width: 450px) {
+  .table--prices {
+    font-size: 11px; } }
+
+@media screen and (max-width: 400px) {
+  .table--prices {
+    font-size: 10px; } }
+
+@media screen and (max-width: 350px) {
+  .table--prices {
+    font-size: 9px; } }
 
 .memberships {
   margin-bottom: 50px; }

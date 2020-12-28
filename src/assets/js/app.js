@@ -65,6 +65,17 @@ $(document).ready(() => {
   $('.js-read-more').on('click', function(e){
     e.preventDefault();
     $(this).stop().prev('.hidden-content').slideToggle();
+    $(this).toggleClass("active");
+
+    if($(this).hasClass("active")) {
+
+      $(this).children("a").find("span").text("Затворите");
+      console.log("ima")
+    }else {
+      console.log("nema")
+      $(this).children("a").find("span").text("Прочитај више");
+
+    }
   })
 
   $('.js-read-more-table').on('click', function(e){

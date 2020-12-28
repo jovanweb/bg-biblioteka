@@ -7,7 +7,9 @@
 
   <title>Библиотека Града Београда </title>
   <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=PT+Sans:ital@0;1&display=swap" rel="stylesheet">
+  <!-- <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=PT+Sans:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com"> -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/app.css">
   <meta name="description" content="">
   <meta name="author" content="">
@@ -23,36 +25,54 @@
 
     <header class="header-main">
       <div class="wrapper">
-        <a href="index.html" class="header-main__logo logo"><img src="assets/images/bgb-logo.svg" alt=""></a>
         <div class="header-main__content">
           <div class="header-main__content-top">
 
-            <div class="search">
-              <input type="text" placeholder="Шта желите да нађете у вашој библиотеци?" class="input">
-              <div class="search__filters show-advance-link">
-                <div class="radio_wrap">
-                  <input type="radio" id="r1" name="r1" class="styled-radiobutton" />
-                  <label for="r1" class='radio'>
-                    <span></span>Веб
-                  </label>
+            <a href="index.html" class="header-main__logo logo"><img src="assets/images/bgb-logo.svg" alt=""></a>
+            <div class="navigations">
+              <div class="search">
+                <div class="search__input">
+                  <input type="text" placeholder="Шта желите да нађете у вашој библиотеци?" class="input">
+                  <svg height="25" width="25" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">
+                    <path fill="currentColor" d="M1413 896q0-27-18-45l-91-91-362-362q-18-18-45-18t-45 18l-91 91q-18 18-18 45t18 45l189 189H448q-26 0-45 19t-19 45v128q0 26 19 45t45 19h502l-189 189q-19 19-19 45t19 45l91 91q18 18 45 18t45-18l362-362 91-91q18-18 18-45zm251 0q0 209-103 385.5T1281.5 1561 896 1664t-385.5-103T231 1281.5 128 896t103-385.5T510.5 231 896 128t385.5 103T1561 510.5 1664 896z" />
+                  </svg>
                 </div>
-                <div class="radio_wrap">
-                  <input type="radio" id="r2" name="r1" class="styled-radiobutton js-radio-advanced" checked />
-                  <label for="r2" class='radio'>
-                    <span></span>Каталог
-                  </label>
+                <div class="search__filters show-advance-link">
+                  <div class="radio_wrap">
+                    <input type="radio" id="r1" name="r1" class="styled-radiobutton" />
+                    <label for="r1" class='radio'>
+                      <span></span>Веб
+                    </label>
+                  </div>
+                  <div class="radio_wrap o-flex">
+                    <input type="radio" id="r2" name="r1" class="styled-radiobutton js-radio-advanced" checked />
+                    <label for="r2" class='radio'>
+                      <span></span>Каталог
+                    </label>
+                    <a href="https://opac.bisis.rs/search/advanced-search" class="search__advanced" target="_blank">Напредна претрага</a>
+                  </div>
                 </div>
-                <a href="https://opac.bisis.rs/search/advanced-search" class="search__advanced" target="_blank">Напредна претрага</a>
               </div>
+              <nav class="nav-main js-nav-main">
+                <ul>
+                  <li><a href="nase-biblioteke.html">НАШЕ БИБЛИОТЕКЕ</a></li>
+                  <li><a href="vodic-za-korisnike.html" class="is-active">ВОДИЧ ЗА КОРИСНИКЕ</a></li>
+                  <li><a href="o-nama.html">О НАМА</a></li>
+                  <li><a href="projekti.html">ПРОЈЕКТИ</a></li>
+                  <li><a href="izlozbe.html">ИЗЛОЖБЕ</a></li>
+                  <li><a href="izdanja.html">ИЗДАЊА</a></li>
+                </ul>
+              </nav>
             </div>
+
             <div class="inner-wrapper">
               <div class="languages">
                 <ul>
-                  <li><a href="" class="is-active">српски</a></li>
+                  <li><a href="" class="is-active">ср</a></li>
                   <li class="languages__separator">|</li>
-                  <li><a href="">srpski</a></li>
+                  <li><a href="">sr</a></li>
                   <li class="languages__separator">|</li>
-                  <li><a href="">english</a></li>
+                  <li><a href="">en</a></li>
                 </ul>
                 <nav><a href="javne-nabavke.html" class="">ЈАВНЕ НАБАВКЕ</a></nav>
               </div>
@@ -63,16 +83,6 @@
               </div>
             </div>
           </div>
-          <nav class="nav-main js-nav-main">
-            <ul>
-              <li><a href="nase-biblioteke.html">НАШЕ БИБЛИОТЕКЕ</a></li>
-              <li><a href="vodic-za-korisnike.html" class="is-active">ВОДИЧ ЗА КОРИСНИКЕ</a></li>
-              <li><a href="o-nama.html">О НАМА</a></li>
-              <li><a href="projekti.html">ПРОЈЕКТИ</a></li>
-              <li><a href="izlozbe.html">ИЗЛОЖБЕ</a></li>
-              <li><a href="izdanja.html">ИЗДАЊА</a></li>
-            </ul>
-          </nav>
         </div>
       </div>
     </header>
@@ -374,7 +384,7 @@
           <p>Корисник има право да продужи рок позајмице књига лично, телефоном (011 2024 011) или путем електронске поште, на адресу: korisnici.bgb@gmail.com.</p>
           <p class="hidden-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum eum numquam fugiat alias voluptas repellendus consequuntur aperiam? Architecto sint ullam sapiente saepe corporis? Fugit ex delectus alias sint excepturi nam ut quaerat minus natus! Similique ut sint repellendus quae expedita quibusdam, vero voluptates cupiditate debitis aspernatur dolores! Deserunt facere blanditiis, nisi expedita tenetur assumenda mollitia ullam sunt repudiandae deleniti doloremque molestiae at architecto perspiciatis possimus illo. Odio, architecto numquam laboriosam accusantium expedita quibusdam corrupti, asperiores necessitatibus neque culpa, reprehenderit eius quasi doloribus? Culpa nobis blanditiis ipsum laborum vero? Obcaecati ex voluptatum omnis quod eius recusandae quia tenetur repellendus dicta quam.</p>
           <p class="read-more js-read-more">
-            <a href="">Прочитај више <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="26.694px" height="15.714px" viewBox="0 0 26.694 15.714" enable-background="new 0 0 26.694 15.714" xml:space="preserve">
+            <a href=""><span>Прочитај више</span> <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="26.694px" height="15.714px" viewBox="0 0 26.694 15.714" enable-background="new 0 0 26.694 15.714" xml:space="preserve">
                 <g>
                   <path fill="currentColor" d="M22.816,7.852l-4.866,4.866V8.206H3.878V7.508H17.95V2.996L22.816,7.852z" />
                 </g>
@@ -387,7 +397,7 @@
           <p>О приспећу резервисане грађе обавестићемо Вас телефоном или на вашу имејл адресу. Резервисану грађу можете подићи у року од три дана, након чега се резервација поништава .</p>
           <p class="hidden-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum eum numquam fugiat alias voluptas repellendus consequuntur aperiam? Architecto sint ullam sapiente saepe corporis? Fugit ex delectus alias sint excepturi nam ut quaerat minus natus! Similique ut sint repellendus quae expedita quibusdam, vero voluptates cupiditate debitis aspernatur dolores! Deserunt facere blanditiis, nisi expedita tenetur assumenda mollitia ullam sunt repudiandae deleniti doloremque molestiae at architecto perspiciatis possimus illo. Odio, architecto numquam laboriosam accusantium expedita quibusdam corrupti, asperiores necessitatibus neque culpa, reprehenderit eius quasi doloribus? Culpa nobis blanditiis ipsum laborum vero? Obcaecati ex voluptatum omnis quod eius recusandae quia tenetur repellendus dicta quam.</p>
           <p class="read-more js-read-more">
-            <a href="">Прочитај више <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="26.694px" height="15.714px" viewBox="0 0 26.694 15.714" enable-background="new 0 0 26.694 15.714" xml:space="preserve">
+            <a href=""><span>Прочитај више</span> <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="26.694px" height="15.714px" viewBox="0 0 26.694 15.714" enable-background="new 0 0 26.694 15.714" xml:space="preserve">
                 <g>
                   <path fill="currentColor" d="M22.816,7.852l-4.866,4.866V8.206H3.878V7.508H17.95V2.996L22.816,7.852z" />
                 </g>
@@ -427,7 +437,7 @@
                 </div>
                 <p>Библиотека града Београда располаже великим бројем читаоница у Централној згради у Кнез Михаиловој 56, као и у већини својих огранака. У оквиру свих читаоница могуће је користити сопствене књиге, као и грађу Библиотеке.</p>
                 <p class="hidden-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum eum numquam fugiat alias voluptas repellendus consequuntur aperiam? Architecto sint ullam sapiente saepe corporis? Fugit ex delectus alias sint excepturi nam ut quaerat minus natus! Similique ut sint repellendus quae expedita quibusdam, vero voluptates cupiditate debitis aspernatur dolores! Deserunt facere blanditiis, nisi expedita tenetur assumenda mollitia ullam sunt repudiandae deleniti doloremque molestiae at architecto perspiciatis possimus illo. Odio, architecto numquam laboriosam accusantium expedita quibusdam corrupti, asperiores necessitatibus neque culpa, reprehenderit eius quasi doloribus? Culpa nobis blanditiis ipsum laborum vero? Obcaecati ex voluptatum omnis quod eius recusandae quia tenetur repellendus dicta quam.</p>
-                <p class="read-more js-read-more"><a href="">Прочитај више <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="26.694px" height="15.714px" viewBox="0 0 26.694 15.714" enable-background="new 0 0 26.694 15.714" xml:space="preserve">
+                <p class="read-more js-read-more"><a href=""><span>Прочитај више</span> <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="26.694px" height="15.714px" viewBox="0 0 26.694 15.714" enable-background="new 0 0 26.694 15.714" xml:space="preserve">
                       <g>
                         <path fill="currentColor" d="M22.816,7.852l-4.866,4.866V8.206H3.878V7.508H17.95V2.996L22.816,7.852z" />
                       </g>
@@ -460,7 +470,7 @@
                 <p>Читаоница Фонда уметности налази се на II спрату зграде Библиотеке града Београда у улици Кнез
                   Михаиловој 56. Читаоница Фонда уметности заузима површину од око 250m2.</p>
                 <p class="hidden-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum eum numquam fugiat alias voluptas repellendus consequuntur aperiam? Architecto sint ullam sapiente saepe corporis? Fugit ex delectus alias sint excepturi nam ut quaerat minus natus! Similique ut sint repellendus quae expedita quibusdam, vero voluptates cupiditate debitis aspernatur dolores! Deserunt facere blanditiis, nisi expedita tenetur assumenda mollitia ullam sunt repudiandae deleniti doloremque molestiae at architecto perspiciatis possimus illo. Odio, architecto numquam laboriosam accusantium expedita quibusdam corrupti, asperiores necessitatibus neque culpa, reprehenderit eius quasi doloribus? Culpa nobis blanditiis ipsum laborum vero? Obcaecati ex voluptatum omnis quod eius recusandae quia tenetur repellendus dicta quam.</p>
-                <p class="read-more js-read-more"><a href="">Прочитај више <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="26.694px" height="15.714px" viewBox="0 0 26.694 15.714" enable-background="new 0 0 26.694 15.714" xml:space="preserve">
+                <p class="read-more js-read-more"><a href=""><span>Прочитај више</span> <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="26.694px" height="15.714px" viewBox="0 0 26.694 15.714" enable-background="new 0 0 26.694 15.714" xml:space="preserve">
                       <g>
                         <path fill="currentColor" d="M22.816,7.852l-4.866,4.866V8.206H3.878V7.508H17.95V2.996L22.816,7.852z" />
                       </g>

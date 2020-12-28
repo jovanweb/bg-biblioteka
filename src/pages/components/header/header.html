@@ -2,11 +2,15 @@
 
 <header class="header-main">
     <div class="wrapper">
-        <a href="index.html" class="header-main__logo logo"><img src="assets/images/bgb-logo.svg" alt=""></a>
         <div class="header-main__content">
             <div class="header-main__content-top">
 
-                {% include "./search.html" -%}
+                <a href="index.html" class="header-main__logo logo"><img src="assets/images/bgb-logo.svg" alt=""></a>
+                <div class="navigations">
+                    {% include "./search.html" -%}
+                    {% include "./navigation.html" -%}
+                </div>
+
                 <div class="inner-wrapper">
                     {% include "./languages.html" -%}
                     <div class="navigation-trigger js-navigation-trigger">
@@ -16,7 +20,6 @@
                     </div>
                 </div>
             </div>
-            {% include "./navigation.html" -%}
         </div>
     </div>
 </header>

@@ -7,7 +7,9 @@
 
   <title>Библиотека Града Београда </title>
   <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=PT+Sans:ital@0;1&display=swap" rel="stylesheet">
+  <!-- <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=PT+Sans:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com"> -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/app.css">
   <meta name="description" content="">
   <meta name="author" content="">
@@ -23,36 +25,54 @@
 
     <header class="header-main">
       <div class="wrapper">
-        <a href="index.html" class="header-main__logo logo"><img src="assets/images/bgb-logo.svg" alt=""></a>
         <div class="header-main__content">
           <div class="header-main__content-top">
 
-            <div class="search">
-              <input type="text" placeholder="Шта желите да нађете у вашој библиотеци?" class="input">
-              <div class="search__filters show-advance-link">
-                <div class="radio_wrap">
-                  <input type="radio" id="r1" name="r1" class="styled-radiobutton" />
-                  <label for="r1" class='radio'>
-                    <span></span>Веб
-                  </label>
+            <a href="index.html" class="header-main__logo logo"><img src="assets/images/bgb-logo.svg" alt=""></a>
+            <div class="navigations">
+              <div class="search">
+                <div class="search__input">
+                  <input type="text" placeholder="Шта желите да нађете у вашој библиотеци?" class="input">
+                  <svg height="25" width="25" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">
+                    <path fill="currentColor" d="M1413 896q0-27-18-45l-91-91-362-362q-18-18-45-18t-45 18l-91 91q-18 18-18 45t18 45l189 189H448q-26 0-45 19t-19 45v128q0 26 19 45t45 19h502l-189 189q-19 19-19 45t19 45l91 91q18 18 45 18t45-18l362-362 91-91q18-18 18-45zm251 0q0 209-103 385.5T1281.5 1561 896 1664t-385.5-103T231 1281.5 128 896t103-385.5T510.5 231 896 128t385.5 103T1561 510.5 1664 896z" />
+                  </svg>
                 </div>
-                <div class="radio_wrap">
-                  <input type="radio" id="r2" name="r1" class="styled-radiobutton js-radio-advanced" checked />
-                  <label for="r2" class='radio'>
-                    <span></span>Каталог
-                  </label>
+                <div class="search__filters show-advance-link">
+                  <div class="radio_wrap">
+                    <input type="radio" id="r1" name="r1" class="styled-radiobutton" />
+                    <label for="r1" class='radio'>
+                      <span></span>Веб
+                    </label>
+                  </div>
+                  <div class="radio_wrap o-flex">
+                    <input type="radio" id="r2" name="r1" class="styled-radiobutton js-radio-advanced" checked />
+                    <label for="r2" class='radio'>
+                      <span></span>Каталог
+                    </label>
+                    <a href="https://opac.bisis.rs/search/advanced-search" class="search__advanced" target="_blank">Напредна претрага</a>
+                  </div>
                 </div>
-                <a href="https://opac.bisis.rs/search/advanced-search" class="search__advanced" target="_blank">Напредна претрага</a>
               </div>
+              <nav class="nav-main js-nav-main">
+                <ul>
+                  <li><a href="nase-biblioteke.html">НАШЕ БИБЛИОТЕКЕ</a></li>
+                  <li><a href="vodic-za-korisnike.html">ВОДИЧ ЗА КОРИСНИКЕ</a></li>
+                  <li><a href="o-nama.html" class="is-active">О НАМА</a></li>
+                  <li><a href="projekti.html">ПРОЈЕКТИ</a></li>
+                  <li><a href="izlozbe.html">ИЗЛОЖБЕ</a></li>
+                  <li><a href="izdanja.html">ИЗДАЊА</a></li>
+                </ul>
+              </nav>
             </div>
+
             <div class="inner-wrapper">
               <div class="languages">
                 <ul>
-                  <li><a href="" class="is-active">српски</a></li>
+                  <li><a href="" class="is-active">ср</a></li>
                   <li class="languages__separator">|</li>
-                  <li><a href="">srpski</a></li>
+                  <li><a href="">sr</a></li>
                   <li class="languages__separator">|</li>
-                  <li><a href="">english</a></li>
+                  <li><a href="">en</a></li>
                 </ul>
                 <nav><a href="javne-nabavke.html" class="">ЈАВНЕ НАБАВКЕ</a></nav>
               </div>
@@ -63,16 +83,6 @@
               </div>
             </div>
           </div>
-          <nav class="nav-main js-nav-main">
-            <ul>
-              <li><a href="nase-biblioteke.html">НАШЕ БИБЛИОТЕКЕ</a></li>
-              <li><a href="vodic-za-korisnike.html">ВОДИЧ ЗА КОРИСНИКЕ</a></li>
-              <li><a href="o-nama.html" class="is-active">О НАМА</a></li>
-              <li><a href="projekti.html">ПРОЈЕКТИ</a></li>
-              <li><a href="izlozbe.html">ИЗЛОЖБЕ</a></li>
-              <li><a href="izdanja.html">ИЗДАЊА</a></li>
-            </ul>
-          </nav>
         </div>
       </div>
     </header>
@@ -134,7 +144,7 @@
           <p>Суд Општине града поставља др Марију Илић за библиотекара, и она, угледајући се на принципе рада савремених европских и америчких библиотека, књиге сређује према децималној класификацији. Исте године, отворена је и прва јавна дечја библиотека у Краљевини Југославији.</p>
           <p class="hidden-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure facilis animi architecto laborum corporis! Optio accusantium totam nihil asperiores porro sunt alias doloribus recusandae. Molestias atque nisi fugit vitae eveniet quia quod quam dolores, veritatis asperiores, vero ipsa voluptate laboriosam maxime natus accusamus voluptatibus labore incidunt. Temporibus, sequi hic accusamus aperiam et modi, ad repudiandae sunt quae cumque, mollitia deserunt maxime possimus. Ipsum laboriosam explicabo quae tempore iusto pariatur architecto? Deleniti incidunt autem, nisi corporis, nemo culpa expedita illo delectus sed nulla facere ipsam aut perspiciatis aspernatur ex nihil similique dolores perferendis rerum. Ex omnis eveniet, dignissimos quisquam autem esse.</p>
           <p class="read-more js-read-more">
-            <a href="">Прочитај више <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="26.694px" height="15.714px" viewBox="0 0 26.694 15.714" enable-background="new 0 0 26.694 15.714" xml:space="preserve">
+            <a href=""><span>Прочитај више</span> <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="26.694px" height="15.714px" viewBox="0 0 26.694 15.714" enable-background="new 0 0 26.694 15.714" xml:space="preserve">
                 <g>
                   <path fill="currentColor" d="M22.816,7.852l-4.866,4.866V8.206H3.878V7.508H17.95V2.996L22.816,7.852z" />
                 </g>
@@ -153,7 +163,7 @@
           <p>У организационој јединици БГБ делатност се обавља у оквиру следећих сектора:</p>
           <p class="hidden-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure facilis animi architecto laborum corporis! Optio accusantium totam nihil asperiores porro sunt alias doloribus recusandae. Molestias atque nisi fugit vitae eveniet quia quod quam dolores, veritatis asperiores, vero ipsa voluptate laboriosam maxime natus accusamus voluptatibus labore incidunt. Temporibus, sequi hic accusamus aperiam et modi, ad repudiandae sunt quae cumque, mollitia deserunt maxime possimus. Ipsum laboriosam explicabo quae tempore iusto pariatur architecto? Deleniti incidunt autem, nisi corporis, nemo culpa expedita illo delectus sed nulla facere ipsam aut perspiciatis aspernatur ex nihil similique dolores perferendis rerum. Ex omnis eveniet, dignissimos quisquam autem esse.</p>
           <p class="read-more js-read-more">
-            <a href="">Прочитај више <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="26.694px" height="15.714px" viewBox="0 0 26.694 15.714" enable-background="new 0 0 26.694 15.714" xml:space="preserve">
+            <a href=""><span>Прочитај више</span> <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="26.694px" height="15.714px" viewBox="0 0 26.694 15.714" enable-background="new 0 0 26.694 15.714" xml:space="preserve">
                 <g>
                   <path fill="currentColor" d="M22.816,7.852l-4.866,4.866V8.206H3.878V7.508H17.95V2.996L22.816,7.852z" />
                 </g>
@@ -173,7 +183,7 @@
                 <h2><a href="prostor.html">Зграда БГБ</a></h2>
                 <p>Налази се на првом спрату Библиотеке и права је мала галерија уметничких слика посвећених Београду. Назив је добила по централној слици – портрету Вука Караџића, раду Бете Вуксановић. </p>
                 <p>
-                  <a href="">Прочитај више <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="26.694px" height="15.714px" viewBox="0 0 26.694 15.714" enable-background="new 0 0 26.694 15.714" xml:space="preserve">
+                  <a href=""><span>Прочитај више</span> <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="26.694px" height="15.714px" viewBox="0 0 26.694 15.714" enable-background="new 0 0 26.694 15.714" xml:space="preserve">
                       <g>
                         <path fill="currentColor" d="M22.816,7.852l-4.866,4.866V8.206H3.878V7.508H17.95V2.996L22.816,7.852z" />
                       </g>
@@ -190,7 +200,7 @@
               <div class="library__content">
                 <h2><a href="prostor.html">Римска дворана</a></h2>
                 <p>Налази се на првом спрату Библиотеке и права је мала галерија уметничких слика посвећених Београду. Назив је добила по централној слици – портрету Вука Караџића, раду Бете Вуксановић. </p>
-                <p><a href="">Прочитај више <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="26.694px" height="15.714px" viewBox="0 0 26.694 15.714" enable-background="new 0 0 26.694 15.714" xml:space="preserve">
+                <p><a href=""><span>Прочитај више</span> <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="26.694px" height="15.714px" viewBox="0 0 26.694 15.714" enable-background="new 0 0 26.694 15.714" xml:space="preserve">
                       <g>
                         <path fill="currentColor" d="M22.816,7.852l-4.866,4.866V8.206H3.878V7.508H17.95V2.996L22.816,7.852z" />
                       </g>
@@ -206,7 +216,7 @@
               <div class="library__content">
                 <h2><a href="prostor.html">Галерија Атријум</a></h2>
                 <p>Налази се на првом спрату Библиотеке и права је мала галерија уметничких слика посвећених Београду. Назив је добила по централној слици – портрету Вука Караџића, раду Бете Вуксановић.</p>
-                <p><a href="">Прочитај више <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="26.694px" height="15.714px" viewBox="0 0 26.694 15.714" enable-background="new 0 0 26.694 15.714" xml:space="preserve">
+                <p><a href=""><span>Прочитај више</span> <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="26.694px" height="15.714px" viewBox="0 0 26.694 15.714" enable-background="new 0 0 26.694 15.714" xml:space="preserve">
                       <g>
                         <path fill="currentColor" d="M22.816,7.852l-4.866,4.866V8.206H3.878V7.508H17.95V2.996L22.816,7.852z" />
                       </g>
@@ -222,7 +232,7 @@
               <div class="library__content">
                 <h2><a href="prostor.html">Вукова сала</a></h2>
                 <p>Налази се на првом спрату Библиотеке и права је мала галерија уметничких слика посвећених Београду. Назив је добила по централној слици – портрету Вука Караџића, раду Бете Вуксановић. </p>
-                <p><a href="">Прочитај више <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="26.694px" height="15.714px" viewBox="0 0 26.694 15.714" enable-background="new 0 0 26.694 15.714" xml:space="preserve">
+                <p><a href=""><span>Прочитај више</span> <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="26.694px" height="15.714px" viewBox="0 0 26.694 15.714" enable-background="new 0 0 26.694 15.714" xml:space="preserve">
                       <g>
                         <path fill="currentColor" d="M22.816,7.852l-4.866,4.866V8.206H3.878V7.508H17.95V2.996L22.816,7.852z" />
                       </g>
@@ -238,7 +248,7 @@
               <div class="library__content">
                 <h2><a href="prostor.html">Читаоница Фонда уметности</a></h2>
                 <p>Налази се на првом спрату Библиотеке и права је мала галерија уметничких слика посвећених Београду. Назив је добила по централној слици – портрету Вука Караџића, раду Бете Вуксановић.</p>
-                <p><a href="">Прочитај више <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="26.694px" height="15.714px" viewBox="0 0 26.694 15.714" enable-background="new 0 0 26.694 15.714" xml:space="preserve">
+                <p><a href=""><span>Прочитај више</span> <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="26.694px" height="15.714px" viewBox="0 0 26.694 15.714" enable-background="new 0 0 26.694 15.714" xml:space="preserve">
                       <g>
                         <path fill="currentColor" d="M22.816,7.852l-4.866,4.866V8.206H3.878V7.508H17.95V2.996L22.816,7.852z" />
                       </g>

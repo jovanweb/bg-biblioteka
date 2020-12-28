@@ -35,10 +35,19 @@
 }
     
 .exhibitions__img {
-    margin-bottom: 20px;
+    margin-bottom: 20px; 
+    padding-bottom: 164%;
+    position: relative;
+    overflow: hidden;
 
     img {
         width: 100%;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: auto;
+        object-fit: contain;
     }
 }
 

@@ -13,12 +13,12 @@ html {
 
 body {
   @include font-size(16px);
-  line-height: 24px;
+  line-height: 24px; 
   
-  @include min-screen($breakpoint-medium) {
-    @include font-size(24px);
-    line-height: 32px;
-  }
+  // @include min-screen($breakpoint-medium) {
+  //   @include font-size(24px);
+  //   line-height: 32px;
+  // }
 }
 
 address,
@@ -45,6 +45,11 @@ img {
   max-width: 100%;
 }
 
+p {
+  text-align:justify;  
+  text-justify:inter-character;
+}
+
 section {
   padding: 40px 0;
 
@@ -67,11 +72,17 @@ section {
 
 .read-more {
 
+  span {
+    min-width: 112px;
+  }
+
   svg {
       transform: rotate(90deg);
+      transition:all .3s ease;
     }
     
-    &.read-less {
+    &.read-less,
+    &.active {
       
       svg {
         transform: rotate(-90deg);

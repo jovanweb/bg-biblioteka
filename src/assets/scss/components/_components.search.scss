@@ -2,106 +2,131 @@
 
 .search {
     display: flex;
-    flex-direction: column;
-    flex: 1;
-    padding: 20px 15px;
-    border: 1px solid $color-border;
-    border-radius: 20px;
-    order: 2;
+    margin-bottom: 45px;
+    // flex-direction: column;
+    // flex: 1;
+    // padding: 20px 15px;
+    // border: 1px solid $color-border;
+    // border-radius: 20px;
+    // order: 2;
     
-    input {
+    input.input {
         flex: 1;
-        height: 58px;
-        margin-bottom: 20px;
+        height: 46px;
         font-size: 10px;
-        
-        @include min-screen(370px) {
-            font-size: 13px;
+        border-bottom: 1px solid #FF6666;
+        width: 460px;
+        max-width: 460px;
+        color: #999999!important;
+        padding-right: 40px;
+        font-size: 20px;
+
+        @mixin input-placeholder {
+          color: #999999!important;
         }
 
-        @include min-screen(430px) {
-            font-size: 15px;
+        &::placeholder {
+            color: #999999 !important;
         }
 
-        @include min-screen($breakpoint-tiny) {
-            font-size: 12px;
-        }
-        
-        @include min-screen(520px) {
-            font-size: 14px;
-        }
-
-        @include min-screen(580px) {
+        @include max-screen(1200px) { 
             font-size: 16px;
+            width: 380px;
         }
 
-        @include min-screen($breakpoint-medium) {
-            margin-bottom: 0px;
-            padding-right: 20px;
-            border-right: 1px solid #000;
+        @include max-screen(768px) { 
+            width: 100%;
+            max-width: 100%;
         }
 
-        @include min-screen($breakpoint-large + 100px) {
-            font-size: 24px;
-        }
+
+            
+        // @include min-screen(370px) { 
+        //     font-size: 13px;
+        // }
+
+        // @include min-screen(430px) {
+        //     font-size: 15px;
+        // }
+
+        // @include min-screen($breakpoint-tiny) {
+        //     font-size: 12px;
+        // }
         
-        @include screen($breakpoint-large, $breakpoint-extralarge) {
-            margin-bottom: 20px;
-            padding-right: 0;
-            border-right: 0;
-        }
+        // @include min-screen(520px) {
+        //     font-size: 14px;
+        // }
 
-        @include screen($breakpoint-extralarge, $breakpoint-huge) {
-            font-size: 16px;
-        }
+        // @include min-screen(580px) {
+        //     font-size: 16px;
+        // }
+
+        // @include min-screen($breakpoint-medium) {
+        //     margin-bottom: 0px;
+        //     padding-right: 40px;
+        //     // border-right: 1px solid #000;
+        // }
+
+        // @include min-screen($breakpoint-large + 100px) {
+        //     font-size: 20px;
+        // }
+        
+        // @include screen($breakpoint-large, $breakpoint-extralarge) {
+        //     // margin-bottom: 20px;
+        // }
+
+        // @include screen($breakpoint-extralarge, $breakpoint-huge) {
+        //     font-size: 20px;
+        // }
     }
     
     .styled-radiobutton + label {
         font-size: 15px;
 
         @include max-screen($breakpoint-medium - 1) {
-            font-size: 12px;
+            font-size: 10px;
         }
     }
     
     .radio_wrap {
-        margin-left: 10px;
+        margin-left: 0;
         
         @include min-screen($breakpoint-medium) {
             margin-left: 20px;
         }
 
-        &:first-child {
-            @include max-screen($breakpoint-medium - 1) {
-                margin-left: 0;
-            }
-
-            @include screen($breakpoint-large, $breakpoint-extralarge) {
-                margin-left: 0;
-            }
+        @include max-screen(1024px) { 
+            margin-right: 20px;
         }
     }
     
-    @include min-screen($breakpoint-medium) {
-        align-items: center;
-        flex-direction: row;
-        justify-content: space-between;
-        padding: 10px 20px;
-        .styled-radiobutton + label {
-            font-size: 18px;
-        }
-    }
+    // @include min-screen($breakpoint-medium) {
+    //     align-items: center;
+    //     flex-direction: row;
+    //     justify-content: space-between;
+    //     // padding: 10px 20px;
+    //     margin-bottom: 25px;
 
-    @include min-screen($breakpoint-large) {
-        padding: 10px 40px;
-        order: 1;
-    }
+    //     .styled-radiobutton + label {
+    //         font-size: 11px;
+    //     }
+    // }
 
-    @include screen($breakpoint-large, $breakpoint-extralarge) {
+    // @include min-screen($breakpoint-large) {
+    //     // padding: 10px 40px;
+    //     padding-bottom: 50px;
+    //     // order: 1;
+    // }
+
+    // @include screen($breakpoint-large, $breakpoint-extralarge) {
+    //     align-items: flex-start;
+    //     // padding-top: 20px;
+    //     padding-bottom: 50px;
+    // }
+
+    @include max-screen(1024px) { 
         flex-direction: column;
-        align-items: flex-start;
-        padding-top: 20px;
-        padding-bottom: 20px;
+        margin-bottom: 0;
     }
 }
 
@@ -130,5 +155,27 @@
 
 .search__filters {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    padding-left: 30px;
+
+    @include max-screen(1200px) { 
+        padding-left: 0;
+    }
+
+    @include max-screen(1024px) {
+        margin-top: 20px;
+        flex-direction: row;
+    }
+}
+
+.search__input {
+    position: relative;
+
+    svg {
+        color: $color-peach;
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translate(0 ,-50%);
+    }
 }

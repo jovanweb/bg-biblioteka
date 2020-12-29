@@ -10,6 +10,11 @@
   margin-right: auto;
   margin-left: auto;
 
+  @media(min-width: 768px) and (max-width:1024px) {
+    padding-right:40px;
+    padding-left:40px;
+  }
+
   @include min-screen($breakpoint-large) {
     max-width: calc(#{$page-max-width} + (#{$spacing-unit} * 2));
     padding-right: $spacing-unit;

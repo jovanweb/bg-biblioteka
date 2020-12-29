@@ -2,13 +2,7 @@
 
 .search {
     display: flex;
-    margin-bottom: 45px;
-    // flex-direction: column;
-    // flex: 1;
-    // padding: 20px 15px;
-    // border: 1px solid $color-border;
-    // border-radius: 20px;
-    // order: 2;
+    margin-bottom: 25px;
     
     input.input {
         flex: 1;
@@ -29,8 +23,12 @@
             color: #999999 !important;
         }
 
-        @include max-screen(1200px) { 
+        @include max-screen(1440px) {
             font-size: 16px;
+
+        }
+
+        @include max-screen(1200px) { 
             width: 380px;
         }
 
@@ -38,46 +36,6 @@
             width: 100%;
             max-width: 100%;
         }
-
-
-            
-        // @include min-screen(370px) { 
-        //     font-size: 13px;
-        // }
-
-        // @include min-screen(430px) {
-        //     font-size: 15px;
-        // }
-
-        // @include min-screen($breakpoint-tiny) {
-        //     font-size: 12px;
-        // }
-        
-        // @include min-screen(520px) {
-        //     font-size: 14px;
-        // }
-
-        // @include min-screen(580px) {
-        //     font-size: 16px;
-        // }
-
-        // @include min-screen($breakpoint-medium) {
-        //     margin-bottom: 0px;
-        //     padding-right: 40px;
-        //     // border-right: 1px solid #000;
-        // }
-
-        // @include min-screen($breakpoint-large + 100px) {
-        //     font-size: 20px;
-        // }
-        
-        // @include screen($breakpoint-large, $breakpoint-extralarge) {
-        //     // margin-bottom: 20px;
-        // }
-
-        // @include screen($breakpoint-extralarge, $breakpoint-huge) {
-        //     font-size: 20px;
-        // }
     }
     
     .styled-radiobutton + label {
@@ -99,30 +57,6 @@
             margin-right: 20px;
         }
     }
-    
-    // @include min-screen($breakpoint-medium) {
-    //     align-items: center;
-    //     flex-direction: row;
-    //     justify-content: space-between;
-    //     // padding: 10px 20px;
-    //     margin-bottom: 25px;
-
-    //     .styled-radiobutton + label {
-    //         font-size: 11px;
-    //     }
-    // }
-
-    // @include min-screen($breakpoint-large) {
-    //     // padding: 10px 40px;
-    //     padding-bottom: 50px;
-    //     // order: 1;
-    // }
-
-    // @include screen($breakpoint-large, $breakpoint-extralarge) {
-    //     align-items: flex-start;
-    //     // padding-top: 20px;
-    //     padding-bottom: 50px;
-    // }
 
     @include max-screen(1024px) { 
         flex-direction: column;

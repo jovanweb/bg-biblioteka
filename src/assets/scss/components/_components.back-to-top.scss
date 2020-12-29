@@ -9,6 +9,10 @@
     transition: all .1s ease;
     max-width: 10vw;
     cursor: pointer;
+
+    img {
+        pointer-events: none;
+    }
     
     &.is-visible {
         visibility: visible;

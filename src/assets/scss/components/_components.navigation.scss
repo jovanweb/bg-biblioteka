@@ -8,23 +8,12 @@
     position: relative;
     color: #000;
     font-size: 14px;
-    
-    // &::before {
-    //   content: '';
-    //   position: absolute;
-    //   top: 100%;
-    //   left: 0;
-    //   right: 0;
-    //   height: 11px;
-    //   background-color: $color-peach;
-    //   display: none;
-    // }
-    
+
     &.is-active,
     &:hover {
       color: $color-lightgray;
     }
-    
+     
     &.is-active {
       color: $color-peach;
     }
@@ -94,12 +83,6 @@
     }
   }
 
-  // @include screen($breakpoint-medium - 1, $breakpoint-large) {
-  //   font-size: 14px;
-  // }
-
-  
-
   @include min-screen($breakpoint-medium) {
     padding: 0 125px;
 
@@ -119,10 +102,6 @@
   @include max-screen(1150px) { 
     padding: 0 16px;
   }
-
-  // @include min-screen($breakpoint-extralarge) {
-  //   padding: 0 80px;
-  // }
 }
 
 .navigations {
@@ -167,12 +146,7 @@
       transform-origin: bottom left;
     }
   }
-  
-  // @include max-screen($breakpoint-tiny - 1) {
-  //   position: absolute;
-  //   top: 10px;
-  //   right: 10px;
-  // }
+
   @include min-screen($breakpoint-medium) {
     display: none;
   }

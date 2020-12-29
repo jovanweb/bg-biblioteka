@@ -4,65 +4,42 @@
   .wrapper {
     display: flex;
     flex-direction: column;
-    padding-top: 40px;
-    padding-bottom: 40px;
-    
-    // @include min-screen($breakpoint-tiny) {
-    //   flex-direction: row;
-    //   align-items: flex-start;
-    //   justify-content: space-between;
-    // }
-    // @include min-screen($breakpoint-medium) {
-    //   // padding-top: 30px;
-    //   // padding-bottom: 40px;
-    // }
-    // @include min-screen($breakpoint-large) {
-    //   padding-top: 40px;
-    //   padding-bottom: 40px; 
-    //   // padding-bottom: 70px;
-    // }
+    // padding-top: 40px;
+    // padding-bottom: 40px;
+    // height: 
 
-    @include max-screen(1024px) {
-      padding-top: 20px;
-      padding-bottom: 20px;
-    }
+    // @include max-screen(1024px) {
+    //   padding-top: 20px;
+    //   padding-bottom: 20px;
+    // }
   }
 }
 
   .logo {
-    width: 150px;
-    display: block;
+    width: 120px;
+    display: flex;
+    align-items: center;
 
     @include max-screen(1024px) {
       width: 100px;
     }
-
-    // @include min-screen($breakpoint-medium) {
-    //   width: 100px;
-    //   margin-bottom: 0;
-    // }
-
-    // @include min-screen($breakpoint-large) {
-    //   width: 150px;
-    //   margin-bottom: 0;
-    // }
   }
 
   .header-main__content {
     display: flex;
+    align-items: center;
     flex-direction: row;
-    flex: 1;
+    // flex: 1;
+    height: 180px;
 
-    // @include min-screen($breakpoint-tiny) {
-    //   // padding-left: 20px;
-    // }
-    // @include min-screen($breakpoint-medium) {
-    //   flex-direction: column;
-    //   // padding-left: 50px;
-    // }
-    // @include min-screen($breakpoint-large) {
-    //   // padding-left: 120px;
-    // }
+    @include max-screen(1024px) {
+      height: 150px;
+    }
+
+    @include max-screen(768px) {
+      height: auto;
+      padding: 20px 0;
+    }
   }
   
   .header-main__content-top {
@@ -72,27 +49,6 @@
     flex-direction: row;
     flex-wrap: wrap;
     flex: 1;
-
-    // @include min-screen($breakpoint-tiny) {}
-
-    // @include min-screen($breakpoint-small) {
-    //   flex-direction: row;
-
-    // }
-    
-    // @include min-screen($breakpoint-medium) {
-    //   // margin-bottom: 20px;
-    //   // align-items: center;
-    //   flex-direction: row;
-
-    // }
-    // @include min-screen($breakpoint-large) {
-    //   // margin-bottom: 50px;
-    //   flex-direction: row;
-    //   justify-content: space-between;
-    // }
-
-    
   }
 
   .inner-wrapper {

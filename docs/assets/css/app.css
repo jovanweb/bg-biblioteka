@@ -895,9 +895,9 @@ html {
   font-weight: 400; }
 
 body {
-  font-size: 16px;
-  font-size: 1rem;
-  line-height: 1.03125;
+  font-size: 18px;
+  font-size: 1.125rem;
+  line-height: 1;
   line-height: 24px; }
 
 address,
@@ -960,9 +960,6 @@ section {
 figure {
   margin-bottom: 40px; }
   figure figcaption {
-    font-size: 20px;
-    font-size: 1.25rem;
-    line-height: 1.05;
     color: #808080; }
 
 /* ------------------------------------*\
@@ -2246,7 +2243,7 @@ a {
       flex-direction: row; } }
   @media screen and (min-width: 1024px) {
     .single-project {
-      padding: 35px 0 35px 20px; } }
+      padding: 25px 0 25px 20px; } }
 
 .single-project__img {
   border-radius: 5px;
@@ -2367,9 +2364,13 @@ a {
       margin-bottom: 40px; } }
 
 .exhibitions__title {
-  font-size: 24px;
-  font-size: 1.5rem;
-  line-height: 1; }
+  font-size: 20px;
+  font-size: 1.25rem;
+  line-height: 1.05;
+  margin-bottom: 5px !important; }
+
+.exhibitions-article p {
+  font-size: 20px !important; }
 
 .exhibitions-article,
 .editions-article {

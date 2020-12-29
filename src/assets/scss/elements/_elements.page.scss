@@ -48,6 +48,7 @@ img {
 p {
   text-align:justify;  
   text-justify:inter-character;
+  line-height: 1.8em;
 }
 
 section {
@@ -74,6 +75,7 @@ section {
 
   span {
     min-width: 112px;
+    font-size: 15px;
   }
 
   svg {

@@ -924,7 +924,8 @@ img {
 
 p {
   text-align: justify;
-  text-justify: inter-character; }
+  text-justify: inter-character;
+  line-height: 1.8em; }
 
 section {
   padding: 40px 0; }
@@ -941,7 +942,8 @@ section {
   display: none; }
 
 .read-more span {
-  min-width: 112px; }
+  min-width: 112px;
+  font-size: 15px; }
 
 .read-more svg {
   transform: rotate(90deg);

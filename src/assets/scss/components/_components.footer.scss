@@ -117,6 +117,13 @@
         font-size: 20px;
       }
     }
+
+    small {
+
+      @include max-screen(500px) {
+        display: block;
+      }
+    }
   }
   
   .footer-main__author, 

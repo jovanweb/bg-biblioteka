@@ -1643,6 +1643,10 @@ a {
     .footer-main__copyright span {
       font-size: 20px; } }
 
+@media screen and (max-width: 500px) {
+  .footer-main__copyright small {
+    display: block; } }
+
 .footer-main__author,
 .footer-main__copyright {
   font-size: 16px;

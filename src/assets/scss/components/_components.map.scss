@@ -129,10 +129,10 @@
 
 .map-marker-info__address {
     margin-bottom: 30px;
-    font-size: 0;
+    // font-size: 0;
     span {
         font-size: 14px;
-        display: block;
+        // display: block;
     }
     @include min-screen($breakpoint-small) {
         display: flex;

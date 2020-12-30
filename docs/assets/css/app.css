@@ -1597,7 +1597,7 @@ a {
 .footer-main__working-hours {
   font-size: 16px;
   color: white; }
-  @media screen and (min-width: 1024px) {
+  @media screen and (min-width: 1440px) {
     .footer-main__links a,
     .footer-main__contact,
     .footer-main__working-hours {
@@ -2061,7 +2061,7 @@ a {
   flex: 1; }
   .navigation-slider .slick-slide a:hover {
     color: #F26475; }
-  @media screen and (min-width: 1024px) {
+  @media screen and (min-width: 1440px) {
     .navigation-slider .slick-slide a {
       font-size: 24px; } }
 
@@ -2180,7 +2180,7 @@ a {
   display: block;
   color: #000;
   transition: none; }
-  @media screen and (min-width: 1024px) {
+  @media screen and (min-width: 1440px) {
     .event {
       margin-bottom: 60px; } }
 
@@ -2189,22 +2189,22 @@ a {
   line-height: 1.2;
   margin-bottom: 10px;
   display: block; }
-  @media screen and (min-width: 1024px) {
+  @media screen and (min-width: 1440px) {
     .event__date {
       font-size: 24px; } }
 
 .event__title {
-  font-size: 18px;
+  font-size: 18px !important;
   font-weight: 600;
   margin-bottom: 10px; }
-  @media screen and (min-width: 1024px) {
+  @media screen and (min-width: 1440px) {
     .event__title {
-      font-size: 28px; } }
+      font-size: 28px !important; } }
 
 .event__location {
   font-size: 16px;
   line-height: 1.33; }
-  @media screen and (min-width: 1024px) {
+  @media screen and (min-width: 1440px) {
     .event__location {
       font-size: 24px; } }
 
@@ -2212,7 +2212,7 @@ a {
   font-size: 32px;
   color: #F26475;
   margin-bottom: 30px; }
-  @media screen and (min-width: 1024px) {
+  @media screen and (min-width: 1440px) {
     .event-wrapper .title-link {
       margin-bottom: 60px;
       font-size: 40px; } }

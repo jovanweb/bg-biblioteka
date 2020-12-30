@@ -124,6 +124,8 @@
             margin-bottom: 0;
         }
     }
+
+
     
     @include min-screen($breakpoint-small) {
         padding: 100px 50px 100px 80px;
@@ -133,7 +135,17 @@
         flex-direction: column;
         justify-content: center;
         h2 {
-            font-size: 40px;
+            font-size: 24px!important;
+        }
+        
+        p {
+            font-size: 18px;
+        }
+    }
+
+    @include min-screen($breakpoint-large) {
+        h2 {
+            font-size: 40px!important;
         }
         
         p {

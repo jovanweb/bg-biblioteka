@@ -22,9 +22,14 @@
     padding: 30px 10px;
     
     @include min-screen($breakpoint-small) {
-      padding: 40px 10px;
+      padding: 40px;
       display: flex;
       justify-content: space-between;
+    }
+
+    @include min-screen($breakpoint-extralarge) {
+      padding: 40px 10px;
+
     }
   }
   

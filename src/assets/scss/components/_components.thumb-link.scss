@@ -5,6 +5,7 @@
         color: $color-black;
         text-align: center;
         font-weight: 500;
+        margin-bottom: 0;
     }
 
     @include min-screen($breakpoint-extralarge) {
@@ -50,7 +51,7 @@
     margin-left: auto;
     margin-right: auto;
     
-    @include min-screen($breakpoint-medium) {
+    @include min-screen($breakpoint-extralarge) {
         margin-bottom: 80px;
     }
 }

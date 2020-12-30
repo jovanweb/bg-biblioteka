@@ -965,6 +965,11 @@ figure {
   figure figcaption {
     color: #808080; }
 
+.user-img {
+  text-align: center; }
+  .user-img img {
+    width: 85%; }
+
 /* ------------------------------------*\
     #HEADINGS
 \*------------------------------------ */
@@ -1289,7 +1294,7 @@ a {
     flex-direction: column; }
 
 .logo {
-  width: 120px;
+  width: 100px;
   display: flex;
   align-items: center; }
   @media screen and (max-width: 1024px) {
@@ -1315,7 +1320,8 @@ a {
   justify-content: space-between;
   flex-direction: row;
   flex-wrap: wrap;
-  flex: 1; }
+  flex: 1;
+  padding-top: 10px; }
 
 .inner-wrapper {
   display: flex;
@@ -1504,6 +1510,9 @@ a {
         max-width: 100%; } }
   .search .styled-radiobutton + label {
     font-size: 15px; }
+    @media screen and (max-width: 1440px) {
+      .search .styled-radiobutton + label {
+        font-size: 12px; } }
     @media screen and (max-width: 1023px) {
       .search .styled-radiobutton + label {
         font-size: 10px; } }
@@ -1575,9 +1584,12 @@ a {
   padding: 30px 10px; }
   @media screen and (min-width: 768px) {
     .footer-main__bottom .wrapper {
-      padding: 40px 10px;
+      padding: 40px;
       display: flex;
       justify-content: space-between; } }
+  @media screen and (min-width: 1440px) {
+    .footer-main__bottom .wrapper {
+      padding: 40px 10px; } }
 
 .footer-main__bottom p:last-of-type {
   margin-bottom: 0; }
@@ -1969,9 +1981,14 @@ a {
       flex-direction: column;
       justify-content: center; }
       .main-slider__item-content h2 {
-        font-size: 40px; }
+        font-size: 24px !important; }
       .main-slider__item-content p {
-        font-size: 24px; } }
+        font-size: 18px; } }
+  @media screen and (min-width: 1216px) {
+    .main-slider__item-content h2 {
+      font-size: 40px !important; }
+    .main-slider__item-content p {
+      font-size: 24px; } }
   @media screen and (min-width: 1024px) {
     .main-slider__item-content {
       padding: 40px 50px 130px 80px; } }
@@ -2118,7 +2135,7 @@ a {
   border: 1px solid #000;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 30px; }
+  margin-bottom: 20px; }
   @media screen and (min-width: 480px) {
     .library__img {
       flex: 0 0 100px;
@@ -2165,7 +2182,8 @@ a {
     font-size: 20px;
     color: #000;
     text-align: center;
-    font-weight: 500; }
+    font-weight: 500;
+    margin-bottom: 0; }
   @media screen and (min-width: 1440px) {
     .thumb-link p {
       font-size: 30px; } }
@@ -2183,7 +2201,7 @@ a {
   max-width: 70%;
   margin-left: auto;
   margin-right: auto; }
-  @media screen and (min-width: 1024px) {
+  @media screen and (min-width: 1440px) {
     .thumb-link__img {
       margin-bottom: 80px; } }
 
@@ -2702,8 +2720,8 @@ a {
   margin-top: 50px; }
   @media screen and (min-width: 768px) {
     .memberships {
-      margin-top: 100px;
-      margin-bottom: 100px;
+      margin-top: 50px;
+      margin-bottom: 50px;
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between; } }

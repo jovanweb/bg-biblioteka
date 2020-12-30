@@ -41,6 +41,10 @@
     .styled-radiobutton + label {
         font-size: 15px;
 
+        @include max-screen($breakpoint-extralarge) {
+            font-size: 12px;
+        }
+
         @include max-screen($breakpoint-medium - 1) {
             font-size: 10px;
         }

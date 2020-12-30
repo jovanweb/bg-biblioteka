@@ -16,7 +16,7 @@
 }
 
   .logo {
-    width: 120px;
+    width: 100px;
     display: flex;
     align-items: center;
 
@@ -49,6 +49,7 @@
     flex-direction: row;
     flex-wrap: wrap;
     flex: 1;
+    padding-top: 10px;
   }
 
   .inner-wrapper {

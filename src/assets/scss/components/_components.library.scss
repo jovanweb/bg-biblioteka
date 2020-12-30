@@ -38,7 +38,7 @@
   border: 1px solid  $color-border;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   
   @include min-screen($breakpoint-tiny) {
     flex: 0 0 100px;

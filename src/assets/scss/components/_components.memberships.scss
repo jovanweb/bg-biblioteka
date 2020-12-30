@@ -3,8 +3,8 @@
   margin-top: 50px;
 
   @include min-screen($breakpoint-small) {
-    margin-top: 100px;
-    margin-bottom: 100px;
+    margin-top: 50px;
+    margin-bottom: 50px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;

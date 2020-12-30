@@ -10,13 +10,19 @@
 }
     
 .exhibition__img {
+
+    max-width: 22%;
+
     
     img {
         margin-bottom: 20px;
-        min-width: 300px;
+
+        @include max-screen($breakpoint-small) {
+            min-width: 300px;
+        }
     }
     
-    @include min-screen($breakpoint-small) {
+    @include min-screen($breakpoint-extralarge) {
         max-width: 30%;
         
         img {
@@ -33,6 +39,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    width: calc(88% - 40px);
 
     .social-icon {
         margin-bottom: 20px;
@@ -54,8 +61,9 @@
         padding-left: 40px;
     }
     
-    @include min-screen($breakpoint-medium) {
+    @include min-screen($breakpoint-extralarge) {
         padding-left: 90px;
+        width: auto;
         
         // h3,
         // p {
@@ -89,13 +97,53 @@
 .exhibitions__title {
     @include font-size(20px);
     margin-bottom: 5px!important;
+    font-weight: 400;
+
+    @include max-screen($breakpoint-extralarge) {
+        font-size: 20px!important;
+    }
 }
 
 .exhibitions-article {
     p {
         font-size: 20px!important;
+        text-align:left;  
+        text-justify:initial;
     }
 }
 
 
+.exhibition-list {
+    display: flex;
+    flex-wrap:wrap;
+    margin-left: -23px;
+    margin-right: -23px;
 
+    >div {
+        padding: 0 23px;
+        flex: 0 0 16.66%;
+
+        @include max-screen(1269px) {
+            flex: 0 0 25%;
+        }
+
+        @include max-screen(991px) {
+            flex: 0 0 33.33%;
+            padding: 0 15px;
+        }
+
+        @include max-screen(768px) {
+            flex: 0 0 50%;
+
+        }
+
+        @include max-screen(480px) {
+            flex: 0 0 100%;
+        }
+    }
+
+    @include max-screen(991px) {
+        margin-left: -15px;
+        margin-right: -15px;
+    }
+}

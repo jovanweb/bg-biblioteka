@@ -49,8 +49,16 @@
         width: 100px;
         margin-bottom: 30px;
     }
-    
+
     @include min-screen($breakpoint-small) {
+        padding-right: 80px;
+
+        img {
+            width: 150px;
+        }
+    }
+    
+    @include min-screen($breakpoint-extralarge) {
         padding-right: 110px;
 
         img {
@@ -95,7 +103,7 @@
     h4 {
         margin: 30px 0;
         
-        @include min-screen($breakpoint-small) {
+        @include min-screen($breakpoint-extralarge) {
             margin: 70px 0;
         }
     }

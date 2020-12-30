@@ -1,7 +1,7 @@
 .contact-element {
   display: flex;
   align-items: center; 
-  font-size: 24px;
+  font-size: 18px;
   margin-bottom: 25px;
   line-height: 1.4;
 
@@ -10,8 +10,12 @@
   }
   .library-hero__info & {
     color: white;
-    font-size: 24px;
+
+    @include min-screen($breakpoint-extralarge) {
+      font-size: 24px;
+
     }
+  }
 }
 
 .contact-element__icon {

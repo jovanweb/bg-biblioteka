@@ -1,10 +1,19 @@
 .memberships {
   margin-bottom: 50px;
+  margin-top: 50px;
 
   @include min-screen($breakpoint-small) {
+    margin-top: 100px;
     margin-bottom: 100px;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
+  }
+
+  @include min-screen($breakpoint-extralarge) {
+    margin-bottom: 80px;
+    margin-top: 80px;
+
   }
 }
 
@@ -15,6 +24,11 @@
     .memberships__item-title {
       color: $color-peach;
     }
+  }
+
+  @include max-screen(1200px) {
+    flex: 0 0 33.33%;
+
   }
 }
 

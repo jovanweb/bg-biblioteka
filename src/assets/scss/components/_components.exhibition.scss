@@ -20,6 +20,10 @@
         @include max-screen($breakpoint-small) {
             min-width: 300px;
         }
+
+        @include min-screen($breakpoint-small+1) {
+            margin-bottom: 0;
+        }
     }
     
     @include min-screen($breakpoint-extralarge) {
@@ -82,7 +86,7 @@
 }
 
 .exhibition-details {
-    padding: 40px 0;
+    padding: 40px 0 0;
 
     p {
         // font-size: 18px;

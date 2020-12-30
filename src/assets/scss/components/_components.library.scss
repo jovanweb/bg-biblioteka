@@ -46,6 +46,11 @@
     margin-right: 20px;
   }
   @include min-screen($breakpoint-large) {
+    flex: 0 0 150px;
+    height: 150px;
+    margin-right: 60px;
+  }
+  @include min-screen($breakpoint-extralarge) {
     flex: 0 0 220px;
     height: 220px;
     margin-right: 120px;

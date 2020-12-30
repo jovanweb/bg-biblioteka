@@ -975,39 +975,35 @@ h6 > a {
 
 h1,
 .h1 {
-  font-size: 40px;
-  font-size: 2.5rem;
-  line-height: 1.0125; }
-  @media screen and (min-width: 1024px) {
+  font-size: 60px;
+  font-size: 3.75rem;
+  line-height: 1; }
+  @media screen and (max-width: 1440px) {
     h1,
     .h1 {
-      font-size: 60px;
-      font-size: 3.75rem;
-      line-height: 1; } }
+      font-size: 40px !important; } }
 
 h2,
 .h2 {
-  font-size: 30px;
-  font-size: 1.875rem;
-  line-height: 1; }
-  @media screen and (min-width: 1024px) {
+  font-size: 40px;
+  font-size: 2.5rem;
+  line-height: 1.0125;
+  font-weight: 300; }
+  @media screen and (max-width: 1440px) {
     h2,
     .h2 {
-      font-size: 40px;
-      font-size: 2.5rem;
-      line-height: 1.0125; } }
+      font-size: 30px !important; } }
 
 h3,
 .h3 {
-  font-size: 25px;
-  font-size: 1.5625rem;
-  line-height: 1.02; }
-  @media screen and (min-width: 1024px) {
+  font-size: 30px;
+  font-size: 1.875rem;
+  line-height: 1;
+  font-weight: 300; }
+  @media screen and (max-width: 1440px) {
     h3,
     .h3 {
-      font-size: 30px;
-      font-size: 1.875rem;
-      line-height: 1; } }
+      font-size: 25px !important; } }
 
 h4,
 .h4 {
@@ -2158,15 +2154,12 @@ a {
     color: #000;
     text-align: center;
     font-weight: 500; }
-  @media screen and (min-width: 1024px) {
+  @media screen and (min-width: 1440px) {
     .thumb-link p {
       font-size: 30px; } }
 
 .thumb-img-wrapper > div:last-child .thumb-link__img {
   margin-bottom: 0; }
-
-.thumb-img-wrapper .thumb-link__text {
-  margin-top: 7px; }
 
 @media screen and (min-width: 480px) {
   .thumb-img-wrapper > div:nth-last-child(-n+2) .thumb-link__img {
@@ -2416,6 +2409,7 @@ a {
   display: flex;
   flex-direction: column;
   margin-bottom: 40px;
+  padding-bottom: 0;
   padding-top: 0; }
   .map-section ul {
     margin-bottom: 0; }
@@ -2673,7 +2667,7 @@ a {
   display: block; }
   @media screen and (min-width: 768px) {
     .memberships__item-img {
-      max-width: 75%; } }
+      max-width: 65%; } }
 
 .memberships__item-title {
   text-align: center;
@@ -2754,7 +2748,7 @@ a {
   visibility: hidden;
   transform: scale(0);
   transition: all .1s ease;
-  max-width: 10vw;
+  max-width: 60px;
   cursor: pointer; }
   .back-to-top img {
     pointer-events: none; }
@@ -2828,7 +2822,7 @@ a {
         margin-top: 10px;
         left: 0;
         right: 0;
-        height: 11px;
+        height: 6px;
         background-color: #F26475;
         display: none; }
     .tab-navigation a.is-active span::before {
@@ -2928,7 +2922,7 @@ a {
       padding-right: 110px; }
       .calendar-event__image img,
       .news-event__image img {
-        width: 230px; } }
+        width: 180px; } }
 
 .calendar-event__social {
   display: flex;
@@ -3027,7 +3021,7 @@ a {
       margin-bottom: 40px; } }
   .library-hero__info .contact-element {
     color: white;
-    font-size: 28px; }
+    font-size: 24px; }
 
 .contact-element__icon {
   margin-right: 20px;

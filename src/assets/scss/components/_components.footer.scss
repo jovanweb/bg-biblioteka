@@ -22,7 +22,7 @@
     padding: 30px 10px;
     
     @include min-screen($breakpoint-small) {
-      padding: 40px;
+      padding: 30px 40px;
       display: flex;
       justify-content: space-between;
     }
@@ -144,5 +144,18 @@
   .footer-main__author {
     a {
       color: #999999;
+
+    }
+    @include max-screen($breakpoint-extralarge) {
+      margin-right: 80px;
+
+      a {
+        font-size: 14px;
+      }
+    }
+
+    @include max-screen(991px) {
+      margin-right: 0;
+
     }
   }

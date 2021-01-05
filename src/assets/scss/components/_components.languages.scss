@@ -32,6 +32,12 @@
 
   @include max-screen(1440px) {
 
+    ul {
+      a {
+        font-size: 12px;
+      }
+    }
+
     nav {
 
       a {

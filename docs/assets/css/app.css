@@ -1174,8 +1174,8 @@ a {
   margin-left: auto; }
   @media (min-width: 768px) and (max-width: 1440px) {
     .wrapper {
-      padding-right: 40px;
-      padding-left: 40px; } }
+      padding-right: 50px;
+      padding-left: 50px; } }
   @media screen and (min-width: 1441px) {
     .wrapper {
       max-width: calc(1750px + (20px * 2));
@@ -1473,6 +1473,8 @@ a {
     .languages {
       padding-right: 20px; } }
   @media screen and (max-width: 1440px) {
+    .languages ul a {
+      font-size: 12px; }
     .languages nav a {
       font-size: 14px; } }
   @media screen and (max-width: 768px) {
@@ -1500,7 +1502,9 @@ a {
       color: #999999 !important; }
     @media screen and (max-width: 1440px) {
       .search input.input {
-        font-size: 16px; } }
+        font-size: 16px;
+        width: 440PX;
+        max-width: 440PX; } }
     @media screen and (max-width: 1200px) {
       .search input.input {
         width: 380px; } }
@@ -1541,7 +1545,7 @@ a {
   .show-advance-link .search__advanced {
     visibility: visible;
     opacity: 1; }
-  @media screen and (min-width: 1024px) {
+  @media screen and (min-width: 1440px) {
     .search__advanced {
       font-size: 15px;
       margin-left: 20px; } }
@@ -1550,9 +1554,15 @@ a {
   display: flex;
   flex-direction: column;
   padding-left: 30px; }
-  @media screen and (max-width: 1200px) {
+  @media screen and (max-width: 1440px) {
     .search__filters {
-      padding-left: 0; } }
+      padding-left: 0; }
+      .search__filters .radio_wrap span {
+        width: 14px;
+        height: 14px; }
+        .search__filters .radio_wrap span:before {
+          width: 6px !important;
+          height: 6px !important; } }
   @media screen and (max-width: 1024px) {
     .search__filters {
       margin-top: 20px;
@@ -1584,7 +1594,7 @@ a {
   padding: 30px 10px; }
   @media screen and (min-width: 768px) {
     .footer-main__bottom .wrapper {
-      padding: 40px;
+      padding: 30px 40px;
       display: flex;
       justify-content: space-between; } }
   @media screen and (min-width: 1440px) {
@@ -1671,6 +1681,16 @@ a {
 .footer-main__author a {
   color: #999999; }
 
+@media screen and (max-width: 1440px) {
+  .footer-main__author {
+    margin-right: 80px; }
+    .footer-main__author a {
+      font-size: 14px; } }
+
+@media screen and (max-width: 991px) {
+  .footer-main__author {
+    margin-right: 0; } }
+
 /**
 * Reset input styles.
 */
@@ -1725,7 +1745,7 @@ a {
   height: 60px;
   font-size: 18px;
   padding: 0 20px; }
-  @media screen and (min-width: 1024px) {
+  @media screen and (min-width: 1440px) {
     .input--search {
       height: 80px;
       font-size: 24px; } }
@@ -1984,11 +2004,11 @@ a {
         font-size: 24px !important; }
       .main-slider__item-content p {
         font-size: 18px; } }
-  @media screen and (min-width: 1216px) {
+  @media screen and (min-width: 1440px) {
     .main-slider__item-content h2 {
-      font-size: 40px !important; }
+      font-size: 22px !important; }
     .main-slider__item-content p {
-      font-size: 24px; } }
+      font-size: 16px; } }
   @media screen and (min-width: 1024px) {
     .main-slider__item-content {
       padding: 40px 50px 130px 80px; } }
@@ -2164,10 +2184,14 @@ a {
     margin-bottom: 30px; }
     @media screen and (min-width: 768px) {
       .library__content h2 {
-        margin-bottom: 60px;
+        margin-bottom: 30px;
         font-size: 40px; } }
+    @media screen and (min-width: 1440px) {
+      .library__content h2 {
+        margin-bottom: 60px; } }
   .library__content p {
-    margin-bottom: 10px; }
+    margin-bottom: 10px;
+    line-height: 1.4em; }
 
 .library__note {
   margin-top: 20px;
@@ -2368,9 +2392,10 @@ a {
     margin-bottom: 20px;
     display: inline-block; }
   .exhibition__content p {
+    margin-bottom: 0;
     font-weight: 500; }
-  .exhibition__content h3,
-  .exhibition__content p {
+  .exhibition__content h3 {
+    font-size: 30px !important;
     margin-bottom: 0; }
   @media screen and (min-width: 768px) {
     .exhibition__content {
@@ -2378,7 +2403,9 @@ a {
   @media screen and (min-width: 1440px) {
     .exhibition__content {
       padding-left: 90px;
-      width: auto; } }
+      width: auto; }
+      .exhibition__content h3 {
+        font-size: 40px !important; } }
 
 .exhibition__author,
 .exhibition__design {
@@ -2392,7 +2419,7 @@ a {
   padding: 40px 0 0; }
   @media screen and (min-width: 1024px) {
     .exhibition-details p {
-      margin-bottom: 40px; } }
+      margin-bottom: 20px; } }
 
 .exhibitions__title {
   font-size: 20px;
@@ -2416,20 +2443,20 @@ a {
   margin-right: -23px; }
   .exhibition-list > div {
     padding: 0 23px;
-    flex: 0 0 16.66%; }
-    @media screen and (max-width: 1269px) {
+    width: 16.66%; }
+    @media screen and (max-width: 1200px) {
       .exhibition-list > div {
-        flex: 0 0 25%; } }
+        width: 25%; } }
     @media screen and (max-width: 991px) {
       .exhibition-list > div {
-        flex: 0 0 33.33%;
+        width: 33.33%;
         padding: 0 15px; } }
     @media screen and (max-width: 768px) {
       .exhibition-list > div {
-        flex: 0 0 50%; } }
+        width: 50%; } }
     @media screen and (max-width: 480px) {
       .exhibition-list > div {
-        flex: 0 0 100%; } }
+        width: 100%; } }
   @media screen and (max-width: 991px) {
     .exhibition-list {
       margin-left: -15px;

@@ -25,7 +25,8 @@
 
         @include max-screen(1440px) {
             font-size: 16px;
-
+            width: 440PX;
+            max-width: 440PX;
         }
 
         @include max-screen(1200px) { 
@@ -62,6 +63,10 @@
         }
     }
 
+    // @include max-screen(1440px) { 
+    //     margin-bottom: 25px;
+    // }
+
     @include max-screen(1024px) { 
         flex-direction: column;
         margin-bottom: 0;
@@ -85,7 +90,7 @@
         opacity: 1;
     }
     
-    @include min-screen($breakpoint-medium) {
+    @include min-screen($breakpoint-extralarge) {
         font-size: 15px;
         margin-left: 20px;
     }
@@ -96,8 +101,20 @@
     flex-direction: column;
     padding-left: 30px;
 
-    @include max-screen(1200px) { 
+    @include max-screen(1440px) { 
         padding-left: 0;
+
+        .radio_wrap {
+            span {
+                width: 14px;
+                height: 14px;
+
+                &:before {
+                    width: 6px!important;
+                    height: 6px!important;
+                }
+            }
+        }
     }
 
     @include max-screen(1024px) {

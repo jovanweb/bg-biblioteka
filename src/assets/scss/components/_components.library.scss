@@ -72,13 +72,19 @@
     margin-bottom: 30px;
 
     @include min-screen($breakpoint-small) {
-      margin-bottom: 60px;
+      margin-bottom: 30px;
       font-size: 40px;
+    }
+
+    @include min-screen($breakpoint-extralarge) {
+      margin-bottom: 60px;
+
     }
   }
 
   p {
     margin-bottom: 10px;
+    line-height: 1.4em;
   }
 }
 

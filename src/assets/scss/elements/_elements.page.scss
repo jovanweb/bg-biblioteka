@@ -50,9 +50,12 @@ img {
 }
 
 p {
-  text-align:justify;  
-  text-justify:inter-character;
   line-height: 1.8em;
+
+  @include min-screen($breakpoint-small) {
+    text-align:justify;  
+    text-justify:inter-character;
+  }
 }
 
 section {

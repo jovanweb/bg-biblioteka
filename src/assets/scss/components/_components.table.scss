@@ -58,7 +58,8 @@
 }
 
 
-.table--employees {
+.table--employees, 
+.table--extend {
   @include max-screen($breakpoint-tiny - 1) {
     font-size: 14px;
   }
@@ -79,5 +80,11 @@
   }
   @include max-screen(350px) {
     font-size: 9px;
+  }
+}
+
+.table {
+  p {
+    text-align: left;
   }
 }

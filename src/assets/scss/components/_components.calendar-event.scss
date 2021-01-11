@@ -28,6 +28,10 @@
         flex-direction: row;
     }
 
+    @include max-screen(1440px) {
+        padding-bottom: 30px;
+    }
+
     .vest & {
         border-bottom: none;
     }
@@ -51,9 +55,11 @@
     }
 
     @include min-screen($breakpoint-small) {
-        padding-right: 80px;
+        padding-right: 40px;
+
 
         img {
+            margin-bottom: 10px;
             width: 150px;
         }
     }
@@ -105,6 +111,12 @@
         
         @include min-screen($breakpoint-extralarge) {
             margin: 70px 0;
+        }
+    }
+
+    @include max-screen($breakpoint-extralarge) {
+        h3 {
+            margin: 5px 0;
         }
     }
 

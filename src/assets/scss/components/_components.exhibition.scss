@@ -56,7 +56,7 @@
     }
     
     h3 {
-        font-size: 30px!important;
+        font-size: 20px!important;
         margin-bottom: 0;
     }
 
@@ -151,5 +151,12 @@
     @include max-screen(991px) {
         margin-left: -15px;
         margin-right: -15px;
+    }
+}
+
+
+.all-links {
+    @include max-screen(1440px) {
+        padding: 0 0 40px;
     }
 }

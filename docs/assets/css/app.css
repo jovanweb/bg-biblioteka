@@ -926,9 +926,11 @@ img {
   max-width: 100%; }
 
 p {
-  text-align: justify;
-  text-justify: inter-character;
   line-height: 1.8em; }
+  @media screen and (min-width: 768px) {
+    p {
+      text-align: justify;
+      text-justify: inter-character; } }
 
 section {
   padding: 40px 0; }
@@ -1000,7 +1002,10 @@ h2,
   @media screen and (max-width: 1440px) {
     h2,
     .h2 {
-      font-size: 30px !important; } }
+      font-size: 28px !important; }
+      h2.zaposleni,
+      .h2.zaposleni {
+        font-size: 28px !important; } }
 
 h3,
 .h3 {
@@ -1011,7 +1016,7 @@ h3,
   @media screen and (max-width: 1440px) {
     h3,
     .h3 {
-      font-size: 25px !important; } }
+      font-size: 22px !important; } }
 
 h4,
 .h4 {
@@ -1021,9 +1026,9 @@ h4,
   @media screen and (min-width: 1024px) {
     h4,
     .h4 {
-      font-size: 28px;
-      font-size: 1.75rem;
-      line-height: 1.01786; } }
+      font-size: 20px;
+      font-size: 1.25rem;
+      line-height: 1.05; } }
 
 h5,
 .h5 {
@@ -1174,8 +1179,8 @@ a {
   margin-left: auto; }
   @media (min-width: 768px) and (max-width: 1440px) {
     .wrapper {
-      padding-right: 50px;
-      padding-left: 50px; } }
+      padding-right: 40px;
+      padding-left: 40px; } }
   @media screen and (min-width: 1441px) {
     .wrapper {
       max-width: calc(1750px + (20px * 2));
@@ -1503,8 +1508,8 @@ a {
     @media screen and (max-width: 1440px) {
       .search input.input {
         font-size: 16px;
-        width: 440PX;
-        max-width: 440PX; } }
+        width: 420px;
+        max-width: 420px; } }
     @media screen and (max-width: 1200px) {
       .search input.input {
         width: 380px; } }
@@ -1672,8 +1677,9 @@ a {
 .footer-main__author,
 .footer-main__copyright {
   font-size: 16px;
-  color: #333333; }
-  @media screen and (min-width: 1024px) {
+  color: #333333;
+  text-align: left; }
+  @media screen and (min-width: 1440px) {
     .footer-main__author,
     .footer-main__copyright {
       font-size: 18px; } }
@@ -2006,7 +2012,7 @@ a {
         font-size: 18px; } }
   @media screen and (min-width: 1440px) {
     .main-slider__item-content h2 {
-      font-size: 22px !important; }
+      font-size: 40px !important; }
     .main-slider__item-content p {
       font-size: 16px; } }
   @media screen and (min-width: 1024px) {
@@ -2395,7 +2401,7 @@ a {
     margin-bottom: 0;
     font-weight: 500; }
   .exhibition__content h3 {
-    font-size: 30px !important;
+    font-size: 20px !important;
     margin-bottom: 0; }
   @media screen and (min-width: 768px) {
     .exhibition__content {
@@ -2461,6 +2467,10 @@ a {
     .exhibition-list {
       margin-left: -15px;
       margin-right: -15px; } }
+
+@media screen and (max-width: 1440px) {
+  .all-links {
+    padding: 0 0 40px; } }
 
 .exhibitions-article,
 .editions-article {
@@ -2719,7 +2729,8 @@ a {
   margin-right: 15px; }
 
 @media screen and (max-width: 479px) {
-  .table--employees {
+  .table--employees,
+  .table--extend {
     font-size: 14px; } }
 
 @media screen and (max-width: 550px) {
@@ -2741,6 +2752,9 @@ a {
 @media screen and (max-width: 350px) {
   .table--prices {
     font-size: 9px; } }
+
+.table p {
+  text-align: left; }
 
 .memberships {
   margin-bottom: 50px;
@@ -2904,7 +2918,7 @@ a {
   @media screen and (min-width: 768px) {
     .tab-navigation {
       margin-bottom: 100px; } }
-  @media screen and (min-width: 1024px) {
+  @media screen and (min-width: 1440px) {
     .tab-navigation {
       margin-bottom: 150px; } }
   .tab-navigation a {
@@ -2947,8 +2961,8 @@ a {
           margin-right: 15px; } }
     @media screen and (min-width: 1216px) {
       .tab-navigation a {
-        font-size: 30px;
-        font-size: 1.875rem;
+        font-size: 24px;
+        font-size: 1.5rem;
         line-height: 1; }
         .tab-navigation a img {
           width: 50px;
@@ -3004,6 +3018,10 @@ a {
       padding-bottom: 60px;
       margin-bottom: 60px;
       flex-direction: row; } }
+  @media screen and (max-width: 1440px) {
+    .calendar-event,
+    .news-event {
+      padding-bottom: 30px; } }
   .vest .calendar-event, .vest
   .news-event {
     border-bottom: none; }
@@ -3025,9 +3043,10 @@ a {
   @media screen and (min-width: 768px) {
     .calendar-event__image,
     .news-event__image {
-      padding-right: 80px; }
+      padding-right: 40px; }
       .calendar-event__image img,
       .news-event__image img {
+        margin-bottom: 10px;
         width: 150px; } }
   @media screen and (min-width: 1440px) {
     .calendar-event__image,
@@ -3069,6 +3088,10 @@ a {
       .calendar-event__content h4,
       .news-event__content h4 {
         margin: 70px 0; } }
+  @media screen and (max-width: 1440px) {
+    .calendar-event__content h3,
+    .news-event__content h3 {
+      margin: 5px 0; } }
 
 .news-event__content h2 {
   margin-bottom: 20px; }

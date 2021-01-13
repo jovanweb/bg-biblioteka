@@ -2673,7 +2673,8 @@ a {
     color: #F26475; }
   @media screen and (min-width: 768px) {
     .sub-navigation__item a {
-      padding: 10px 30px; }
+      padding: 10px 30px;
+      white-space: nowrap; }
       .sub-navigation__item a::before {
         content: "|";
         color: #F26475;

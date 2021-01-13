@@ -34,6 +34,7 @@
 
     @include min-screen($breakpoint-small) {
       padding: 10px 30px;
+      white-space: nowrap;
 
       &::before {
         content: "|";

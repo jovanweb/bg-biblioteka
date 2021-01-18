@@ -121,3 +121,11 @@ figure {
     width: 85%;
   }
 }
+
+.section-wrapper {
+  padding: 0 60px;
+
+  @include max-screen($breakpoint-small) {
+    padding: 0;
+  }
+}

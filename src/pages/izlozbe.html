@@ -9,52 +9,54 @@
 
 <main>
   <div class="wrapper">
-    <section class="exhibition-details">
-      <p>
-        Библиотека града Београда приређује ауторске истраживачке изложбе посвећене нашим најпознатијим књижевницима и књижевним појавама. Изложбе су стручно осмишљене, атрактивно дизајниране и одштампане на великим постерима или паноима, са обимним пратећим каталозима. До сада су гостовале у готово свим градовима Србије и широм света. Могу се погледати и у електронском формату на нашој <a href="">дигиталној библиотеци</a>.
-      </p>
-    </section>
-    <div class="exhibition-list thumb-img-wrapper">
-      <div class="exhibition-list__item">
-          {{ allMacros.exhibitions('exhibition-img1.jpg', 'Borisav Stanković', '(1876-1927-2007)') }}
-      </div>
-      <div class="exhibition-list__item">
-          {{ allMacros.exhibitions('exhibition-img2.jpg',' Владан Десница:',  '1907-1967') }}
-      </div>
-      <div class="exhibition-list__item">
-          {{ allMacros.exhibitions('exhibition-img.jpg', 'Данило Киш: ', '1935-1989') }}
-      </div>
-      <div class="exhibition-list__item">
-          {{ allMacros.exhibitions('exhibition-img3.jpg', 'Павић од Ш до А',  '') }}
-      </div>
-      <div class="exhibition-list__item">
-          {{ allMacros.exhibitions('exhibition-img1.jpg', 'Borisav Stanković', '(1876-1927-2007)') }}
-      </div>
-      <div class="exhibition-list__item">
-          {{ allMacros.exhibitions('exhibition-img2.jpg',' Владан Десница:',  '1907-1967') }}
-      </div>
-      <div class="exhibition-list__item">
-          {{ allMacros.exhibitions('exhibition-img.jpg', 'Данило Киш: ', '1935-1989') }}
-      </div>
-      <div class="exhibition-list__item">
-          {{ allMacros.exhibitions('exhibition-img3.jpg', 'Павић од Ш до А',  '') }}
-      </div>
-      <div class="exhibition-list__item">
-          {{ allMacros.exhibitions('exhibition-img1.jpg', 'Borisav Stanković', '(1876-1927-2007)') }}
-      </div>
-      <div class="exhibition-list__item">
-          {{ allMacros.exhibitions('exhibition-img2.jpg',' Владан Десница:',  '1907-1967') }}
-      </div>
-      <div class="exhibition-list__item">
-          {{ allMacros.exhibitions('exhibition-img.jpg', 'Данило Киш: ', '1935-1989') }}
-      </div>
-      <div class="exhibition-list__item">
-          {{ allMacros.exhibitions('exhibition-img3.jpg', 'Павић од Ш до А',  '') }}
-      </div>
-    </div>
-    <section class="all-links">
-        {{ allMacros.titleLink('h2', 'Прикажи све изложбе', '#', true) }}
+    <div class="section-wrapper">
+      <section class="exhibition-details">
+        <p>
+          Библиотека града Београда приређује ауторске истраживачке изложбе посвећене нашим најпознатијим књижевницима и књижевним појавама. Изложбе су стручно осмишљене, атрактивно дизајниране и одштампане на великим постерима или паноима, са обимним пратећим каталозима. До сада су гостовале у готово свим градовима Србије и широм света. Могу се погледати и у електронском формату на нашој <a href="">дигиталној библиотеци</a>.
+        </p>
       </section>
+      <div class="exhibition-list thumb-img-wrapper">
+        <div class="exhibition-list__item">
+            {{ allMacros.exhibitions('exhibition-img1.jpg', 'Borisav Stanković', '(1876-1927-2007)') }}
+        </div>
+        <div class="exhibition-list__item">
+            {{ allMacros.exhibitions('exhibition-img2.jpg',' Владан Десница:',  '1907-1967') }}
+        </div>
+        <div class="exhibition-list__item">
+            {{ allMacros.exhibitions('exhibition-img.jpg', 'Данило Киш: ', '1935-1989') }}
+        </div>
+        <div class="exhibition-list__item">
+            {{ allMacros.exhibitions('exhibition-img3.jpg', 'Павић од Ш до А',  '') }}
+        </div>
+        <div class="exhibition-list__item">
+            {{ allMacros.exhibitions('exhibition-img1.jpg', 'Borisav Stanković', '(1876-1927-2007)') }}
+        </div>
+        <div class="exhibition-list__item">
+            {{ allMacros.exhibitions('exhibition-img2.jpg',' Владан Десница:',  '1907-1967') }}
+        </div>
+        <div class="exhibition-list__item">
+            {{ allMacros.exhibitions('exhibition-img.jpg', 'Данило Киш: ', '1935-1989') }}
+        </div>
+        <div class="exhibition-list__item">
+            {{ allMacros.exhibitions('exhibition-img3.jpg', 'Павић од Ш до А',  '') }}
+        </div>
+        <div class="exhibition-list__item">
+            {{ allMacros.exhibitions('exhibition-img1.jpg', 'Borisav Stanković', '(1876-1927-2007)') }}
+        </div>
+        <div class="exhibition-list__item">
+            {{ allMacros.exhibitions('exhibition-img2.jpg',' Владан Десница:',  '1907-1967') }}
+        </div>
+        <div class="exhibition-list__item">
+            {{ allMacros.exhibitions('exhibition-img.jpg', 'Данило Киш: ', '1935-1989') }}
+        </div>
+        <div class="exhibition-list__item">
+            {{ allMacros.exhibitions('exhibition-img3.jpg', 'Павић од Ш до А',  '') }}
+        </div>
+      </div>
+      <section class="all-links">
+          {{ allMacros.titleLink('h2', 'Прикажи све изложбе', '#', true) }}
+      </section>
+    </div>
   </div>
 </main>
 {% include "./components/footer/footer.html" -%}

@@ -10,6 +10,8 @@
   @include min-screen($breakpoint-small) {
     padding-bottom: 40px;
     margin-bottom: 50px;
+    display: flex;
+    justify-content: center;
   }
 }
 
@@ -24,6 +26,11 @@
     flex-direction: row;
     align-items: flex-start;
   }
+
+  @include min-screen($breakpoint-small) {
+    width: 90%;
+  }
+
 
   @include min-screen($breakpoint-medium) {
     align-items: center;
@@ -48,7 +55,7 @@
   @include min-screen($breakpoint-large) {
     flex: 0 0 150px;
     height: 150px;
-    margin-right: 60px;
+    margin-right: 80px;
   }
   @include min-screen($breakpoint-extralarge) {
     flex: 0 0 220px;

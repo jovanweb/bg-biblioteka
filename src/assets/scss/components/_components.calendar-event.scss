@@ -21,6 +21,10 @@
     padding-bottom: 30px;
     margin-bottom: 30px;
     border-bottom: 1px solid  $color-border;
+
+    &:last-child {
+        border:none;
+    }
     
     @include min-screen($breakpoint-small) {
         padding-bottom: 60px;
@@ -87,7 +91,7 @@
             width: 100%;
         }
         
-        @include min-screen($breakpoint-small) {
+        @include min-screen($breakpoint-extralarge) {
             margin: 0 20px;
         }
     }
@@ -148,14 +152,14 @@
         color: $color-peach;
     }
     
-    @include min-screen($breakpoint-medium) {
+    @include min-screen($breakpoint-extralarge) {
         margin-bottom: 100px;
     }
 }
 
 .news-event__social {
     margin-bottom: 20px;
-    @include min-screen($breakpoint-medium) {
+    @include min-screen($breakpoint-extralarge) {
         margin-bottom: 40px;
     }
 }

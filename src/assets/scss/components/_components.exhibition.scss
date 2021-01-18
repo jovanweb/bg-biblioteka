@@ -53,11 +53,12 @@
     p {
         margin-bottom: 0;
         font-weight: 500;
+        line-height: 1.2em;
     }
     
     h3 {
-        font-size: 20px!important;
-        margin-bottom: 0;
+        font-size: 18px!important;
+        margin-bottom: 5px;
     }
 
     @include min-screen($breakpoint-small) {

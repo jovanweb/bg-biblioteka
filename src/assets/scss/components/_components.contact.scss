@@ -12,7 +12,7 @@
     color: white;
 
     @include min-screen($breakpoint-extralarge) {
-      font-size: 24px;
+      font-size: 20px;
 
     }
   }

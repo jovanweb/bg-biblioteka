@@ -26,7 +26,7 @@ h1,
 
 h2,
 .h2 {
-  @include font-size(40px);
+  @include font-size(32px);
   font-weight: 300;
 
   @include max-screen(1440px) {
@@ -63,7 +63,7 @@ h5,
   @include font-size(20px);
   
   @include min-screen($heading-breakpoint) {
-    @include font-size(24px);
+    @include font-size(22px);
   }
 }
 

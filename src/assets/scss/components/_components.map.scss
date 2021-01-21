@@ -90,12 +90,12 @@
         }
         
         @include min-screen($breakpoint-extralarge) {
-            font-size: 24px;
+            font-size: 22px;
         }
     }
 
-    @include min-screen($breakpoint-large) {
-        padding: 25px 40px 35px;
+    @include min-screen($breakpoint-extralarge) {
+        padding: 25px 80px 35px;
     }
 }
 

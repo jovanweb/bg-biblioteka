@@ -58,8 +58,8 @@
     margin-right: 80px;
   }
   @include min-screen($breakpoint-extralarge) {
-    flex: 0 0 220px;
-    height: 220px;
+    flex: 0 0 190px;
+    height: 190px;
     margin-right: 120px;
   }
 
@@ -80,11 +80,11 @@
 
     @include min-screen($breakpoint-small) {
       margin-bottom: 30px;
-      font-size: 40px;
+      font-size: 32px;
     }
 
     @include min-screen($breakpoint-extralarge) {
-      margin-bottom: 60px;
+      margin-bottom: 30px;
 
     }
   }

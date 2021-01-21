@@ -69,7 +69,7 @@
     }
     
     @include min-screen($breakpoint-extralarge) {
-        padding-right: 110px;
+        padding-right: 80px;
 
         img {
             width: 180px;
@@ -108,13 +108,15 @@
 
     time {
         color: $color-lightgray;
+        margin-top: 5px;
+        display: block;
     }
 
     h4 {
         margin: 30px 0;
         
         @include min-screen($breakpoint-extralarge) {
-            margin: 70px 0;
+            margin: 35px 0;
         }
     }
 
@@ -128,11 +130,11 @@
 
 .news-event__content {
     h2 {
-        margin-bottom: 20px;
+        margin-bottom: 10px;
     }
 
     time {
-        margin-bottom: 20px;
+        margin-bottom: 10px;
         display: block;
     }
 
@@ -150,6 +152,7 @@
 
     .h2 {
         color: $color-peach;
+        margin-bottom: 10px;
     }
     
     @include min-screen($breakpoint-extralarge) {
@@ -160,6 +163,6 @@
 .news-event__social {
     margin-bottom: 20px;
     @include min-screen($breakpoint-extralarge) {
-        margin-bottom: 40px;
+        margin-bottom: 20px;
     }
 }

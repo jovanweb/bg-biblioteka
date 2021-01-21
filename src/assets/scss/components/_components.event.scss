@@ -20,7 +20,7 @@
     display: block;
 
     @include min-screen($breakpoint-extralarge) {
-        font-size: 24px;
+        font-size: 20px;
     }
 }
 
@@ -30,7 +30,7 @@
     margin-bottom: 10px;
 
     @include min-screen($breakpoint-extralarge) {
-        font-size: 28px!important;
+        font-size: 20px!important;
     }
 }
 
@@ -39,7 +39,7 @@
     line-height: 1.33;
 
     @include min-screen($breakpoint-extralarge) {
-        font-size: 24px;
+        font-size: 20px;
     }
 }
 

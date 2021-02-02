@@ -5,7 +5,7 @@
     
     @include min-screen($breakpoint-small) {
         flex-direction: row;
-        padding-top: 60px;
+        padding-top: 45px;
     }
 }
     
@@ -90,21 +90,21 @@
 }
 
 .exhibition-details {
-    padding: 40px 0 0;
+    padding: 20px 0 0;
 
     p {
         // font-size: 18px;
         // line-height: 1.3;
         
         @include min-screen($breakpoint-medium) {
-            margin-bottom: 20px;
+            margin-bottom: 0;
         }
     }
 }
 
 .exhibitions__title {
     @include font-size(20px);
-    margin-bottom: 5px!important;
+    margin-bottom: 0!important;
     font-weight: 400;
 
     @include max-screen($breakpoint-extralarge) {

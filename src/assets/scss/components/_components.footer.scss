@@ -25,16 +25,16 @@
 
 .footer-main__bottom {
   .wrapper {
-    padding: 30px 10px;
+    padding: 20px 10px;
     
     @include min-screen($breakpoint-small) {
-      padding: 30px 40px;
+      padding: 20px 40px;
       display: flex;
       justify-content: space-between;
     }
 
     @include min-screen($breakpoint-extralarge) {
-      padding: 40px 10px;
+      padding: 20px 10px;
 
     }
   }
@@ -52,11 +52,11 @@
 
 .footer-main__heading {
   color: $color-peach;
-  font-size: 32px;
+  font-size: 30px;
   margin-bottom: 30px;
   
   @include min-screen($breakpoint-large) {
-    font-size: 36px;
+    font-size: 30px;
     margin-bottom: 20px;
   }
 }
@@ -64,17 +64,17 @@
 .footer-main__links a,
 .footer-main__contact,
 .footer-main__working-hours {
-  font-size: 16px;
+  font-size: 14px;
   color: white;
   
   @include min-screen($breakpoint-extralarge) {
-      font-size: 18px;
+      font-size: 14px;
     }
   }
 
   .footer-main__links {
     a {
-      line-height: 30px;
+      line-height: 1.4px;
       display: inline-block;
 
       &:hover {
@@ -88,7 +88,7 @@
     line-height: 1.5;
     
     dt {
-      margin-top: 20px;
+      margin-top: 10px;
       
       &:first-child {
         margin-top: 0;
@@ -122,10 +122,10 @@
   
   .footer-main__copyright {
     span {
-      font-size: 16px;
+      font-size: 14px;
 
       @include min-screen($breakpoint-extralarge) {
-        font-size: 16px;
+        font-size: 14px;
       }
     }
 
@@ -139,12 +139,12 @@
   
   .footer-main__author, 
   .footer-main__copyright {
-    font-size: 14px;
+    font-size: 12px;
     color: $color-darkgray;
     text-align: left;
 
     @include min-screen($breakpoint-extralarge) {
-      font-size: 14px;
+      font-size: 12px;
     }
   }
 
@@ -157,7 +157,7 @@
       margin-right: 80px;
 
       a {
-        font-size: 14px;
+        font-size: 12px;
       }
     }
 

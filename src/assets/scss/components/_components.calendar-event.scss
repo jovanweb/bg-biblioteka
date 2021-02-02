@@ -27,13 +27,13 @@
     }
     
     @include min-screen($breakpoint-small) {
-        padding-bottom: 60px;
-        margin-bottom: 60px;
+        padding-bottom: 10px;
+        margin-bottom: 30px;
         flex-direction: row;
     }
 
     @include max-screen(1440px) {
-        padding-bottom: 30px;
+        padding-bottom: 10px;
     }
 
     .vest & {
@@ -142,7 +142,7 @@
         margin: 30px 0;
         
         @include min-screen($breakpoint-medium) {
-            margin: 60px 0;
+            margin: 30px 0;
         }
     }
 }
@@ -156,7 +156,7 @@
     }
     
     @include min-screen($breakpoint-extralarge) {
-        margin-bottom: 100px;
+        margin-bottom: 70px;
     }
 }
 

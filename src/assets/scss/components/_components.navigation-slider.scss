@@ -75,7 +75,7 @@
         
         a {
             color: white;
-            font-size: 18px;
+            font-size: 16px;
             padding: 0 20px;
             display: block;
             line-height: 1.2;
@@ -88,7 +88,7 @@
             }
 
             @include min-screen($breakpoint-extralarge) {
-                font-size: 22px;
+                font-size: 16px;
             }
         }
     }

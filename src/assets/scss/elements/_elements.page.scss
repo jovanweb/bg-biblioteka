@@ -50,7 +50,7 @@ img {
 }
 
 p {
-  line-height: 1.8em;
+  line-height: 1.5em;
 
   @include min-screen($breakpoint-small) {
     text-align:justify;  
@@ -68,9 +68,20 @@ section {
 
 .guide {
   section {
-    padding-top: 40px;
-    padding-bottom: 40px;
+    padding-top: 30px;
+    padding-bottom: 10px;
     border-bottom: 1px solid #000;
+  }
+
+  .library {
+    padding-bottom: 30px;
+  }
+}
+
+.libraries-inner {
+  section {
+    padding-top: 30px;
+    padding-bottom: 10px;
   }
 }
 
@@ -128,4 +139,9 @@ figure {
   @include max-screen($breakpoint-small) {
     padding: 0;
   }
+}
+
+.text-wrapper {
+  max-width: 991px;
+  margin: 0 auto;
 }

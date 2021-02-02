@@ -60,12 +60,14 @@
 
 .table--employees, 
 .table--extend {
-  @include max-screen($breakpoint-tiny - 1) {
+  // @include max-screen($breakpoint-tiny - 1) {
     font-size: 14px;
-  }
+  // }
 }
 
 .table--prices {
+  font-size: 14px;
+  
   @include max-screen(550px) {
     font-size: 13px;
   }

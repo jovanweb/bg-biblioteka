@@ -41,11 +41,18 @@
   <a href="{{href}}" class="social-icon"><img src="assets/images/{{icon}}" alt=""></a>
 {% endmacro %}
 
-  {% macro event(time, title, location, href) %}
+  {% macro event(time, title, location, href, participants ) %}
   <a href="{{ href }}" class="event">
     <time class="event__date">{{ time }}</time>
-    <h3 class="event__title">{{title}}</h3>
     <p class="event__location">{{location}}</p>
+    <h3 class="event__title">{{title}}</h3>
+    <p class="event__participants ">{{participants}}</p>
+  </a>
+  {% endmacro %}
+
+  {% macro eventNews(title, href) %}
+  <a href="{{ href }}" class="event mb">
+    <h3 class="event__title">{{title}}</h3>
   </a>
   {% endmacro %}
 
@@ -200,8 +207,7 @@
       <div class="calendar-event__content">
         <time>{{ date }}</time>
         <br>
-        <br>
-        <h5>{{ title }}</h5>
+        <p>{{ title }}</p>
       </div>
     </article>
   {% endmacro %}

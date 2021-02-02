@@ -2,7 +2,7 @@
     display: flex;
     align-items: center;
     flex-direction: column;
-    padding: 25px 0 25px 10px;
+    padding: 15px 0 15px 10px;
     border-bottom: 1px solid  $color-border;
     color: #000;
     
@@ -15,7 +15,7 @@
     }
     
     @include min-screen($breakpoint-medium) {
-        padding: 25px 0 25px 20px;
+        padding: 15px 0 15px 20px;
     }
 }
 
@@ -24,7 +24,7 @@
     background-repeat: no-repeat;
     background-size: 85%;
     background-position: 50% 50%;
-    height: 110px;
+    height: 80px;
     width: 190px;
     margin-bottom: 15px;
     img {
@@ -74,10 +74,10 @@
 .project {
 
     h2.heading {
-        margin: 50px 0;
+        margin: 30px 0;
 
         @include min-screen($breakpoint-medium) {
-            margin: 65px 0;
+            margin: 45px 0;
         }
     }
 
@@ -85,7 +85,7 @@
         margin: 30px 0;
         
         @include min-screen($breakpoint-medium) {
-            margin: 40px 0;
+            margin: 30px 0;
         }
     }
 
@@ -95,9 +95,9 @@
 }
 
 .project__social {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     @include min-screen($breakpoint-medium) {
-        margin-bottom: 20px;
+        margin-bottom: 10px;
     }    
 }
 

@@ -1,18 +1,18 @@
 .memberships {
-  margin-bottom: 50px;
-  margin-top: 50px;
+  margin-bottom: 20px;
+  margin-top: 40px;
 
   @include min-screen($breakpoint-small) {
-    margin-top: 50px;
-    margin-bottom: 50px;
+    margin-top: 40px;
+    margin-bottom: 20px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
   }
 
   @include min-screen($breakpoint-extralarge) {
-    margin-bottom: 80px;
-    margin-top: 80px;
+    margin-bottom: 20px;
+    margin-top: 40px;
 
   }
 }
@@ -45,10 +45,10 @@
 
 .memberships__item-title {
   text-align: center;
-  @include font-size(28px);
+  @include font-size(18px);
   
   @include max-screen($breakpoint-large - 1) {
-    @include font-size(20px);
+    @include font-size(18px);
   }
 }
 
@@ -59,6 +59,6 @@
     width: 400px;
   }
   @include min-screen($breakpoint-small) {
-    width: 500px;
+    width: 400px;
   }
 }

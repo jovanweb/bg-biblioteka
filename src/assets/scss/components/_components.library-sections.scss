@@ -1,8 +1,8 @@
 .library-sections {
-    padding: 40px 0 20px;
+    padding: 30px 0 20px;
 
     @include min-screen($breakpoint-medium) {
-        padding: 50px 0 20px;
+        padding: 30px 0 20px;
     }
     
 }

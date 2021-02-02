@@ -17,7 +17,7 @@
   top: 100%;
   left: 50%;
   transform: translateX(-50%);
-  margin-top: 30px;
+  // margin-top: 30px;
   background-color: white;
   border: 1px solid rgba($color-border, 0.1);
   padding: 20px;
@@ -36,6 +36,41 @@
     border-left: none;
     border-bottom: none;
     background-color: white;
+  }
+
+  h3 {
+    @include font-size(22px);
+    margin-bottom: 10px;
+  }
+
+  li {
+    @include font-size(14px);
+    line-height: 1.5;
+
+    &:before {
+      top: 5px;
+    }
+
+  }
+
+  ul {
+    &.list--dotted {
+      li {
+        &:before {
+          top: 8px;
+        }
+      }
+    }
+  }
+
+  p {
+    @include font-size(14px);
+    line-height: 1.5;
+    margin-bottom: 10px;
+  }
+
+  ul:last-of-type {
+    margin-bottom: 0;
   }
 }
 

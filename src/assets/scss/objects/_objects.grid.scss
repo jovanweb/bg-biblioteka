@@ -8,7 +8,7 @@
 .grid-gap--medium\@sm {
 
     @include min-screen($breakpoint-small) {
-        grid-gap: 45px;
+        grid-gap: 30px;
     }
 }
 

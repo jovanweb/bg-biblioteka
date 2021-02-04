@@ -2607,6 +2607,9 @@ a {
       padding-bottom: 40%; }
       .map-section--middle .map-container {
         padding-bottom: 30%; } }
+  @media (max-width: 1440px) and (min-width: 991px) {
+    .map-container {
+      padding-bottom: 39%; } }
   .map-container #map {
     position: absolute;
     width: 100%;

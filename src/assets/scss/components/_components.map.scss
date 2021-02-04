@@ -86,11 +86,13 @@
         
         @include min-screen($breakpoint-small) {
             display: block;
-            margin: 10px 0 0;
+            margin: 8px 0 0;
         }
         
         @include min-screen($breakpoint-extralarge) {
             font-size: 18px;
+            margin: 10px 0 0;
+
         }
     }
 

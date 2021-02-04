@@ -2287,33 +2287,37 @@ a {
   transition: none; }
   @media screen and (min-width: 1440px) {
     .event {
-      margin-bottom: 60px; } }
+      margin-bottom: 30px; } }
 
 .event__date {
   font-size: 16px;
   line-height: 1.2;
-  margin-bottom: 10px;
-  display: block; }
+  margin-bottom: 0;
+  display: block;
+  color: #dd132b; }
   @media screen and (min-width: 1440px) {
     .event__date {
-      font-size: 20px; } }
+      font-size: 18px; } }
 
 .event__title {
   font-size: 18px !important;
   font-weight: 600;
-  margin-bottom: 10px;
+  margin-bottom: 0;
   line-height: 1.3; }
   @media screen and (min-width: 1440px) {
     .event__title {
-      font-size: 20px !important; } }
+      font-size: 18px !important; } }
 
 .event__location {
   font-size: 16px;
   line-height: 1.33;
-  margin-bottom: 10px; }
+  margin-bottom: 0; }
   @media screen and (min-width: 1440px) {
     .event__location {
-      font-size: 20px; } }
+      font-size: 18px; } }
+
+.event__participants {
+  line-height: 1.3; }
 
 @media (max-width: 1440px) and (min-width: 768px) {
   .event-wrapper {
@@ -2325,7 +2329,7 @@ a {
   margin-bottom: 30px; }
   @media screen and (min-width: 1440px) {
     .event-wrapper .title-link {
-      margin-bottom: 60px;
+      margin-bottom: 30px;
       font-size: 40px !important; } }
   .event-wrapper .title-link a {
     display: block; }
@@ -2641,10 +2645,11 @@ a {
     @media screen and (min-width: 768px) {
       .map-places li {
         display: block;
-        margin: 10px 0 0; } }
+        margin: 8px 0 0; } }
     @media screen and (min-width: 1440px) {
       .map-places li {
-        font-size: 18px; } }
+        font-size: 18px;
+        margin: 10px 0 0; } }
   @media screen and (min-width: 1440px) {
     .map-places {
       padding: 25px 80px 35px; } }
@@ -2853,14 +2858,10 @@ a {
 
 .memberships__item-title {
   text-align: center;
-  font-size: 18px;
-  font-size: 1.125rem;
-  line-height: 1; }
-  @media screen and (max-width: 1215px) {
+  font-size: 22px !important; }
+  @media screen and (max-width: 1439px) {
     .memberships__item-title {
-      font-size: 18px;
-      font-size: 1.125rem;
-      line-height: 1; } }
+      font-size: 18px !important; } }
 
 .memberships__item-tooltip {
   width: 300px; }

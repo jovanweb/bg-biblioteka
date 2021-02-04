@@ -9,40 +9,45 @@
     // }
     
     @include min-screen($breakpoint-extralarge) {
-        margin-bottom: 60px;
+        margin-bottom: 30px;
     }
 }
 
 .event__date {
     font-size: 16px;
     line-height: 1.2;
-    margin-bottom: 10px;
+    margin-bottom: 0;
     display: block;
+    color: #dd132b;
 
     @include min-screen($breakpoint-extralarge) {
-        font-size: 20px;
+        font-size: 18px;
     }
 }
 
 .event__title {
     font-size: 18px!important;
     font-weight: 600;
-    margin-bottom: 10px;
+    margin-bottom: 0;
     line-height: 1.3;
 
     @include min-screen($breakpoint-extralarge) {
-        font-size: 20px!important;
+        font-size: 18px!important;
     }
 }
 
 .event__location {
     font-size: 16px;
     line-height: 1.33;
-    margin-bottom: 10px;
+    margin-bottom: 0;
 
     @include min-screen($breakpoint-extralarge) {
-        font-size: 20px;
+        font-size: 18px;
     }
+}
+
+.event__participants  {
+    line-height: 1.3;
 }
 
 .event-wrapper {
@@ -56,7 +61,7 @@
         margin-bottom: 30px;
         
         @include min-screen($breakpoint-extralarge) {
-            margin-bottom: 60px;
+            margin-bottom: 30px;
             font-size: 40px!important;
         }
 

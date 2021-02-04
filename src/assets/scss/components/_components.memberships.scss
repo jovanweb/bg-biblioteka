@@ -45,10 +45,11 @@
 
 .memberships__item-title {
   text-align: center;
-  @include font-size(18px);
+  font-size: 22px!important;
+
   
-  @include max-screen($breakpoint-large - 1) {
-    @include font-size(18px);
+  @include max-screen($breakpoint-extralarge - 1) {
+    font-size: 18px!important;
   }
 }
 

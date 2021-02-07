@@ -13,6 +13,7 @@ $(document).ready(() => {
     autoplay: true,
     autoplaySpeed: 3000,
     speed: 300,
+    pauseOnHover:false,
     fade: true,
     infinite: true,
   });

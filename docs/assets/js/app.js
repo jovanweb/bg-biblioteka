@@ -1088,8 +1088,9 @@ $(document).ready(function () {
     prevArrow: $(".main-slider-arrows .slick-prev"),
     nextArrow: $(".main-slider-arrows .slick-next"),
     autoplay: true,
-    autoplaySpeed: 500000,
+    autoplaySpeed: 3000,
     speed: 300,
+    fade: true,
     infinite: true
   });
   var homeSlider = $('.home-slider');

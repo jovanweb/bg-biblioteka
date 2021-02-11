@@ -22,3 +22,31 @@
         
     }
 }
+
+.employees-section {
+
+    >div {
+        width: 50%;
+    }
+    .input--search {
+        @include min-screen($breakpoint-small) {
+            min-width: 450px;
+        }
+
+        @include max-screen(810px) {
+            font-size: 14px;
+            min-width: 350px;
+        }
+
+        @include max-screen(768px) {
+            min-width: 100%;
+        }
+    }
+
+    @include max-screen(768px) {
+        flex-direction:column;
+        >div {
+            width: 100%;
+        }
+    }
+}

@@ -113,7 +113,7 @@
         font-size: 22px!important;
         font-family: $second-font-family;
         @include min-screen($breakpoint-extralarge) {
-            font-size: 46px!important;
+            // font-size: 46px!important;
         }
     }
     
@@ -156,11 +156,11 @@
     }
 
     @include min-screen($breakpoint-extralarge) {
-        font-size: 24px;
+        // font-size: 24px;
         
-        span {
-            font-size: 24px;
-        }
+        // span {
+        //     font-size: 24px;
+        // }
     }
 }
 
@@ -182,7 +182,7 @@
     }
     
     @include min-screen($breakpoint-extralarge) {
-        @include font-size(24px);
+        // @include font-size(24px);
     }
 
     @include max-screen($breakpoint-tiny - 1) {
@@ -199,10 +199,10 @@
 .gm-style-iw.gm-style-iw-c {
     border-radius: 0;
     border: 1px solid #BCBCBC;
+    max-width: 576px!important;
 
-    @include max-screen($breakpoint-extralarge) {
-        max-width: 576px!important;
-    }
+    // @include max-screen($breakpoint-extralarge) {
+    // }
 }
 
 .gm-style-iw-t {

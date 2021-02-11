@@ -35,6 +35,14 @@
       }
     }
   }
+
+  .on-mobile {
+    display: none;
+    
+    @include max-screen($breakpoint-small) {
+      display: block;
+    }
+  }
   
   @include max-screen($breakpoint-medium - 1) {
     position: fixed;

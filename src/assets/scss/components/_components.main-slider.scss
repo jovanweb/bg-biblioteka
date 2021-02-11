@@ -108,17 +108,25 @@
     padding: 20px 30px;
     background-color: $color-peach;
     text-align: center;
+    min-height: 236px;
     
     h2 {
         font-size: 25px;
         font-weight: 300;
         line-height: 1.15;
+
+        &:hover {
+            a {
+                color: #fff;
+            }
+        }
     }
     
     p {
         line-height: 1.25;
         font-size: 16px;
         font-weight: normal;
+        text-align: left;
 
         &:last-child {
             margin-bottom: 0;
@@ -134,6 +142,9 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
+        height: calc(100vh - 228px);
+
+
         h2 {
             font-size: 24px!important;
         }

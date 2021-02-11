@@ -14,7 +14,7 @@
       <div bp="grid">
         <div bp="6@md" class="o-flex o-flex--justify-center o-flex--center o-flex--column">
             <div>
-              <h1>Библиотека</h1>
+              <h1 class="mb-">Библиотека</h1>
               <h3 class="color-peach">МЕСТО ЗА СВЕ</h3>
               <br>
               <p class="text-left">У Београду смо центар знања, културе и забаве. <br> У Србији смо водећа јавна библиотека. <br>У Европи смо део породице најсавременијих јавних библиотека.</p>
@@ -70,7 +70,7 @@
         <div class="section-divider"></div>
         <section id="section3">
           <h2>Простори</h2>
-          <article class="library library--reading-rooms">
+          <article class="library library__border-light library--reading-rooms">
             <div class="library__wrapper">
               <div class="library__img">
                 <img src="assets/images/libraries/img1.jpg" alt="">
@@ -78,13 +78,13 @@
               <div class="library__content">
                 <h2><a href="prostor.html">Зграда БГБ</a></h2>
                 <p>Налази се на првом спрату Библиотеке и права је мала галерија уметничких слика посвећених Београду. Назив је добила по централној слици – портрету Вука Караџића, раду Бете Вуксановић. </p>
-                <p>
+                <p class="read-more-btn">
                   <a href="prostor.html"><span>Прочитај више</span> {% include "./components/inline-svg/arrow.html" -%}</a>
                 </p>
               </div>
             </div>
           </article>
-          <article class="library library--reading-rooms">
+          <article class="library library__border-light library--reading-rooms">
             <div class="library__wrapper">
               <div class="library__img">
                 <img src="assets/images/libraries/img1.jpg" alt="">
@@ -92,11 +92,11 @@
               <div class="library__content">
                 <h2><a href="prostor.html">Римска дворана</a></h2>
                 <p>Налази се на првом спрату Библиотеке и права је мала галерија уметничких слика посвећених Београду. Назив је добила по централној слици – портрету Вука Караџића, раду Бете Вуксановић. </p>
-                <p><a href="prostor.html"><span>Прочитај више</span> {% include "./components/inline-svg/arrow.html" -%}</a></p>
+                <p class="read-more-btn"><a href="prostor.html"><span>Прочитај више</span> {% include "./components/inline-svg/arrow.html" -%}</a></p>
               </div>
             </div>
           </article>
-          <article class="library library--reading-rooms">
+          <article class="library library__border-light library--reading-rooms">
             <div class="library__wrapper">
               <div class="library__img">
                 <img src="assets/images/libraries/img1.jpg" alt="">
@@ -104,11 +104,11 @@
               <div class="library__content">
                 <h2><a href="prostor.html">Галерија Атријум</a></h2>
                 <p>Налази се на првом спрату Библиотеке и права је мала галерија уметничких слика посвећених Београду. Назив је добила по централној слици – портрету Вука Караџића, раду Бете Вуксановић.</p>
-                <p><a href="prostor.html"><span>Прочитај више</span> {% include "./components/inline-svg/arrow.html" -%}</a></p>
+                <p class="read-more-btn"><a href="prostor.html"><span>Прочитај више</span> {% include "./components/inline-svg/arrow.html" -%}</a></p>
               </div>
             </div>
           </article>
-          <article class="library library--reading-rooms">
+          <article class="library library__border-light library--reading-rooms">
             <div class="library__wrapper">
               <div class="library__img">
                 <img src="assets/images/libraries/img1.jpg" alt="">
@@ -116,11 +116,11 @@
               <div class="library__content">
                 <h2><a href="prostor.html">Вукова сала</a></h2>
                 <p>Налази се на првом спрату Библиотеке и права је мала галерија уметничких слика посвећених Београду. Назив је добила по централној слици – портрету Вука Караџића, раду Бете Вуксановић. </p>
-                <p><a href="prostor.html"><span>Прочитај више</span> {% include "./components/inline-svg/arrow.html" -%}</a></p>
+                <p class="read-more-btn"><a href="prostor.html"><span>Прочитај више</span> {% include "./components/inline-svg/arrow.html" -%}</a></p>
               </div>
             </div>
           </article>
-          <article class="library library--reading-rooms">
+          <article class="library library__border-light library--reading-rooms">
             <div class="library__wrapper">
               <div class="library__img">
                 <img src="assets/images/libraries/img1.jpg" alt="">
@@ -128,17 +128,18 @@
               <div class="library__content">
                 <h2><a href="prostor.html">Читаоница Фонда уметности</a></h2>
                 <p>Налази се на првом спрату Библиотеке и права је мала галерија уметничких слика посвећених Београду. Назив је добила по централној слици – портрету Вука Караџића, раду Бете Вуксановић.</p>
-                <p><a href="prostor.html"><span>Прочитај више</span> {% include "./components/inline-svg/arrow.html" -%}</a></p>
+                <p class="read-more-btn"><a href="prostor.html"><span>Прочитај више</span> {% include "./components/inline-svg/arrow.html" -%}</a></p>
               </div>
             </div>
           </article>
         </section>
+        <div class="section-divider"></div>
         <section id="section4">
-          <div bp="grid" class="grid-gap--large@md grid-gap--medium@sm ">
-            <div bp="6@lg 6@md">
+          <div class="o-flex o-flex--center o-flex--justify employees-section">
+            <div>
               <h2 class="zaposleni">Запослени</h2>
             </div>
-            <div bp="6@lg 6@md" class="o-flex o-flex--justify-end">
+            <div class="o-flex o-flex--justify-end">
               <input type="text" placeholder="Укуцајте име, презиме или звање запосленог" class="input input--search">
             </div>
           </div>
@@ -273,7 +274,7 @@
           <h2>Акти</h2>
           <br>
           <h2 class="h4">Закони</h4>
-          <div class="section-divider"></div>
+          <div class="section-divider-gray"></div>
           <div class="table-wrapper">
             <table class="table">
               <tr>
@@ -288,7 +289,7 @@
             </table>
           </div>
           <h2 class="h4">Упутства</h4>
-          <div class="section-divider"></div>
+          <div class="section-divider-gray"></div>
           <div class="table-wrapper">
             <table class="table">
               <tr>
@@ -302,7 +303,7 @@
             </table>
           </div>
           <h2 class="h4">Правилници</h4>
-          <div class="section-divider"></div>
+          <div class="section-divider-gray"></div>
           <div class="table-wrapper">
             <table class="table">
               <tr>
